@@ -28,6 +28,21 @@
 					<span class="subtitle text-uppercase">rejoignez nous</span>
 					<h2>Veuillez remplir cette <span> Demande.</span></h2>
 			</div>
+			@if(session()->has('success'))
+			  <div class="alert alert-success alert-dismissible fade show" role="alert">
+			    <strong>{{session()->get('success')}} </strong>
+			    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			      <span aria-hidden="true">&times;</span>
+			    </button>
+			  </div>
+			@elseif(session()->has('error'))
+			  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+			   <strong>{{session()->get('error')}} </strong>
+			   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			     <span aria-hidden="true">&times;</span>
+			   </button>
+			  </div>
+			@endif
 			<div class="order-payment">
 								<div class="payment-method" style="background-image: url('/assets/img/banner/blue.jpg'); background-size: cover; background-attachment: inherit;">
 									<div class="payment-method-header">
@@ -49,22 +64,22 @@
 										</div>
 									</div>
 
-@php
-    $offres=DB::table('offres')
-   		 ->select('offres.*')
-   		 ->get();
-@endphp
-
-									<div class="check-out-form">
-										<form action="{{url('/demandes')}}" method="post" enctype="multipart/form-data">
+						<div class="check-out-form">
+										<form action="{{url('demandes')}}" method="post" enctype="multipart/form-data">
           									{{ csrf_field()}}
 	
 											<div class="payment-info input-2">
 												<select class="form-control @error('IDoffre') is-invalid @enderror" name="IDoffre" value="{{old('IDoffre')}}" required>
 													<option value="">---------Sélectionnez une offre---------</option>
-													 @foreach($offres as $f)
-									                 <option value="<?php echo $f->id ?>"> <?php echo $f->titre ?> ( <?php echo $f->durée ?>) </option>
-									                 @endforeach
+													 @if(count($offres) == 1)
+														 @foreach($offres as $f)
+										                <option value="{{$f->id}}" selected> {{$f->titre}} ({{$f->durée}}) </option>
+										                @endforeach
+									                 @else
+														 @foreach($offres as $f)
+										                 <option value="{{$f->id}}"> {{$f->titre}} ({{$f->durée}}) </option>
+										                 @endforeach
+									                 @endif
 												</select>
 											</div>
 											<div class="payment-info">
@@ -74,10 +89,6 @@
 											<div class="payment-info">
 												<label class=" control-label">Prénom* :</label>
 												<input type="text" class="form-control @error('prenom') is-invalid @enderror"  name="prenom" placeholder="Entrer votre prénom" value="{{old('prenom')}}" required>
-											</div>
-											<div class="payment-info">
-												<label class=" control-label">Numero de Téléphone*:</label>
-												<input type="text" class="form-control @error('num') is-invalid @enderror" name="num" placeholder="Entrer votre numero de téléphone" value="{{old('num')}}" required>
 											</div>
 											<div class="payment-info">
 												<label class=" control-label">Email* :</label>

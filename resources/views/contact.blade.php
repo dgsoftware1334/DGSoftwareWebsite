@@ -126,21 +126,41 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="contact-info">
-									<input class="name form-control @error('nom') is-invalid @enderror" name="name" type="text" placeholder="Votre Nom*">
+									<input class="name form-control @error('nom') is-invalid @enderror" name="nom" type="text" value="{{old('nom')}}" placeholder="Votre Nom*">
 								</div>
+								@error('nom')
+				                  <span class="invalid-feedback" role="alert">
+				                      <strong>{{ $message }}</strong>
+				                  </span>
+				              @enderror
 							</div>
 							<div class="col-md-4">
 								<div class="contact-info">
-									<input class="email form-control @error('email') is-invalid @enderror" name="email" type="email" placeholder="Votre Mail*">
+									<input class="email form-control @error('email') is-invalid @enderror" name="email" type="email" value="{{old('email')}}" placeholder="Votre Mail*">
 								</div>
+								@error('email')
+				                  <span class="invalid-feedback" role="alert">
+				                      <strong>{{ $message }}</strong>
+				                  </span>
+				              @enderror
 							</div>
 							<div class="col-md-4">
 								<div class="contact-info">
-									<input class="number form-control @error('tel') is-invalid @enderror" name="number" type="number" placeholder="Numéro téléphone*">
+									<input class="number form-control @error('tel') is-invalid @enderror" name="tel" type="number" value="{{old('tel')}}" placeholder="Numéro téléphone*">
 								</div>
+								@error('tel')
+				                  <span class="invalid-feedback" role="alert">
+				                      <strong>{{ $message }}</strong>
+				                  </span>
+				              @enderror
 							</div>
 						</div>
 						<textarea id="message" class="form-control @error('message') is-invalid @enderror" name="message" placeholder="Message*">{{ old('message') }}</textarea>
+						@error('message')
+		                  <span class="invalid-feedback" role="alert">
+		                      <strong>{{ $message }}</strong>
+		                  </span>
+  	  	                @enderror
 
 						<div class="nws-button text-center  gradient-bg text-uppercase">
 							<button type="submit" value="Submit">ENVOYER UN EMAIL<i class="fas fa-caret-right"></i></button> 

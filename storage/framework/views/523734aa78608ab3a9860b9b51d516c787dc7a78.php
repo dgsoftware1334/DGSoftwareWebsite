@@ -1,0 +1,1 @@
+<?php /**PATH C:\laragon\www\E-ECG\resources\views/dashboard.blade.php ENDPATH**/ ?>

@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>E-ECG</title>
+    <title>Easy-ECG</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.css">
@@ -130,7 +137,7 @@
                                                         <span>3500 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('/demande/1')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('demandes/offre/1')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
@@ -161,7 +168,7 @@
                                                         <span>5000 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('/demande/2')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('demandes/offre/2')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
@@ -184,7 +191,7 @@
                                     </div>
                                     <div class="register-form-area">
                                         <div class="nws-button text-center white text-capitalize">
-                                        <a href="{{url('/inscription')}}">
+                                        <a href="{{url('demandes/create')}}">
                                             <button  class="btn btn-Primary" type="button">Inscription</button>
                                         </a>
                                         </div>
@@ -271,7 +278,7 @@
                                         </li>
                                         <li><a href="{{ url('/about') }}">A propos</a></li>
                                         <li><a href="{{ url('/cours')}}">Cours</a></li>
-                                        <li><a href="{{ url('/contact')}}">Contact</a></li>
+                                        <li><a href="{{ url('/contacts')}}">Contact</a></li>
                                         
                                     </ul>
                                 </div>
@@ -2227,14 +2234,25 @@
                     </div>
                      <div class="footer-social-subscribe mb65">
                         <div class="row">
-                           
+                            @if (\Session::has('success'))
+                              <div class="alert alert-success">
+                                <p>{{ \Session::get('success') }}</p>
+                              </div><br />
+                             @endif
+                             @if (\Session::has('failure'))
+                              <div class="alert alert-danger">
+                                <p>{{ \Session::get('failure') }}</p>
+                              </div><br />
+                             @endif
                             <div class="col-md-10">
                                 <div class="subscribe-form">
                                     <h2 class="widget-title">Abonnez-vous à la newsletter</h2>
 
                                     <div class="subs-form relative-position">
-                                        <form action="#" method="post">
-                                            <input class="course" name="course" type="email" placeholder="Adresse mail .">
+                                        <form action="{{url('newsletter/store')}}" method="post">
+                                            {{ csrf_field()}}
+    
+                                            <input type="email" class="course" name="email" placeholder="Adresse mail .">
                                             <div class="nws-button text-center  gradient-bg text-uppercase">
                                                 <button type="submit" value="Submit">Abonner</button>
                                             </div>
@@ -2289,7 +2307,7 @@
                                         <ul>
                                             <li><a href="#"><i class="fas fa-caret-right"></i>Offres</a></li>
                                             <li><a href="{{url('/cours')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
-                                            <li><a href="{{url('/contact')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
+                                            <li><a href="{{url('/contacts')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="{{url('/about')}}"><i class="fas fa-caret-right"></i>A propos</a></li>
                                             <li><a href="#"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
                                             <li><a href="#"><i class="fas fa-caret-right"></i>S'authentifier</a></li>

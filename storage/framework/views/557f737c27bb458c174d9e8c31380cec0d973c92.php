@@ -28,6 +28,21 @@
 					<span class="subtitle text-uppercase">rejoignez nous</span>
 					<h2>Veuillez remplir cette <span> Demande.</span></h2>
 			</div>
+			<?php if(session()->has('success')): ?>
+			  <div class="alert alert-success alert-dismissible fade show" role="alert">
+			    <strong><?php echo e(session()->get('success')); ?> </strong>
+			    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			      <span aria-hidden="true">&times;</span>
+			    </button>
+			  </div>
+			<?php elseif(session()->has('error')): ?>
+			  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+			   <strong><?php echo e(session()->get('error')); ?> </strong>
+			   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			     <span aria-hidden="true">&times;</span>
+			   </button>
+			  </div>
+			<?php endif; ?>
 			<div class="order-payment">
 								<div class="payment-method" style="background-image: url('/assets/img/banner/blue.jpg'); background-size: cover; background-attachment: inherit;">
 									<div class="payment-method-header">
@@ -49,14 +64,8 @@
 										</div>
 									</div>
 
-<?php
-    $offres=DB::table('offres')
-   		 ->select('offres.*')
-   		 ->get();
-?>
-
-									<div class="check-out-form">
-										<form action="<?php echo e(url('/demandes')); ?>" method="post" enctype="multipart/form-data">
+						<div class="check-out-form">
+										<form action="<?php echo e(url('demandes')); ?>" method="post" enctype="multipart/form-data">
           									<?php echo e(csrf_field()); ?>
 
 	
@@ -70,9 +79,15 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="IDoffre" value="<?php echo e(old('IDoffre')); ?>" required>
 													<option value="">---------Sélectionnez une offre---------</option>
-													 <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-									                 <option value="<?php echo $f->id ?>"> <?php echo $f->titre ?> ( <?php echo $f->durée ?>) </option>
-									                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+													 <?php if(count($offres) == 1): ?>
+														 <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+										                <option value="<?php echo e($f->id); ?>" selected> <?php echo e($f->titre); ?> (<?php echo e($f->durée); ?>) </option>
+										                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+									                 <?php else: ?>
+														 <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+										                 <option value="<?php echo e($f->id); ?>"> <?php echo e($f->titre); ?> (<?php echo e($f->durée); ?>) </option>
+										                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+									                 <?php endif; ?>
 												</select>
 											</div>
 											<div class="payment-info">
@@ -96,17 +111,6 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"  name="prenom" placeholder="Entrer votre prénom" value="<?php echo e(old('prenom')); ?>" required>
-											</div>
-											<div class="payment-info">
-												<label class=" control-label">Numero de Téléphone*:</label>
-												<input type="text" class="form-control <?php $__errorArgs = ['num'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" name="num" placeholder="Entrer votre numero de téléphone" value="<?php echo e(old('num')); ?>" required>
 											</div>
 											<div class="payment-info">
 												<label class=" control-label">Email* :</label>

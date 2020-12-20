@@ -683,7 +683,7 @@
 										<span>3500 DA</span>
 									</div>
 									<div class="course-details-btn">
-										<a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+										<a href="{{url('/demandes/create/0')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
 									</div>
 									<div class="blakish-overlay"></div>
 								</div>
@@ -714,7 +714,7 @@
 										<span>5000 DA</span>
 									</div>
 									<div class="course-details-btn">
-										<a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+										<a href="{{url('/demandes/create/0')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
 									</div>
 									<div class="blakish-overlay"></div>
 								</div>

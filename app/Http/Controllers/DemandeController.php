@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Demande;
-use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\DB;
 
 class DemandeController extends Controller
 {
@@ -16,7 +15,7 @@ class DemandeController extends Controller
      */
     public function index()
     {
-        //
+        //return view('');
     }
 
     /**
@@ -24,20 +23,25 @@ class DemandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
-    }
-     public function shortCut($offreID)
-    {
-        $x = DB::table('offres')
+        try {
+            if($id == 0)
+         $x = DB::table('offres')
             ->select('offres.*')
-            ->where('offres.id','=','$offreID')
-            ->first();
+            ->get();
+            else{
+             $x = DB::table('offres')
+            ->select('offres.*')
+            ->where('offres.id','=',$id)
+            ->get();
+            }
+        } catch (ModelNotFoundException $exception) {
+            return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+    
+        }
 
-        return view('inscription', ['offres' => $x]);
-  
-      
+        return view('inscription',['offres' => $x]);
     }
 
     /**
@@ -48,13 +52,12 @@ class DemandeController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-           $x = new Demande();
-            $x->IDoffre = $request->input('IDoffre');
+         try {
+              $x = new Demande();
+            $x->ID_offre = $request->input('IDoffre');
             $x->nom = $request->input('nom');
             $x->prenom = $request->input('prenom');
             $x->email = $request->input('email');
-            $x->num = $request->input('num');
             $x->pays = $request->input('pays');
             $x->ville = $request->input('ville');
             if($request->file('recuCCP')){
@@ -64,7 +67,12 @@ class DemandeController extends Controller
                $x->recuCCP = $request->file('recuCCP')->storeAs('receipts',$user);
             }
         $x->save();
-         return back()->with('success', "Demande d'incription ajoutée avec succés!");
+
+    }catch (ModelNotFoundException $exception) {
+        return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+    }
+     return back()->with('success', "Merci pour votre demande, votre inscription a été soumise avec succès! 
+        Vous recevrez un e-mail de votre compte d'accès une fois votre reçu CCP validé par l'administrateur");
     
     }
 
@@ -112,4 +120,6 @@ class DemandeController extends Controller
     {
         //
     }
+
+     
 }

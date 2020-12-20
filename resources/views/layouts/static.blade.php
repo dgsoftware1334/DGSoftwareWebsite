@@ -1,33 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Easy-ECG</title>
-
-    <!-- Mobile Specific Meta -->
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/video.min.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-    <link rel="stylesheet" href="assets/css/progess.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>Easy-ECG</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Mobile Specific Meta -->
+   
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/video.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/progess.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
-
-    <link rel="stylesheet"  href="assets/css/colors/switch.css">
-    <link href="assets/css/colors/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
-    <link href="assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
-    <link href="assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
-    <link href="assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
-    <link href="assets/css/colors/color-6.css" rel="alternate stylesheet" type="text/css" title="color-6">
-    <link href="assets/css/colors/color-7.css" rel="alternate stylesheet" type="text/css" title="color-7">
-    <link href="assets/css/colors/color-8.css" rel="alternate stylesheet" type="text/css" title="color-8">
-    <link href="assets/css/colors/color-9.css" rel="alternate stylesheet" type="text/css" title="color-9">
+    <link rel="stylesheet"  href="{{asset('assets/css/colors/switch.css')}}">
+    <link href="{{asset('assets/css/colors/color-2.css')}}" rel="alternate stylesheet" type="text/css" title="color-2">
+    <link href="{{asset('assets/css/colors/color-3.css')}}" rel="alternate stylesheet" type="text/css" title="color-3">
+    <link href="{{asset('assets/css/colors/color-4.css')}}" rel="alternate stylesheet" type="text/css" title="color-4">
+    <link href="{{asset('assets/css/colors/color-5.css')}}" rel="alternate stylesheet" type="text/css" title="color-5">
+    <link href="{{asset('assets/css/colors/color-6.css')}}" rel="alternate stylesheet" type="text/css" title="color-6">
+    <link href="{{asset('assets/css/colors/color-7.css')}}" rel="alternate stylesheet" type="text/css" title="color-7">
+    <link href="{{asset('assets/css/colors/color-8.css')}}" rel="alternate stylesheet" type="text/css" title="color-8">
+    <link href="{{asset('assets/css/colors/color-9.css')}}" rel="alternate stylesheet" type="text/css" title="color-9">
 
 </head>
 
@@ -63,7 +72,7 @@
                     <div class="container">
                         <div class="navbar-default">
                             <div class="navbar-header float-left">
-                                <a class="navbar-brand text-uppercase" href="#"><img src="assets/img/logo/E-ECG-LOGO-[Converted].png"  alt="logo"></a>
+                                <a class="navbar-brand text-uppercase" href="#"><img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}"  alt="logo"></a>
                             </div><!-- /.navbar-header -->
 
                         <!--    <div class="select-lang">
@@ -97,13 +106,16 @@
                                     </li>
                                 </ul>
                             </div>
+                @php
+                   $offres =  DB::table('offres')->select('offres.*')->get();
+                @endphp
                             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" role="dialog" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                   <div class="modal-header  backgroud-style">
                                     <div class="gradient-bg"></div>
                                         <div class="popup-logo">
-                                            <img src="assets/img/logo/E-ECG-LOGO-[Converted].png" alt="">
+                                            <img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}" alt="">
                                         </div>
                                          <div class="popup-text text-center">
                                             <h2 class="modal-title" id="staticBackdropLabel"> <span>Inscrivez-vous </span> dès maintenant !</h2>
@@ -114,73 +126,38 @@
                                   </div>
                                   <div class="modal-body">
                                    <div class="row">
+                                    @foreach($offres as $offre)
                                         <div class="col-md-5">
                                             <div class="best-course-pic-text relative-position">
                                                 <div class="best-course-pic relative-position">
-                                                    <img src="assets/img/banner/offer2.png" alt="">
+                                                    <img src="{{asset('assets/img/banner/offer1.png')}}" alt="">
                                                     <div class="trend-badge-2 text-center text-uppercase">
                                                         <i class="fas fa-bolt"></i>
-                                                        <span>6 mois</span>
+                                                        <span>{{$offre->durée}}</span>
                                                     </div>
                                                     <div class="course-price text-center gradient-bg">
-                                                        <span>3500 DA</span>
+                                                        <span>{{$offre->prix}} DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('/demande/1')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('demandes/create/'.$offre->id)}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
                                                 <div class="best-course-text">
                                                     <div class="course-title mb20 headline relative-position">
-                                                        <h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
-                                                          <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
-                                                            <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
-                                                          </ul>
+                                                       {{$offre->description}}
                                                         
                                                     </div>
                                                 
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-2"></div>
-                                        <div class="col-md-5">
-                                            <div class="best-course-pic-text relative-position">
-                                                <div class="best-course-pic relative-position">
-                                                    <img src="assets/img/banner/offer1.png" alt="">
-                                                    <div class="trend-badge-2 text-center text-uppercase">
-                                                        <i class="fas fa-bolt"></i>
-                                                        <span>12 mois</span>
-                                                    </div>
-                                                    <div class="course-price text-center gradient-bg">
-                                                        <span>5000 DA</span>
-                                                    </div>
-                                                    <div class="course-details-btn">
-                                                        <a href="{{url('/demande/2')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
-                                                    </div>
-                                                    <div class="blakish-overlay"></div>
-                                                </div>
-                                                <div class="best-course-text">
-                                                    <div class="course-title mb20 headline relative-position">
-                                                        <h3><a href="#">Accés pour une année !</a></h3>
-                                                          <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
-                                                            <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
-                                                          </ul>
-                                                        
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
+                                        @endforeach
                                         <!-- /course -->
                                     </div>
                                     <div class="register-form-area">
                                         <div class="nws-button text-center white text-capitalize">
-                                        <a href="{{url('/inscription')}}">
+                                        <a href="{{url('demandes/create/0')}}">
                                             <button  class="btn btn-Primary" type="button">Inscription</button>
                                         </a>
                                         </div>
@@ -205,7 +182,7 @@
                                             <div class="modal-header backgroud-style">
                                                 <div class="gradient-bg"></div>
                                                 <div class="popup-logo">
-                                                    <img src="assets/img/logo/E-ECG-LOGO-[Converted].png" alt="">
+                                                    <img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}" alt="">
                                                 </div>
                                                 <div class="popup-text text-center">
                                                 <h2> <span>Bienvenue!</span> Veuillez connectez à votre compte.</h2>
@@ -259,7 +236,7 @@
                                         <li><a href="{{ url('/') }}">Accueil</a></li>
                                         <li><a href="{{ url('/about') }}">À propos</a></li>
                                         <li><a href="{{  url('/cours') }}">Cours</a></li>
-                                        <li><a href="{{  url('/contact') }}">Contact</a></li>
+                                        <li><a href="{{  url('/contacts') }}">Contact</a></li>
                                         <!--<li class="menu-item-has-children ul-li-block">
                                             <a href="#!">Pages</a>
                                             <ul class="sub-menu">
@@ -278,14 +255,14 @@
                             </nav>
 
                             <div class="mobile-menu">
-                                <div class="logo"><a href="{{ url('/')}}"><img src="assets/img/logo/E-ECG-LOGO-[Converted].png" alt="Logo"></a></div>
+                                <div class="logo"><a href="{{ url('/')}}"><img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}" alt="Logo"></a></div>
                                 <nav>
                                     <ul>
                                         <li><a href="index-1.html">Accueil</a>
                                         </li>
                                         <li><a href="{{url('/about') }}">A propos</a></li>
                                         <li><a href="{{url('/cours')}}">Cours</a></li>
-                                        <li><a href="{{url('/contact')}}">Contact</a></li>
+                                        <li><a href="{{url('/contacts')}}">Contact</a></li>
                                       
                                     </ul>
                                 </nav>
@@ -315,8 +292,10 @@
                                     <h2 class="widget-title">Abonnez-vous à la newsletter</h2>
 
                                     <div class="subs-form relative-position">
-                                        <form action="#" method="post">
-                                            <input class="course" name="course" type="email" placeholder="Adresse mail .">
+                                        <form action="{{url('newsletter/store')}}" method="post">
+                                            {{ csrf_field()}}
+    
+                                            <input type="email" class="course" name="email" placeholder="Adresse mail .">
                                             <div class="nws-button text-center  gradient-bg text-uppercase">
                                                 <button type="submit" value="Submit">Abonner</button>
                                             </div>
@@ -333,7 +312,7 @@
                             <div class="col-md-5">
                                 <div class="footer-widget">
                                     <div class="footer-logo mb35">
-                                        <img src="assets/img/logo/E-ECG-LOGO-[Converted].png" alt="">
+                                        <img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}" alt="">
                                     </div>
                                     <div class="footer-about-text">
                                         <p>E-ECG prend au sérieux la mission d'accroître les connaissances dans le domaine de la médecine et de fournir une éducation de qualité, en connectons les apprenants aux meilleures offres du marché et à une formation variée.</p>
@@ -369,12 +348,12 @@
                                     <div class="footer-menu ul-li-block">
                                         <h2 class="widget-title">Liens utiles</h2>
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-caret-right"></i>Offres</a></li>
+                                            <li><a  data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-caret-right"></i>Offres</a></li>
                                             <li><a href="{{url('/cours')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
-                                            <li><a href="{{url('/contact')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
+                                            <li><a href="{{url('/contacts')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="{{url('/about')}}"><i class="fas fa-caret-right"></i>A propos</a></li>
-                                            <li><a href="#"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
-                                            <li><a href="#"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
+                                            <li><a href="{{url('demandes/create/0')}}"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
+                                            <li><a  data-toggle="modal" data-target="#myModal"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -465,23 +444,23 @@
 
 
         <!-- For Js Library -->
-        <script src="assets/js/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/jarallax.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/lightbox.js"></script>
-        <script src="assets/js/jquery.meanmenu.js"></script>
-        <script src="assets/js/scrollreveal.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/jquery-ui.js"></script>
-        <script src="assets/js/gmap3.min.js"></script>
-        <script src="assets/js/switch.js"></script>
+        <script src="{{asset('assets/js/jquery-2.1.4.min.js')}}"></script>
+        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('assets/js/popper.min.js')}}"></script>
+        <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('assets/js/jarallax.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{asset('assets/js/lightbox.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.meanmenu.js')}}"></script>
+        <script src="{{asset('assets/js/scrollreveal.min.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+        <script src="{{asset('assets/js/waypoints.min.js')}}"></script>
+        <script src="{{asset('assets/js/jquery-ui.js')}}"></script>
+        <script src="{{asset('assets/js/gmap3.min.js')}}"></script>
+        <script src="{{asset('assets/js/switch.js')}}"></script>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
 
-        <script src="assets/js/script.js"></script>
+        <script src="{{asset('assets/js/script.js')}}"></script>
     </body>
     </html>
 
