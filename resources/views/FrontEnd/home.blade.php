@@ -1,7 +1,8 @@
 @extends('FrontEnd.master')
 
 @section('catchPhrase')
-<h1 class="white typed">Be Modern To Be Happy</h1>
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
+<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
 @endsection
 
 
@@ -109,14 +110,14 @@
                 @foreach ($services as $s)
 
                 <div class="col-md-4">
-				    <div class="intro-table intro-table-hover" style=" background-image: url('../img/{{$s->lienMedia}}');">
-                    <h5 class="white heading">{{$s->titre}}</h5>
-                        <p class="white heading hide-hover">{{$s->description}}</p>
+				    <div class="intro-table intro-table-hover" style=" background-image: url('../storage/public/img/Services/{{$s->photo}}');">
+                    <h5 class="black heading" style="background-color: #9c1210 ; color: white;">{{$s->titre}}</h5>
+                        <p class="black heading hide-hover"></p>
 
 						<div class="owl-testimonials bottom">
 							<div class="item">
-								<h4 class="white heading content"><a href="#" class="btn btn-white-fill expand">Commander</a></h4>
-								<h3 class="white heading light author">
+								<h4 class="black heading content"><a href="{{ url('/categories/'.$s->id)}}" class="btn btn-primary expand">Voir plus</a></h4>
+								<h3 class="black heading light author">
                                     @if($s->prix != 0)
                                     {{$s->prix}} DA
                                     @endif
@@ -130,31 +131,46 @@
                 @endforeach
 			</div>
         </div>
-        <section class="section section-padded blue-bg">
+        <section class="section section-padded black-bg" style="background-color: #AFEEEE;">
+
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="owl-twitter owl-carousel">
-                    	<div class="item text-center">
-                            <h2 class="white">Notre Travails.</h2>
-							<h4 class="light muted ">Obtenez les meilleurs résultats et choisissez parmi une variété de produits fabriqués avec dévouement et perfection!</h4>
-				            <br><img src="img/CartesVisites/C2.jpg" alt="">
-                            </div>
-						<div class="item text-center">
-                            <h2  class="white">Notre Travails.</h2>
-							<h4 class="light muted">Obtenez les meilleurs résultats et choisissez parmi une variété de produits fabriqués avec dévouement et perfection!</h4>
-				            <br><img src="img/CartesVisites/C3.jpg" alt="">
-							</div>
-						<div class="item text-center">
-                            <h2 class="white">Notre Travails.</h2>
-							<h4 class="light muted">Obtenez les meilleurs résultats et choisissez parmi une variété de produits fabriqués avec dévouement et perfection!</h4>
-				            <br><img src="img/CartesVisites/C6.jpg" alt="">
-						</div>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</section>s
+  <h2></h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators" style="height: 50px;">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/CartesVisites/C2.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/CartesVisites/C3.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/CartesVisites/C6.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="fa fa-chevron-left" style="padding-top: 350px;"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="fa fa-chevron-right" style="padding-top: 350px;"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+	</section>
     </section>
             <!-- <div class="owl-carousel owl-theme owl-wrapper">
                      <div class="item" data-merge="1"><h2><img src="img/CartesVisites/C4.jpg" alt=""></h2></div>
@@ -312,11 +328,13 @@
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">Sign Up</h3>
+				<h3 class="white">Se connecter</h3>
 				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="Full Name">
-					<input type="text" class="form-control form-white" placeholder="Email Address">
-					<div class="dropdown">
+					<!--input type="text" class="form-control form-white" placeholder="Full Name"-->
+					<input type="text" class="form-control form-white" placeholder="Email/Username" required>
+					<input type="password" class="form-control form-white" placeholder="Mot de passe" required>
+
+					<!--div class="dropdown">
 						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Pricing Plan
 						</button>
@@ -326,18 +344,17 @@
 							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
 							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
 						</ul>
-					</div>
-					<div class="checkbox-holder text-left">
+					</div-->
+					<!--div class="checkbox-holder text-left">
 						<div class="checkbox">
 							<input type="checkbox" value="None" id="squaredOne" name="check" />
 							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
 						</div>
-					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
+					</div-->
+					<button type="submit" class="btn btn-submit">Connexion</button>
 				</form>
 			</div>
 		</div>
 	</div>
 
 @endsection
-
