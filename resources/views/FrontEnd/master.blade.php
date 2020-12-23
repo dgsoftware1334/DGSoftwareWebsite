@@ -38,8 +38,7 @@
 	<style type="text/css">
 		.boutton:hover{
 			background-color: #5d76b6;
-			height: 50px;
-			width: 100px;
+			
 			border-radius: 5px 5px 5px 5px;
 			
 		}
@@ -65,13 +64,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70" ></a>
+				<a class="navbar-brand" href="{{url('/home')}}"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70" ></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="{{url('/')}}" class="boutton">Accueil</a></li>
-					<li><a href="{{url('/services')}}" class="boutton" >Services</a></li>
+					<li><a href="{{url('/home')}}" class="boutton">Accueil</a></li>
+					<li><a href="{{url('/service')}}" class="boutton" >Services</a></li>
                 <li><a href="{{url('/aboutUs')}}" class="boutton">About</a></li>
                 <li><a href="{{url('/contact')}}" class="boutton" >Contact</a></li>
 					<li><a href="{{url('/login')}}"   style="background-color: #345da7;">Connexion</a></li>
@@ -81,21 +80,7 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	<header id="intro">
-		<div class="container" id="up">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<center><div  style="font-weight: bold; height:200px; width:170px;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);border-radius: 5px;"><img src="{{ asset('img/logoo.png') }}" height="200px" width="180px" style="background-color: white;background-size: 80% 80%;"></div></center>
-							@yield('catchPhrase')
-							<span class="typed-cursor">|</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </header>
+	@yield('catchPhrase')
 
 	@yield('dynamique')
 

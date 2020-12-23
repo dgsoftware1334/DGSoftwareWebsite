@@ -1,19 +1,21 @@
 @extends('FrontEnd.master')
 
-@section('catchPhrase')
-<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
-<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
-@endsection
+
 
 
 @section('dynamique')
 
 <style type="text/css">
-	.container{
-		margin: 40px 40px 40px 40px;
+	.caard{
+		margin-top: 200px;
+		margin-bottom: 200px;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+		padding-top: 30px;
+       padding-bottom: 20px;
 	}
 	.column{
 		margin: 3px 3px 3px 3px;
+		padding: 10px;
 		width: 570px;
 		height: 500px;
 
@@ -25,9 +27,9 @@
 
 <section>
 
-<div class="container">
+<div class="container caard">
 	
-
+<h2 style="text-align: center;">{{$service->titre}}</h2>
     <div class="row">
 	@foreach($galeries as $g)
 	
@@ -35,8 +37,8 @@
     <div class="card" style="background-color:  rgba(255, 255, 255, .4); ">
       <div class="card-body">
         <h3 class="card-title" style="text-align: center;padding-top: 5px; color: #9c1210;">{{$g->titre}}</h3>
-        <p class="card-text" style="text-align: justify-all;color: black; font-size: 30px;">{{$g->description}}</p>
-        <a href="{{url('/show/categorie/'.$g->id)}}" class="btn btn-primary" style="background-color:#345da7;text-align: center;">Voir</a>
+        <p class="card-text" style="text-align: justify-all;color: black; font-size: 20px;">{{$g->description}}</p>
+        <center><a href="{{url('/show/categorie/'.$g->id)}}" class="btn btn-primary" style="background-color:#345da7;text-align: center;">Voir</a></center>
       </div>
     </div>
   </div>

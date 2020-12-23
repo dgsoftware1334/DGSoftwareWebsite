@@ -1,66 +1,101 @@
 @extends('FrontEnd.master')
 
-@section('catchPhrase')
-            <h1 class="white typed">About Us</h1>
-@endsection
+
+
 @section('dynamique')
 
+<style type="text/css">
+  .caard{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .column{
+    margin: 3px 3px 3px 3px;
+    width: 570px;
+    height: 500px;
 
+  }
+   .card{
+       text-align: justify-all;
+   }
+   .gal{
+    margin-top: 1px;
+   }
+</style>
 
-    <div class="container" style="margin-top: 20px; margin-bottom: 30px;">
+    <div class="container caard">
+
+      <h2 style="text-align: center;">{{$galerie->titre}}</h2>
   <div class="row mt">
   
     <div class="container">
       <div class="row">
     @foreach($liens as $l)
    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc gal" >
-     <a href="#" data-toggle="modal" data-target="#Mymodel-<?php echo $l->id;  ?>" title="Modifier"> <img src="{{asset('/storage/public/img/Galerie/'.$l->nom)}}" height="300px" width="" /></a>
+     <a class="btn btn-primary btn-ms" data-toggle="modal" data-target="#Mymodel-<?php echo $l->id;  ?>" ><img src="{{asset('/storage/public/img/Galerie/'.$l->nom)}}" height="300px" width="300px" /></a> 
      
       
     </div>
-    @endforeach
-                          
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                              <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary"> {{ $liens->links() }}</button>
-                                </div>
-                              </div>
 
-</div>
-</div>
-  
- 
+    @endforeach
+                                 
+ </div>
+
+  </div>
+
+                      <div class="container">
+                         <div class="row">
+                            <div class="col-sm-4 ">
+                                      <div class="btn-group">
+                                        {{ $liens->links() }}
+                                      </div>
+                                  </div>                    
+                            
+                          </div>
+                          </div>
+    </div>
+ </div>
 
    <!--   SHOW   IMAGE-->
+ @foreach($liens as $l)
 
-<div class="container">
                   <!-- Modal -->
-  <div class="modal fade" id="Mymodel-<?php echo $lien->id; ?>" role="dialog">
+  <div class="modal fade" id="Mymodel-<?php echo $l->id; ?>" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modifier employé</h4>
+          <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
+          <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
           
-                     
+          
+
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                   <center><img src="{{asset('/storage/public/img/Galerie/'.$l->nom)}}" height="500px" width="500px" /></center> 
+                                  </div>
+                                </div>
+
+             
         
           
-        </div>
+      </div>
         
       </div>
-    
+      
       
     </div>
   </div>
 
-</div>
 
- </div>
-</div>
+@endforeach
+
 
 
 

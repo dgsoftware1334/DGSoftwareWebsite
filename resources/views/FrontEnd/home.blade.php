@@ -1,8 +1,24 @@
+
 @extends('FrontEnd.master')
 
 @section('catchPhrase')
 <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
-<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
+<header id="intro">
+		<div class="container" id="up">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<center><div  style="font-weight: bold; height:200px; width:170px;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);border-radius: 5px;"><img src="{{ asset('img/logoo.png') }}" height="200px" width="180px" style="background-color: white;background-size: 80% 80%;"></div></center>
+							<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
+							
+							<span class="typed-cursor">|</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </header>
 @endsection
 
 

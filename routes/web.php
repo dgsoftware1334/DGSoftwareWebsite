@@ -38,7 +38,7 @@ Route::get('/contact', function () {
     return view('FrontEnd.contact');
 });
 
-Route::get('/services', function () {
+Route::get('/service', function () {
     return view('FrontEnd.services');
 });
 
@@ -86,6 +86,7 @@ Route::delete('/delete/photo/{id}/{id1}',[GalerieController::class, 'DestroyLien
 Route::get('/home',[HomeController::class, 'homepage']);
 Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
 Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
+
 
 
 
