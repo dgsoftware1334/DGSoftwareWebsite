@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Demande;
+use App\Models\Offre;
 
 class OffreController extends Controller
 {
@@ -16,9 +17,7 @@ class OffreController extends Controller
     {
         try {
 
-         $x = DB::table('offres')
-            ->select('offres.*')
-            ->get();
+         $x = Offre::get();
             
         } catch (ModelNotFoundException $exception) {
             return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();

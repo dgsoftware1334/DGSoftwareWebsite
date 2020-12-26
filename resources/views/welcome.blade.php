@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Easy-ECG</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -137,7 +137,7 @@
                                                         <span>3500 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('demandes/offre/1')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
@@ -168,7 +168,7 @@
                                                         <span>5000 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('demandes/offre/2')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
@@ -191,7 +191,7 @@
                                     </div>
                                     <div class="register-form-area">
                                         <div class="nws-button text-center white text-capitalize">
-                                        <a href="{{url('demandes/create')}}">
+                                        <a href="{{url('/inscription')}}">
                                             <button  class="btn btn-Primary" type="button">Inscription</button>
                                         </a>
                                         </div>
@@ -250,13 +250,13 @@
                                                         <button type="submit" value="Submit">Entrer</button>
                                                     </div>
                                                     <div class="log-in-footer" align="right">
+                                                  @if (Route::has('password.request'))
                                                         <a style=" font-size: 0.875rem; text-decoration: underline; color: grey;" href="{{ route('password.request') }}"> 
                                                         Mot de passe oublié?
                                                        </a>
-                                                    </div>
-                                                 @if (Route::has('password.request'))
-                                                      
                                                     @endif
+                                                    </div>
+                                                
                                                 </form>
                                             </div>
                                         </div>
@@ -267,15 +267,7 @@
                             <nav class="navbar-menu float-right">
                                 <div class="nav-menu ul-li">
                                     <ul >
-                                        <li class="menu-item-has-children ul-li-block">
-                                            <a href="#">Accueil</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index-1.html">Dashboard 1</a></li>
-                                                <li><a href="index-2.html">Dashboard 2</a></li>
-                                                <li><a href="index-3.html">Dashboard 3</a></li>
-                                                <li><a href="index-4.html">Dashboard 4</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="{{ url('/') }}">Accueil</a></li>
                                         <li><a href="{{ url('/about') }}">A propos</a></li>
                                         <li><a href="{{ url('/cours')}}">Cours</a></li>
                                         <li><a href="{{ url('/contacts')}}">Contact</a></li>
@@ -285,31 +277,14 @@
                             </nav>
 
                             <div class="mobile-menu">
-                                <div class="logo"><a href="index-1.html"><img src="assets/img/logo/logo.png" alt="Logo"></a></div>
+                                <div class="logo"><a href="{{url('/')}}"><img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}" alt="Logo"></a></div>
                                 <nav>
                                     <ul>
-                                        <li><a href="index-1.html">Dashboard</a>
-                                        </li>
-                                        <li><a href="{{url('/about') }}">About</a></li>
-                                        <li><a href="blog.html">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-single.html">Blog sinlge</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="shop.html">Shop</a>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="course.html">Course</a></li>
-                                                <li><a href="course-details.html">course sinlge</a></li>
-                                                <li><a href="teacher.html">teacher</a></li>
-                                                <li><a href="teacher-details.html">teacher details</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="check-out.html">Check Out</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="{{ url('/') }}">Accueil</a></li>
+                                        <li><a href="{{ url('/about') }}">A propos</a></li>
+                                        <li><a href="{{ url('/cours')}}">Cours</a></li>
+                                        <li><a href="{{ url('/contacts')}}">Contact</a></li>
+                                        
                                     </ul>
                                 </nav>
 
@@ -390,17 +365,14 @@
                                         <span class="number"></span>
                                         <span class>Days</span>
                                     </li>
-
                                     <li class="hours">
                                         <span class="number"></span>
                                         <span class>Hours</span>
                                     </li>
-
                                     <li class="minutes">
                                         <span class="number"></span>
                                         <span class>Minutes</span>
                                     </li>
-
                                     <li class="seconds">
                                         <span class="number"></span>
                                         <span class>Seconds</span>
@@ -1483,7 +1455,6 @@
                         <span class="subtitle text-uppercase">OUR PROFESSIONAL</span>
                         <h2>Genius Courses <span>Teachers.</span></h2>
                     </div>
-
                     <div class="teacher-list">
                         <div class="row justify-content-center">
                             <div class="col-md-3">
@@ -1689,7 +1660,6 @@
                             </div>
                          /teacher
                         </div>
-
                         <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font "  >
                             <a href="#">All teacher <i class="fas fa-caret-right"></i></a>
                         </div>
@@ -1730,7 +1700,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="product-img-text "  >
                         <div class="product-img text-center mb20">
                             <img src="assets/img/product/bp-2.png" alt="">
@@ -2054,7 +2023,6 @@
                             </div>
                         </div>
                         /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2066,7 +2034,6 @@
                             </div>
                         </div>
                          /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2078,7 +2045,6 @@
                             </div>
                         </div>
                          /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2090,7 +2056,6 @@
                             </div>
                         </div>
                          /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2102,7 +2067,6 @@
                             </div>
                         </div>
                         /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2114,7 +2078,6 @@
                             </div>
                         </div>
                         /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2126,7 +2089,6 @@
                             </div>
                         </div>
                          /category
-
                         <div class="col-md-3">
                             <div class="category-icon-title text-center "  >
                                 <div class="category-icon">
@@ -2309,8 +2271,8 @@
                                             <li><a href="{{url('/cours')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
                                             <li><a href="{{url('/contacts')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="{{url('/about')}}"><i class="fas fa-caret-right"></i>A propos</a></li>
-                                            <li><a href="#"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
-                                            <li><a href="#"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
+                                            <li><a href="{{url('/inscription')}}"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
+                                            <li><a href="{{url('login')}}"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -2367,7 +2329,6 @@
                                                 <div class="pop-up-icon">
                                                     <a href="assets/img/gallery/g-6.jpg" data-lightbox="roadtrip">  <i class="fas fa-search"></i></a>
                                                 </div>
-
                                             </li>
                                         </ul>
                                     </div>

@@ -11,9 +11,8 @@ class Demande extends Model
 
 
     protected $table = 'demandes';
-    protected $model = Demande::class;
 
     protected $fillable = ['nom', 'prenom', 'email', 'num', 'pays', 'ville', 'recuCCP','etat'];
     protected $dates = ['created_at', 'updated_at','deleted_at'];
-    protected $files = ['recuCCP',];
+    protected $files = ['recuCCP'];
 }

@@ -79,16 +79,9 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="IDoffre" value="<?php echo e(old('IDoffre')); ?>" required>
 													<option value="">---------Sélectionnez une offre---------</option>
-													 <?php if(count($offres) == 1): ?>
-														 <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-										                <option value="<?php echo e($f->id); ?>" selected> <?php echo e($f->titre); ?> (<?php echo e($f->durée); ?>) </option>
-										                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-									                 <?php else: ?>
-														 <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-										                 <option value="<?php echo e($f->id); ?>"> <?php echo e($f->titre); ?> (<?php echo e($f->durée); ?>) </option>
-										                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-									                 <?php endif; ?>
-												</select>
+												    <option value='1'> Offre 1 (6 mois) </option>
+										            <option value='2'> Offre 2 (12 mois)</option>
+										        </select>
 											</div>
 											<div class="payment-info">
 												<label class=" control-label">Nom*:</label>
@@ -121,7 +114,12 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>"  name="email" placeholder="Entrer votre adresse mail" value="<?php echo e(old('email')); ?>" required>
+unset($__errorArgs, $__bag); ?>"  name="email" placeholder="Entrer votre adresse mail" value="<?php echo e(old('email')); ?>" required unique>
+												 <?php if($errors->has('email')): ?>
+								                    <span class="invalid-feedback" style="display: block;" role="alert">
+								                    <strong><?php echo e($errors->first('email')); ?></strong>
+								                    </span>
+								                <?php endif; ?>
 											</div>
 											<div class="payment-info input-2">
 												<label class=" control-label">Emplacement :</label>
@@ -152,6 +150,11 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="recuCCP"  value="<?php echo e(old('recuCCP')); ?>" placeholder="Veuillez envoyer une image de votre recu de payment CCP" required/>
+												 <?php if($errors->has('recuCCP')): ?>
+								                    <span class="invalid-feedback" style="display: block;" role="alert">
+								                    <strong><?php echo e($errors->first('recuCCP')); ?></strong>
+								                    </span>
+								                <?php endif; ?>
 											</div>
 											<div >
 	                                    		<button type="submit" value="Submit" class="genius-btn mt25 gradient-bg text-center text-uppercase  bold-font" style=" font-weight: 700; color: #fff;">

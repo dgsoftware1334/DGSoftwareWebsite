@@ -71,16 +71,9 @@
 											<div class="payment-info input-2">
 												<select class="form-control @error('IDoffre') is-invalid @enderror" name="IDoffre" value="{{old('IDoffre')}}" required>
 													<option value="">---------Sélectionnez une offre---------</option>
-													 @if(count($offres) == 1)
-														 @foreach($offres as $f)
-										                <option value="{{$f->id}}" selected> {{$f->titre}} ({{$f->durée}}) </option>
-										                @endforeach
-									                 @else
-														 @foreach($offres as $f)
-										                 <option value="{{$f->id}}"> {{$f->titre}} ({{$f->durée}}) </option>
-										                 @endforeach
-									                 @endif
-												</select>
+												    <option value='1'> Offre 1 (6 mois) </option>
+										            <option value='2'> Offre 2 (12 mois)</option>
+										        </select>
 											</div>
 											<div class="payment-info">
 												<label class=" control-label">Nom*:</label>
@@ -92,7 +85,12 @@
 											</div>
 											<div class="payment-info">
 												<label class=" control-label">Email* :</label>
-												<input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" placeholder="Entrer votre adresse mail" value="{{old('email')}}" required>
+												<input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" placeholder="Entrer votre adresse mail" value="{{old('email')}}" required unique>
+												 @if ($errors->has('email'))
+								                    <span class="invalid-feedback" style="display: block;" role="alert">
+								                    <strong>{{ $errors->first('email') }}</strong>
+								                    </span>
+								                @endif
 											</div>
 											<div class="payment-info input-2">
 												<label class=" control-label">Emplacement :</label>
@@ -102,6 +100,11 @@
 											<div class="payment-info">
 												<label class="control-label">Payment* :</label>
 												 <input type="file" accept=".png,.jpg,.jpeg," data-default-file="{{old('recuCCP')}}" class="form-group  @error('recuCCP') is-invalid @enderror" name="recuCCP"  value="{{old('recuCCP')}}" placeholder="Veuillez envoyer une image de votre recu de payment CCP" required/>
+												 @if ($errors->has('recuCCP'))
+								                    <span class="invalid-feedback" style="display: block;" role="alert">
+								                    <strong>{{ $errors->first('recuCCP') }}</strong>
+								                    </span>
+								                @endif
 											</div>
 											<div >
 	                                    		<button type="submit" value="Submit" class="genius-btn mt25 gradient-bg text-center text-uppercase  bold-font" style=" font-weight: 700; color: #fff;">

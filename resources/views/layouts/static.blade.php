@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Easy-ECG</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -72,7 +72,7 @@
                     <div class="container">
                         <div class="navbar-default">
                             <div class="navbar-header float-left">
-                                <a class="navbar-brand text-uppercase" href="#"><img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}"  alt="logo"></a>
+                                <a class="navbar-brand text-uppercase" href="{{url('/')}}"><img src="{{asset('assets/img/logo/E-ECG-LOGO-[Converted].png')}}"  alt="logo"></a>
                             </div><!-- /.navbar-header -->
 
                         <!--    <div class="select-lang">
@@ -106,9 +106,6 @@
                                     </li>
                                 </ul>
                             </div>
-                @php
-                   $offres =  DB::table('offres')->select('offres.*')->get();
-                @endphp
                             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" role="dialog" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -126,38 +123,71 @@
                                   </div>
                                   <div class="modal-body">
                                    <div class="row">
-                                    @foreach($offres as $offre)
                                         <div class="col-md-5">
                                             <div class="best-course-pic-text relative-position">
                                                 <div class="best-course-pic relative-position">
                                                     <img src="{{asset('assets/img/banner/offer1.png')}}" alt="">
                                                     <div class="trend-badge-2 text-center text-uppercase">
                                                         <i class="fas fa-bolt"></i>
-                                                        <span>{{$offre->durée}}</span>
+                                                        <span>6 mois</span>
                                                     </div>
                                                     <div class="course-price text-center gradient-bg">
-                                                        <span>{{$offre->prix}} DA</span>
+                                                        <span>3500 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="{{url('demandes/create/'.$offre->id)}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
                                                 <div class="best-course-text">
                                                     <div class="course-title mb20 headline relative-position">
-                                                       {{$offre->description}}
+                                                    <h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
+                                                      <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
+                                                        <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                        <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
+                                                      </ul>
+                                                    
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5">
+                                            <div class="best-course-pic-text relative-position">
+                                                <div class="best-course-pic relative-position">
+                                                    <img src="{{asset('assets/img/banner/offer1.png')}}" alt="">
+                                                    <div class="trend-badge-2 text-center text-uppercase">
+                                                        <i class="fas fa-bolt"></i>
+                                                        <span>12 mois</span>
+                                                    </div>
+                                                    <div class="course-price text-center gradient-bg">
+                                                        <span>5000 DA</span>
+                                                    </div>
+                                                    <div class="course-details-btn">
+                                                        <a href="{{url('/inscription')}}">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+                                                    <div class="blakish-overlay"></div>
+                                                </div>
+                                                <div class="best-course-text">
+                                                    <div class="course-title mb20 headline relative-position">
+                                                        <h3><a href="#">Accés pour une année !</a></h3>
+                                                          <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
+                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
+                                                          </ul>
                                                         
                                                     </div>
                                                 
                                                 </div>
                                             </div>
                                         </div>
-                                        @endforeach
                                         <!-- /course -->
                                     </div>
                                     <div class="register-form-area">
                                         <div class="nws-button text-center white text-capitalize">
-                                        <a href="{{url('demandes/create/0')}}">
+                                        <a href="{{url('/inscription')}}">
                                             <button  class="btn btn-Primary" type="button">Inscription</button>
                                         </a>
                                         </div>
@@ -216,13 +246,13 @@
                                                         <button type="submit" value="Submit">Entrer</button>
                                                     </div>
                                                     <div class="log-in-footer" align="right">
+                                                      @if (Route::has('password.request'))
                                                         <a style=" font-size: 0.875rem; text-decoration: underline; color: grey;" href="{{ route('password.request') }}"> 
                                                         Mot de passe oublié?
                                                        </a>
-                                                    </div>
-                                                 @if (Route::has('password.request'))
-                                                      
                                                     @endif
+                                                    </div>
+                                                 
                                                 </form>
                                             </div>
                                         </div>
@@ -352,8 +382,8 @@
                                             <li><a href="{{url('/cours')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
                                             <li><a href="{{url('/contacts')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="{{url('/about')}}"><i class="fas fa-caret-right"></i>A propos</a></li>
-                                            <li><a href="{{url('demandes/create/0')}}"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
-                                            <li><a  data-toggle="modal" data-target="#myModal"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
+                                            <li><a href="{{url('/inscription')}}"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
+                                            <li><a href="{{url('login')}}"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
                                         </ul>
                                     </div>
                                 </div>

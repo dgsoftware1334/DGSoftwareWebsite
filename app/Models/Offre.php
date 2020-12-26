@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Offre extends Model
+{
+    use HasFactory;
+     protected $table = 'offres';
+     protected $fillable = ['titre', 'durée', 'prix', 'description'];
+     protected $dates = ['created_at', 'updated_at','deleted_at'];
+ 
+}

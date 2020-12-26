@@ -16,6 +16,19 @@ class CoursController extends Controller
     {
         try {
             $x = Cours::all()->where('payant','=','false');
+
+        } catch (Exception $e) {
+          return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+    
+        }
+        return view('cours', ['cours' => $x]);
+    }
+
+    public function freeCourses()
+    {
+        try {
+            $x = Cours::all()->where('payant','=','false');
+            
         } catch (Exception $e) {
           return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
     

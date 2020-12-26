@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Easy-ECG</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('assets/images/apple-touch-icon.png')); ?>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/images/favicon-32x32.png')); ?>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/images/favicon-32x32.png')); ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('assets/img/apple-touch-icon.png')); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/img/favicon-32x32.png')); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/img/favicon-32x32.png')); ?>">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -72,7 +72,7 @@
                     <div class="container">
                         <div class="navbar-default">
                             <div class="navbar-header float-left">
-                                <a class="navbar-brand text-uppercase" href="#"><img src="<?php echo e(asset('assets/img/logo/E-ECG-LOGO-[Converted].png')); ?>"  alt="logo"></a>
+                                <a class="navbar-brand text-uppercase" href="<?php echo e(url('/')); ?>"><img src="<?php echo e(asset('assets/img/logo/E-ECG-LOGO-[Converted].png')); ?>"  alt="logo"></a>
                             </div><!-- /.navbar-header -->
 
                         <!--    <div class="select-lang">
@@ -106,9 +106,6 @@
                                     </li>
                                 </ul>
                             </div>
-                <?php
-                   $offres =  DB::table('offres')->select('offres.*')->get();
-                ?>
                             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" role="dialog" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -126,39 +123,71 @@
                                   </div>
                                   <div class="modal-body">
                                    <div class="row">
-                                    <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $offre): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <div class="col-md-5">
                                             <div class="best-course-pic-text relative-position">
                                                 <div class="best-course-pic relative-position">
                                                     <img src="<?php echo e(asset('assets/img/banner/offer1.png')); ?>" alt="">
                                                     <div class="trend-badge-2 text-center text-uppercase">
                                                         <i class="fas fa-bolt"></i>
-                                                        <span><?php echo e($offre->durée); ?></span>
+                                                        <span>6 mois</span>
                                                     </div>
                                                     <div class="course-price text-center gradient-bg">
-                                                        <span><?php echo e($offre->prix); ?> DA</span>
+                                                        <span>3500 DA</span>
                                                     </div>
                                                     <div class="course-details-btn">
-                                                        <a href="<?php echo e(url('demandes/create/'.$offre->id)); ?>">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                        <a href="<?php echo e(url('/inscription')); ?>">S'inscrir<i class="fas fa-arrow-right"></i></a>
                                                     </div>
                                                     <div class="blakish-overlay"></div>
                                                 </div>
                                                 <div class="best-course-text">
                                                     <div class="course-title mb20 headline relative-position">
-                                                       <?php echo e($offre->description); ?>
-
+                                                    <h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
+                                                      <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
+                                                        <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                        <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
+                                                      </ul>
+                                                    
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5">
+                                            <div class="best-course-pic-text relative-position">
+                                                <div class="best-course-pic relative-position">
+                                                    <img src="<?php echo e(asset('assets/img/banner/offer1.png')); ?>" alt="">
+                                                    <div class="trend-badge-2 text-center text-uppercase">
+                                                        <i class="fas fa-bolt"></i>
+                                                        <span>12 mois</span>
+                                                    </div>
+                                                    <div class="course-price text-center gradient-bg">
+                                                        <span>5000 DA</span>
+                                                    </div>
+                                                    <div class="course-details-btn">
+                                                        <a href="<?php echo e(url('/inscription')); ?>">S'inscrir<i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+                                                    <div class="blakish-overlay"></div>
+                                                </div>
+                                                <div class="best-course-text">
+                                                    <div class="course-title mb20 headline relative-position">
+                                                        <h3><a href="#">Accés pour une année !</a></h3>
+                                                          <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
+                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
+                                                          </ul>
                                                         
                                                     </div>
                                                 
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         <!-- /course -->
                                     </div>
                                     <div class="register-form-area">
                                         <div class="nws-button text-center white text-capitalize">
-                                        <a href="<?php echo e(url('demandes/create/0')); ?>">
+                                        <a href="<?php echo e(url('/inscription')); ?>">
                                             <button  class="btn btn-Primary" type="button">Inscription</button>
                                         </a>
                                         </div>
@@ -240,13 +269,13 @@
                                                         <button type="submit" value="Submit">Entrer</button>
                                                     </div>
                                                     <div class="log-in-footer" align="right">
+                                                      <?php if(Route::has('password.request')): ?>
                                                         <a style=" font-size: 0.875rem; text-decoration: underline; color: grey;" href="<?php echo e(route('password.request')); ?>"> 
                                                         Mot de passe oublié?
                                                        </a>
-                                                    </div>
-                                                 <?php if(Route::has('password.request')): ?>
-                                                      
                                                     <?php endif; ?>
+                                                    </div>
+                                                 
                                                 </form>
                                             </div>
                                         </div>
@@ -377,8 +406,8 @@
                                             <li><a href="<?php echo e(url('/cours')); ?>"><i class="fas fa-caret-right"></i>Cours</a></li>
                                             <li><a href="<?php echo e(url('/contacts')); ?>"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="<?php echo e(url('/about')); ?>"><i class="fas fa-caret-right"></i>A propos</a></li>
-                                            <li><a href="<?php echo e(url('demandes/create/0')); ?>"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
-                                            <li><a  data-toggle="modal" data-target="#myModal"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
+                                            <li><a href="<?php echo e(url('/inscription')); ?>"><i class="fas fa-caret-right"></i>S'inscrire</a></li>
+                                            <li><a href="<?php echo e(url('login')); ?>"><i class="fas fa-caret-right"></i>S'authentifier</a></li>
                                         </ul>
                                     </div>
                                 </div>

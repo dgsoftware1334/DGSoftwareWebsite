@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Demande;
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Offre;
+use App\Http\Requests\DemandeRequest;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use App\Mail\accountCreated;
+use App\Mail\demandeNonValide;
+use Illuminate\Support\Facades\Mail;
 
 class DemandeController extends Controller
 {
@@ -15,7 +22,9 @@ class DemandeController extends Controller
      */
     public function index()
     {
-        //return view('');
+         $x = Demande::orderByRaw('etat DESC,created_at DESC')->get();
+
+        return view('demandes.index',['demandes' => $x]);
     }
 
     /**
@@ -23,19 +32,12 @@ class DemandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
         try {
-            if($id == 0)
-         $x = DB::table('offres')
-            ->select('offres.*')
-            ->get();
-            else{
-             $x = DB::table('offres')
-            ->select('offres.*')
-            ->where('offres.id','=',$id)
-            ->get();
-            }
+           
+         $x = Offre::get();
+           
         } catch (ModelNotFoundException $exception) {
             return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
     
@@ -50,7 +52,7 @@ class DemandeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DemandeRequest $request)
     {
          try {
               $x = new Demande();
@@ -118,8 +120,57 @@ class DemandeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $x =Demande::find($id);
+            Mail::to($x->email)->send(new demandeNonValide($x));
+            $x->delete();
+
+        }catch(Exception $e){
+            return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        return back()->with('success', "La demande a été suprrimée avec succès.");
     }
 
-     
+    
+
+    public function confirmer($id)
+    {
+        try{
+            $x =Demande::find($id);
+
+                $abonné = new User();
+                $abonné->name= $x->nom.'  '.$x->prenom;
+                $abonné->email = $x->email;
+                $abonné->status ='Offre'.' '.$x->ID_offre;
+                  $motDepasse = str_random(8);
+                $abonné->password = $hashed_random_password = Hash::make($motDepasse);
+                Mail::to($abonné->email)->send(new accountCreated($abonné,$motDepasse));
+                $abonné->save();
+           
+                        
+            $x->etat = "confirmé";
+            $x->save();
+
+        }catch(Exception $e){
+            return back()->with('error','Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        return back()->with('success', "Un compte pour : ".$abonné->email."  avec le mot de passe : ".$motDepasse." a été créer!");
+    
+    }
+
+    public function fileViewer($recu)
+    {
+        try {
+             $file = Demande::find($recu)->recuCCP;
+            if (Storage::disk('local')->exists($file)) {
+                return response()->file('storage/' . $file);
+            } 
+
+        }catch(Exception $e) {
+
+            return back()->with('error','Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        
+    }
+
 }

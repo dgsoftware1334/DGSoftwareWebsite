@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Contact;
-
+use App\Models\User;
+use App\Models\Demande;
+use App\Mail\accountCreated;
+use App\Mail\demandeNonValide;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,20 @@ use App\Models\Contact;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Tester les emails
+
+Route::get('/mailable', function () {
+    $invoice = App\Models\User::find(2);
+    return new App\Mail\accountCreated($invoice,'sfgrger');
+});
+
+Route::get('/mailable2', function () {
+    $invoice = App\Models\Demande::find(14);
+    
+    return new App\Mail\demandeNonValide($invoice);
+});
+//
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,13 +52,36 @@ Route::get('/cours', function () {
 
 
 Route::resource('/contacts' , ContactController::class);
-Route::resource('/cours' , CoursController::class);
+Route::get('/cours' ,'CoursController@freeCourses');
 Route::resource('/offres' , OffreController::class);
 Route::resource('/demandes' , DemandeController::class);
-Route::get('/demandes/create/{id}' , 'DemandeController@create');
 
+Route::get('/inscription' , 'DemandeController@create');
 
 Route::get('newsletter','NewsletterController@index');
 Route::post('newsletter/store','NewsletterController@store');
 
 //BackEnd
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+	
+	Route::resource('user', 'UserController', ['except' => ['show']]);
+	Route::get('abonnés','UserController@clients');
+
+	//Inscriptions
+	Route::get('demande/confirmer/{id}','DemandeController@confirmer');
+	Route::get('recu/{id}', 'DemandeController@fileViewer');
+	//Cours
+	Route::resource('cours', 'CoursController');
+	
+	
+	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'UserController@edit']);
+	Route::put('profileUpdate/{id}', ['as' => 'profile.update', 'uses' => 'UserController@update']);
+	Route::put('profile', ['as' => 'profile.store', 'uses' => 'UserController@store']);
+	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'UserController@password']);
+	Route::delete('profile/{id}', ['as' => 'profile.delete', 'uses' => 'UserController@destroy']);
+	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+});
+
