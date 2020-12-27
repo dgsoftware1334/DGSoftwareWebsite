@@ -16,7 +16,7 @@ class CreateGaleriesTable extends Migration
         Schema::create('galeries', function (Blueprint $table) {
             $table->id();
             $table->string('titre')->required();
-            $table->string('description');
+            $table->Text('description');
             $table->string('main_image')->required();
             $table->unsignedBigInteger('id_service')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
             $table->softDeletes();
