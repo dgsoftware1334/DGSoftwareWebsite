@@ -24,7 +24,7 @@
 
  		<div class="row">
  			<div class="col-sm-12" style="text-align: center;">
- 				<img src="../storage/public/img/Profil/{{$users->photo}}" style="border-radius: 50%;width:200px;">
+ 				<img src="../storage/{{$users->photo}}" style="border-radius: 50%;width:200px;">
  			</div>
  		</div>
 

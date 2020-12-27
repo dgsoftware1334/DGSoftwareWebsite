@@ -55,7 +55,7 @@ class ServiceSeeder extends Seeder
         	'titre' => 'INSTALLATION DE CAMÉRAS ET DE SYSTÈMES DE SÉCURITÉ',
         	'description' => 'Un service de qualité pour  l\'installations des  videosurveillance , alarme anti intrusion , controle d\'acces..\r\n',
             'prix' => '0',
-            'photo' => 'thomas-jensen-qTEj-KMMq_Q-unsplash.jpg',
+            'photo' => 'scott-webb-yekGLpc3vro-unsplash.jpg',
             'created_at' => now(),
             'updated_at' => now()
         ]

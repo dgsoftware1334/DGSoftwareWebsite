@@ -299,7 +299,7 @@
                                   <div class="col-sm-2">
                                     <b>Photo</b>
                                   </div>
-                                  <div class="col-md-3 card card-image" style=" background-image: url('../storage/public/img/Services/{{$service->photo}}'); background-size: 300px 250px; ">
+                                  <div class="col-md-3 card card-image" style=" background-image: url('../storage/{{$service->photo}}'); background-size: 300px 250px; ">
                                     
                                   </div>
                                 </div>

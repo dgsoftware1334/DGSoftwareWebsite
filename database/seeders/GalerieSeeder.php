@@ -47,8 +47,15 @@ class GalerieSeeder extends Seeder
         ],[
         	'titre' => 'RÉSEAUX D\'INSTALLATION',
         	'description' => 'Les entreprises qui s’agrandissent ou qui déménagent sont confrontées au besoin d’installer un réseau informatique, Augmentez les performances de votre réseau avec un câblage réseau adapté.\r\n',
-            'main_image' => 'scott-webb-yekGLpc3vro-unsplash.jpg',
+            'main_image' => 'thomas-jensen-qTEj-KMMq_Q-unsplash.jpg',
             'id_service' => '5',
+            'created_at' => now(),
+            'updated_at' => now()
+        ],[
+            'titre' => 'INSTALLATION DE CAMÉRAS ET DE SYSTÈMES DE SÉCURITÉ',
+            'description' => 'Un service de qualité pour  l\'installations des  videosurveillance , alarme anti intrusion , controle d\'acces..\r\n',
+            'main_image' => 'scott-webb-yekGLpc3vro-unsplash.jpg',
+            'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ]

@@ -66,7 +66,7 @@ color: #345da7;
     </div>
 
     @foreach($galeries as $g)
-    <a href="{{ url('Show/galeire/'.$g->id)}}" ><div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc gal" style=" background-image: url('../storage/public/img/Galerie/{{$g->main_image}}'); background-size:100%; background-repeat: no-repeat;">
+    <a href="{{ url('Show/galeire/'.$g->id)}}" ><div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc gal" style=" background-image: url('../storage/{{$g->main_image}}'); background-size:100%; background-repeat: no-repeat;">
       <div style="  background-color: rgba(0, 0, 255, 0.45); text-align: center;margin-top: 50px;padding-bottom: 5px; background-size: 100%; ">
         <p style="font-size: 25px; color: white;"><b>{{ $g->titre }}</b></p> 
 
