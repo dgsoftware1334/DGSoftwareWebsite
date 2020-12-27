@@ -11,34 +11,48 @@
     <meta name="author" content="MECIFI Youssera Zoukha" />
 
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="img/favicons/manifest.json">
-	<link rel="shortcut icon" href="img/favicons/dg-software.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicons/apple-touch-icon-57x57.png') }}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicons/apple-touch-icon-60x60.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-16x16.png') }}" sizes="16x16">
+	<link rel="manifest" href="{{ asset('img/favicons/manifest.json') }}">
+	<link rel="shortcut icon" href="{{ asset('img/favicons/dg-software.ico') }}">
 	<meta name="msapplication-TileColor" content="#00a8ff">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
 	<!-- Owl -->
-	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.css') }}">
 	<!-- Animate.css -->
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css') }}">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.1.0/css/font-awesome.min.css') }}">
 	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/eleganticons/et-icons.css') }}">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="css/cardio.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
+
+	<style type="text/css">
+		.boutton:hover{
+			background-color: #5d76b6;
+			
+			border-radius: 5px 5px 5px 5px;
+			
+		}
+		.boutton{
+			color: white;
+			background-color:#345da7; 
+			font-size: 15px;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="preloader">
-		<img src="img/loader.gif" alt="Preloader image">
+		<img src="{{ asset('img/loader.gif') }} " alt="Preloader image">
 	</div>
 	<nav class="navbar">
 		<div class="container">
@@ -50,37 +64,23 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="img/dg-software.jpg" data-active-url="img/dg-software.jpg"  hight="50" width="60" ></a>
+				<a class="navbar-brand" href="{{url('/home')}}"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70" ></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="{{url('/')}}">Accueil</a></li>
-					<li><a href="{{url('/services')}}">Services</a></li>
-                <li><a href="{{url('/aboutUs')}}">About</a></li>
-                <li><a href="{{url('/contact')}}">Contact</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+					<li><a href="{{url('/home')}}" class="boutton">Accueil</a></li>
+					<li><a href="{{url('/service')}}" class="boutton" >Services</a></li>
+                <li><a href="{{url('/aboutUs')}}" class="boutton">About</a></li>
+                <li><a href="{{url('/contact')}}" class="boutton" >Contact</a></li>
+					<li><a href="{{url('/login')}}"   style="background-color: #345da7;">Connexion</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	<header id="intro">
-		<div class="container" id="up">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<h3 class="light white" style="font-weight: bold; color: #ec524b;">DG Software.</h3>
-							@yield('catchPhrase')
-							<span class="typed-cursor">|</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </header>
+	@yield('catchPhrase')
 
 	@yield('dynamique')
 
@@ -142,13 +142,13 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/typewriter.js"></script>
-	<script src="js/jquery.onepagenav.js"></script>
-	<script src="js/main.js"></script>
+	<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/wow.min.js') }}"></script>
+	<script src="{{ asset('js/typewriter.js') }}"></script>
+	<script src="{{ asset('js/jquery.onepagenav.js') }}"></script>
+	<script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

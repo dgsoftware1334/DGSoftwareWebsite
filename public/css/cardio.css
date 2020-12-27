@@ -114,7 +114,7 @@ header {
 	width: 100%;
 	color: white;
 	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/code.jpg');/*header/1*/
+	background: url('../img/christina-wocintechchat-com-F75IfIWSqRY-unsplash.jpg');/*header/1*/
 	background-size: cover;
 }
 
@@ -281,6 +281,7 @@ section {
 
 .section-padded {
     padding: 140px 0 40px;
+    background-color: white;
 }
 
 .cut-top {
