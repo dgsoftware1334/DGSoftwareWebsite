@@ -126,7 +126,7 @@
                 @foreach ($services as $s)
 
                 <div class="col-md-4">
-				    <div class="intro-table intro-table-hover" style=" background-image: url('../storage/public/img/Services/{{$s->photo}}');">
+				    <div class="intro-table intro-table-hover" style=" background-image: url('../img/{{$s->photo}}');">
                     <h5 class="black heading" style="background-color: #9c1210 ; color: white;">{{$s->titre}}</h5>
                         <p class="black heading hide-hover"></p>
 
