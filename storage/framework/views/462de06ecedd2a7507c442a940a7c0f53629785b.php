@@ -288,7 +288,7 @@
                                     <ul >
                                         <li><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
                                         <li><a href="<?php echo e(url('/about')); ?>">À propos</a></li>
-                                        <li><a href="<?php echo e(url('/cours')); ?>">Cours</a></li>
+                                        <li><a href="<?php echo e(url('/coursgratuits')); ?>">Cours</a></li>
                                         <li><a href="<?php echo e(url('/contacts')); ?>">Contact</a></li>
                                         <!--<li class="menu-item-has-children ul-li-block">
                                             <a href="#!">Pages</a>
@@ -314,7 +314,7 @@
                                         <li><a href="index-1.html">Accueil</a>
                                         </li>
                                         <li><a href="<?php echo e(url('/about')); ?>">A propos</a></li>
-                                        <li><a href="<?php echo e(url('/cours')); ?>">Cours</a></li>
+                                        <li><a href="<?php echo e(url('/coursgratuits')); ?>">Cours</a></li>
                                         <li><a href="<?php echo e(url('/contacts')); ?>">Contact</a></li>
                                       
                                     </ul>
@@ -403,7 +403,7 @@
                                         <h2 class="widget-title">Liens utiles</h2>
                                         <ul>
                                             <li><a  data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-caret-right"></i>Offres</a></li>
-                                            <li><a href="<?php echo e(url('/cours')); ?>"><i class="fas fa-caret-right"></i>Cours</a></li>
+                                            <li><a href="<?php echo e(url('/coursgratuits')); ?>"><i class="fas fa-caret-right"></i>Cours</a></li>
                                             <li><a href="<?php echo e(url('/contacts')); ?>"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="<?php echo e(url('/about')); ?>"><i class="fas fa-caret-right"></i>A propos</a></li>
                                             <li><a href="<?php echo e(url('/inscription')); ?>"><i class="fas fa-caret-right"></i>S'inscrire</a></li>

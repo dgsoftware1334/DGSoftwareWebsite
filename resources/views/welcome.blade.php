@@ -269,7 +269,7 @@
                                     <ul >
                                         <li><a href="{{ url('/') }}">Accueil</a></li>
                                         <li><a href="{{ url('/about') }}">A propos</a></li>
-                                        <li><a href="{{ url('/cours')}}">Cours</a></li>
+                                        <li><a href="{{ url('/coursgratuits')}}">Cours</a></li>
                                         <li><a href="{{ url('/contacts')}}">Contact</a></li>
                                         
                                     </ul>
@@ -282,7 +282,7 @@
                                     <ul>
                                         <li><a href="{{ url('/') }}">Accueil</a></li>
                                         <li><a href="{{ url('/about') }}">A propos</a></li>
-                                        <li><a href="{{ url('/cours')}}">Cours</a></li>
+                                        <li><a href="{{ url('/coursgratuits')}}">Cours</a></li>
                                         <li><a href="{{ url('/contacts')}}">Contact</a></li>
                                         
                                     </ul>
@@ -315,7 +315,7 @@
                         <div class="layer-1-4">
                             <div id="course-btn">
                                 <div class="genius-btn  text-center text-uppercase ul-li-block bold-font">
-                                    <a href="{{ url('/cours')}}">Nos cours <i class="fas fa-caret-right"></i></a>
+                                    <a href="{{ url('/coursgratuits')}}">Nos cours <i class="fas fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>

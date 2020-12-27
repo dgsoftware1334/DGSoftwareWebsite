@@ -265,7 +265,7 @@
                                     <ul >
                                         <li><a href="{{ url('/') }}">Accueil</a></li>
                                         <li><a href="{{ url('/about') }}">À propos</a></li>
-                                        <li><a href="{{  url('/cours') }}">Cours</a></li>
+                                        <li><a href="{{  url('/coursgratuits') }}">Cours</a></li>
                                         <li><a href="{{  url('/contacts') }}">Contact</a></li>
                                         <!--<li class="menu-item-has-children ul-li-block">
                                             <a href="#!">Pages</a>
@@ -291,7 +291,7 @@
                                         <li><a href="index-1.html">Accueil</a>
                                         </li>
                                         <li><a href="{{url('/about') }}">A propos</a></li>
-                                        <li><a href="{{url('/cours')}}">Cours</a></li>
+                                        <li><a href="{{url('/coursgratuits')}}">Cours</a></li>
                                         <li><a href="{{url('/contacts')}}">Contact</a></li>
                                       
                                     </ul>
@@ -379,7 +379,7 @@
                                         <h2 class="widget-title">Liens utiles</h2>
                                         <ul>
                                             <li><a  data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-caret-right"></i>Offres</a></li>
-                                            <li><a href="{{url('/cours')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
+                                            <li><a href="{{url('/coursgratuits')}}"><i class="fas fa-caret-right"></i>Cours</a></li>
                                             <li><a href="{{url('/contacts')}}"><i class="fas fa-caret-right"></i>Contact</a></li>
                                             <li><a href="{{url('/about')}}"><i class="fas fa-caret-right"></i>A propos</a></li>
                                             <li><a href="{{url('/inscription')}}"><i class="fas fa-caret-right"></i>S'inscrire</a></li>

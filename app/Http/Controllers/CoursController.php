@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use  App\Models\Cours;
+use  App\Models\Offre;
 
 class CoursController extends Controller
 {
@@ -15,19 +16,19 @@ class CoursController extends Controller
     public function index()
     {
         try {
-            $x = Cours::all()->where('payant','=','false');
+            $x = Cours::all();
 
         } catch (Exception $e) {
           return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
     
         }
-        return view('cours', ['cours' => $x]);
+        return view('cours.index', ['cours' => $x]);
     }
 
     public function freeCourses()
     {
         try {
-            $x = Cours::all()->where('payant','=','false');
+            $x = Cours::all()->where('offre','=','Gratuit');
             
         } catch (Exception $e) {
           return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
@@ -43,7 +44,9 @@ class CoursController extends Controller
      */
     public function create()
     {
-        //
+         $offres = Offre::get();
+    
+        return view('cours.create', ['offres' => $offres]);
     }
 
     /**
@@ -54,7 +57,26 @@ class CoursController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+         try {
+            $x = new Cours();
+            $x->offre= $request->input('offre');
+            $x->cours= $request->input('cours');
+            $x->description = $request->input('description');
+            $x->durée = $request->input('durée');
+            $x->catégories = $request->input('catégories');
+            if($request->hasFile('thumbnail')){
+              $thumbnail= $request->input('cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
+               $x->thumbnail = $request->thumbnail->storeAs('thumbnails',$thumbnail);
+            }
+
+            $x->save();
+            
+        } catch(ModelNotFoundException $exception) {
+            return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        return back()->withStatus(__("Le cours a été ajouté avec succès."));
+    
     }
 
     /**

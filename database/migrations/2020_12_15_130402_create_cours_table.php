@@ -16,11 +16,11 @@ class CreateCoursTable extends Migration
         Schema::create('cours', function (Blueprint $table) {
             $table->id();
             $table->string('Cours')->required();
-            $table->string('Description')->required();
-            $table->boolean('payant');
-            $table->integer('Durée');
+            $table->Text('Description')->required();
+            $table->string('Durée');
             $table->string('catégories');
             $table->string('thumbnail')->default('thumbnail/bc-1.jpg');
+            $table->DateTime('deleted_at')->nullable();
             $table->timestamps();
         });
     }

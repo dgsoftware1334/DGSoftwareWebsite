@@ -110,7 +110,7 @@
              </div>
             
               <div class="card-footer " align="center">
-                <button type="submit" class="btn btn-success btn-round">{{__('Save')}}</button>
+                <button type="submit" class="btn btn-success btn-round">{{__('Enregistrer')}}</button>
                 <a href="{{  url('user')}}" class="btn btn-primary btn-round">Annuler</a>
               </div>
               <hr class="half-rule"/>

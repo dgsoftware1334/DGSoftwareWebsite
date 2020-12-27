@@ -46,13 +46,8 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/cours', function () {
-    return view('cours');
-});
-
-
+Route::get('/coursgratuits' ,'CoursController@freeCourses');
 Route::resource('/contacts' , ContactController::class);
-Route::get('/cours' ,'CoursController@freeCourses');
 Route::resource('/offres' , OffreController::class);
 Route::resource('/demandes' , DemandeController::class);
 
@@ -74,8 +69,17 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('demande/confirmer/{id}','DemandeController@confirmer');
 	Route::get('recu/{id}', 'DemandeController@fileViewer');
 	//Cours
-	Route::resource('cours', 'CoursController');
-	
+	Route::get('/cours', 'CoursController@index');
+
+	Route::put('/cours', 'CoursController@store');
+
+	Route::get('/cours/create', 'CoursController@create');
+
+	Route::get('/cours/{id}', 'CoursController@show');
+
+	Route::get('/cours/{id}/edit', 'CoursController@edit');
+
+	Route::get('/cours/{id}', 'CoursController@update');
 	
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'UserController@edit']);
 	Route::put('profileUpdate/{id}', ['as' => 'profile.update', 'uses' => 'UserController@update']);
