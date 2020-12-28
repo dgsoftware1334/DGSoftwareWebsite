@@ -91,7 +91,7 @@
       <div class="card">
         <img src="/img/team/hamlili.jpg" alt="Jane" style="width:100%">
         <div class="containerB">
-          <h2>ENNABETI Hamlili</h2>
+          <h2>ENNEBATI Hamlili</h2>
           <p class="title">Co-fondateur</p>
           <p>Responsable service réseaux sociaux et réseaux informatiques.</p>
           <p>hamliliv14@gmail.com</p>

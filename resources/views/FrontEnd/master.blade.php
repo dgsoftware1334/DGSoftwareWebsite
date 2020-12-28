@@ -73,7 +73,7 @@
 					<li><a href="{{url('/service')}}" class="boutton" >Services</a></li>
                 <li><a href="{{url('/aboutUs')}}" class="boutton">About</a></li>
                 <li><a href="{{url('/contact')}}" class="boutton" >Contact</a></li>
-					<li><a href="{{url('/login')}}"   style="background-color: #345da7;">Connexion</a></li>
+					<li><a href="{{url('/login')}}" class="btn-round" style=" border-width: 1px; border-radius: 30px; padding-right: 23px; padding-left: 23px;background-color: #fff; font-weight: bold; font-size: 30px; color: #00a8ff;">Connexion</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -83,6 +83,8 @@
 	@yield('catchPhrase')
 
 	@yield('dynamique')
+
+
 
     <footer>
 		<div class="container">
@@ -115,7 +117,7 @@
 					    <div class="col-sm-12 text-center-mobile" style="padding: 0; margin: 0 0 10px 0; display: block; ">
                             <li><p class="regular white"><i class="light-white light text-center-mobile fa fa-map-marker" aria-hidden="true"></i>&nbsp;<a href="https://www.google.com/maps/dir/?api=1&destination=34.8782%2C-1.315&fbclid=IwAR05FgOXK0HTuo4Kzpi2Egwe05PBCqLDsZ_UuvkNsOfd_CSYKJZPxVJd0Rs" style="color:white">Imama en face palais de culture <br> 13000 Tlemcen, Algérie</a> </p></li>
                          	<li><p class="regular white"><i class="light-white light text-center-mobile fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="https://mail.google.com/mail/u/0/"  style="color:white">dgsoftware1334@gmail.com</a> </p></li>
-                         	<li><p class="regular white"><i class="light-white light text-center-mobile fa fa-phone" aria-hidden="true"></i>&nbsp;0558 80 53 27 / 0668 50 20 50</p></li>
+                         	<li><p class="regular white"><i class="light-white light text-center-mobile fa fa-phone" aria-hidden="true"></i>&nbsp;0558 80 53 27 / 0665 44 45 91</p></li>
                         </div>
                     </div>
                 </div>
@@ -139,7 +141,7 @@
 	<div class="mobile-nav">
 		<ul>
 		</ul>
-		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		<a href="#" class="clo-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
 	<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
