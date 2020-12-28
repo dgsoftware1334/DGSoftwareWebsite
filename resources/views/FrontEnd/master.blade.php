@@ -137,7 +137,7 @@
 						<li><a href="https://www.instagram.com/dgsoftware1334/" target="_blank"><img src="img/icons/instagram.png" alt="Instagram"></a></li>
 						<li style="right:0; "><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqWgZvjBDXrXNfGxXjBmQvZKMMSjMvFVMhRMggzxLLRdFCGSHftSCxNcWbjWtDKrZvMkHL" target="_blank"><img src="img/icons/gmail1.png" alt="Gmail"></a></li>
 					</ul>
-					<p>&copy; 2020 All Rights Reserved. Powered by <a href="http://localhost">DG Software</a></p>
+					<p>&copy; 2020 All Rights Reserved. Powered by <a href="https://dgsoftwareplus.com/">DG Software</a></p>
                 </div>
 			</div>
 		</div>

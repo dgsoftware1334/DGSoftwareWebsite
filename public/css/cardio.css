@@ -40,7 +40,7 @@ body {
 .preloader div {
 	display: none;
 	/* Preload the Second Pricing Image */
-	background: url(../img/pricing2.jpg) no-repeat 9999px 9999px;
+	background: url(../img/123.jpg) no-repeat 9999px 9999px;
 	background-position: 9999px 9999px;
 }
 
