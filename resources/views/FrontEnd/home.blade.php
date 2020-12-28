@@ -143,8 +143,8 @@
 	<section id="team" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">Team</h2>
-				<h4 class="light muted">We're a dream team!</h4>
+				<h2 class="margin-top">Nos équipes</h2>
+				<h4 class="light muted">Nous sommes là pour vous!</h4>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
@@ -157,10 +157,10 @@
 						</div>
 						<img src="img/team/team3.jpg" alt="Team Image" class="avatar">
 						<div class="title">
-							<h4>Ben Adamson</h4>
-							<h5 class="muted regular">Fitness Instructor</h5>
+							<h4>ÉQUIPE DE DÉVELOPPEMENT</h4>
+							<h5 class="muted regular">Sites Web, applications mobiles, logiciels ...</h5>
 						</div>
-						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">0668 01 98 30</button>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -173,10 +173,10 @@
 						</div>
 						<img src="img/team/team1.jpg" alt="Team Image" class="avatar">
 						<div class="title">
-							<h4>Eva Williams</h4>
-							<h5 class="muted regular">Personal Trainer</h5>
+							<h4>ÉQUIPE DE SPONSORISATION</h4>
+							<h5 class="muted regular">Publicités facebook, instagram, messenger</h5>
 						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">0665 44 45 91</a>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -189,10 +189,10 @@
 						</div>
 						<img src="img/team/team2.jpg" alt="Team Image" class="avatar">
 						<div class="title">
-							<h4>John Phillips</h4>
-							<h5 class="muted regular">Personal Trainer</h5>
+							<h4>ÉQUIPE DE DESIGN</h4>
+							<h5 class="muted regular">Logo, Cartes Visites, Flyers, Calendrier, Notebook, Dépliants</h5>
 						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">0558 80 53 27</a>
 					</div>
 				</div>
 			</div>
