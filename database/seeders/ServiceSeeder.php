@@ -38,21 +38,21 @@ class ServiceSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ],[
-        	'titre' => 'PUBLICITÉ ET SPONSORING',
+        	'titre' => 'PUBLICITÉ ET SPONSORING FACEBOOK',
         	'description' => 'Communiquez avec vos clients potentiels de la manière la plus tendance de nos jours: les réseaux sociaux',
             'prix' => '0',
             'photo' => 'william-iven-DfMMzzi3rmg-unsplash.jpg',
             'created_at' => now(),
             'updated_at' => now()
         ],[
-        	'titre' => 'RÉSEAUX D\'INSTALLATION',
+        	'titre' => 'INSTALLATION DES CAMERAS ET RÉSEAUX',
         	'description' => 'Les entreprises qui s’agrandissent ou qui déménagent sont confrontées au besoin d’installer un réseau informatique, Augmentez les performances de votre réseau avec un câblage réseau adapté.\r\n',
             'prix' => '0',
             'photo' => 'thomas-jensen-qTEj-KMMq_Q-unsplash.jpg',
             'created_at' => now(),
             'updated_at' => now()
         ],[
-        	'titre' => 'INSTALLATION DE CAMÉRAS ET DE SYSTÈMES DE SÉCURITÉ',
+        	'titre' => 'DÉVELOPPEMENT DES LOGICIELS',
         	'description' => 'Un service de qualité pour  l\'installations des  videosurveillance , alarme anti intrusion , controle d\'acces..\r\n',
             'prix' => '0',
             'photo' => 'scott-webb-yekGLpc3vro-unsplash.jpg',

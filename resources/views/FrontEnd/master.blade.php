@@ -36,19 +36,7 @@
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
 
-	<style type="text/css">
-		.boutton:hover{
-			background-color: #5d76b6;
-			
-			border-radius: 5px 5px 5px 5px;
-			
-		}
-		.boutton{
-			color: white;
-			background-color:#345da7; 
-			font-size: 15px;
-		}
-	</style>
+	
 </head>
 
 <body>
@@ -67,20 +55,36 @@
 				</button>
 				<a class="navbar-brand" href="{{url('/home')}}"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70" ></a>
 			</div>
+<style type="text/css">
+		.boutton:hover{
+			background-color: #00a8ff;
+			
+			border-radius: 20px 20px 20px 20px;
+			
+		}
+		.boutton{
+			background-color: #5d76b6;
+		}
+</style>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right main-nav">
+				<ul class="nav navbar-nav main-nav" style=" margin-right: 20%; margin-left: 20%;">
 					<li><a href="{{url('/home')}}" class="boutton">Accueil</a></li>
 					<li><a href="{{url('/service')}}" class="boutton" >Services</a></li>
-                <li><a href="{{url('/aboutUs')}}" class="boutton">About</a></li>
-                <li><a href="{{url('/contact')}}" class="boutton" >Contact</a></li>
-					<li><a href="{{url('/login')}}" class="btn-round" style=" border-width: 1px; border-radius: 30px; padding-right: 23px; padding-left: 23px;background-color: #fff; font-weight: bold; font-size: 30px; color: #00a8ff;">Connexion</a></li>
+	                <li><a href="{{url('/aboutUs')}}" class="boutton">About</a></li>
+	                <li><a href="{{url('/contact')}}" class="boutton" >Contact</a></li>
 				</ul>
+					<a href="{{url('/login')}}" class="btn btn-primary" title="S'authentifier"style=" border-width: 1px; border-radius: 50px; background-color: #00a8ff; color: #fff;" >
+						<img src="img/icons/insert-memory-card.png" alt="" class="icon">
+					</a>
+				
+					
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
+
 	@yield('catchPhrase')
 
 	@yield('dynamique')
@@ -129,9 +133,9 @@
 			<div class="row bottom-footer text-center-mobile">
 				<div class="col-sm-12  text-center text-center-mobile">
                     <ul class="social-footer">
-						<li><a href="https://www.facebook.com/DGSoftware" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="https://www.instagram.com/dgsoftware1334/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="https://github.com/dgsoftware1334" target="_blank"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.facebook.com/DGSoftware" target="_blank"><img src="img/icons/facebook-logo.png" alt="Facebook"></a></li>
+						<li><a href="https://www.instagram.com/dgsoftware1334/" target="_blank"><img src="img/icons/instagram.png" alt="Instagram"></a></li>
+						<li style="right:0; "><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqWgZvjBDXrXNfGxXjBmQvZKMMSjMvFVMhRMggzxLLRdFCGSHftSCxNcWbjWtDKrZvMkHL" target="_blank"><img src="img/icons/gmail1.png" alt="Gmail"></a></li>
 					</ul>
 					<p>&copy; 2020 All Rights Reserved. Powered by <a href="http://localhost">DG Software</a></p>
                 </div>
@@ -142,7 +146,10 @@
 	<div class="mobile-nav">
 		<ul>
 		</ul>
-		<a href="#" class="clo-link"><i class="arrow_up"></i></a>
+		<a href="{{url('/login')}}" class="btn btn-primary" title="S'authentifier"style=" border-width: 1px; border-radius: 50px; background-color: #00a8ff; color: #fff;" ><img src="img/icons/insert-memory-card.png" alt="" class="icon">
+		</a>
+		<a class="btn btn-primary clo-link" title="Fermer" style="background-color: #5d76b6;border-radius: 50px 50px 50px 50px;"><img src="img/icons/back.png" alt="" class="icon">
+		</a>
 	</div>
 	<!-- Scripts -->
 	<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>

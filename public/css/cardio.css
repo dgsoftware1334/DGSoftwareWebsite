@@ -183,7 +183,7 @@ nav.navbar-fixed-top {
 }
 
 nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
-	color: #bbb;
+	color: white;
 }
 
 .icon-bar {
@@ -553,7 +553,7 @@ section {
 /* Pricing */
 
 #pricing {
-	background: #00a8ff url('../img/pricing1.jpg') no-repeat center center;
+	background: #00a8ff url('../img/123.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	-webkit-transition: background-image 0.6s linear 0.3s;
@@ -580,7 +580,7 @@ section {
 	position: relative;
 	left: 25%;
 	display: inline-block;
-	width: 50%;
+	width: 60%;
 	height: 300px;
 	padding: 50px 40px;
 	background: #bbb;
@@ -600,13 +600,13 @@ section {
 }
 
 .pricings .pricing .box-main .info-icon {
-	font-size: 14px;
+	font-size: 24px;
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	pointer-events: none;
 	opacity: 0;
-	color: #fff;
+	color: #9c1210;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
