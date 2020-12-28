@@ -9,11 +9,13 @@
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<center><div  style="font-weight: bold; height:250px; width:200px;border-radius: 5px;"><img src="{{ asset('img/logoo.png') }}" height="250px" width="250px"></div></center>
+							<div>
+								<img src="{{ asset('img/logoo.png') }}" height="250px" width="250px">
+							</div><br>
 							<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
 							
 							<span class="typed-cursor">|</span>
-						</div>
+						</div><br><br>
 					</div>
 				</div>
 			</div>
@@ -46,7 +48,7 @@
                 @endforeach
 			</div>
         </div>
-        <section class="section section-padded black-bg" style="background-color: grey;">
+        <section class="section section-padded black-bg" style="background-color: #bbb;">
 
 		<div class="container">
 		  <h2></h2>  
@@ -103,35 +105,35 @@
 	<section id="services" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
-				<h2>Notre travails</h2>
+				<h2>Nos principes</h2>
 				<h4 class="light muted">Obtenez les meilleurs résultats et choisissez parmi une variété de produits <br> fabriqués avec dévouement et perfection!</h4>
             </div>
             <div class="row services">
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/heart-blue.png" alt="" class="icon">
+							<img src="img/icons/quality.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Cardio Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">Qualité Garantie</h4>
+						<p class="description">Nous nous assurons que nos produits sont fabriqués avec dévouement et perfection et livrés à temps.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/guru-blue.png" alt="" class="icon">
+							<img src="img/icons/best-price.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Yoga Pilates</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">Meilleurs prix</h4>
+						<p class="description">Nos prix sont abordables pour tout le monde car notre objectif le plus important est d'aider les petites entreprises à prospérer et à réussir.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/weight-blue.png" alt="" class="icon">
+							<img src="img/icons/customer-service.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Power Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">Service clientèle</h4>
+						<p class="description">Une équipe de service à la clientèle dédiée à répondre à vos besoins et à répondre à vos demandes tout le temps.</p>
 					</div>
 				</div>
 			</div>
