@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="{{ asset('assets') }}/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="{{ $class ?? '' }}">
@@ -51,7 +53,7 @@
   <script src="{{ asset('assets') }}/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{ asset('assets') }}/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
- 
+ <script src="{{ asset('assets') }}/demo/demo.js"></script>
   @stack('js')
 </body>
 

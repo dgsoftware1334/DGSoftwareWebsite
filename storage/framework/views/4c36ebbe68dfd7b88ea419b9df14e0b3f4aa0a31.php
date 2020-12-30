@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="<?php echo e(asset('assets')); ?>/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="<?php echo e($class ?? ''); ?>">
@@ -51,7 +53,7 @@
   <script src="<?php echo e(asset('assets')); ?>/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="<?php echo e(asset('assets')); ?>/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
- 
+ <script src="<?php echo e(asset('assets')); ?>/demo/demo.js"></script>
   <?php echo $__env->yieldPushContent('js'); ?>
 </body>
 
