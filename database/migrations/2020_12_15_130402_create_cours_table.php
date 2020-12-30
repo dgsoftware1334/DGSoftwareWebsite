@@ -19,7 +19,7 @@ class CreateCoursTable extends Migration
             $table->Text('Description')->required();
             $table->string('Durée');
             $table->string('catégories');
-            $table->string('thumbnail')->default('thumbnail/bc-1.jpg');
+            $table->string('thumbnail')->default('thumbnails/cuteheart.jpg');
             $table->DateTime('deleted_at')->nullable();
             $table->timestamps();
         });

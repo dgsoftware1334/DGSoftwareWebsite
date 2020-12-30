@@ -11,6 +11,21 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card ">
+          @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>{{session()->get('success')}} </strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+           @elseif(session()->has('error'))
+           <div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <strong>{{session()->get('error')}} </strong>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+            </div>
+           @endif
           <div class="card-header">
             <h4 class="card-title">Ajouter un cours</h4>
             <div class="col-12 mt-2">
@@ -68,8 +83,16 @@
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Vignette</label> 
                 <div class="custom-file">
-                  <input type="file" class="form-control @error('thumbnail') is-invalid @enderror" value="{{old('thumbnail')}}" name="thumbnail" nullable>
+                  <input type="file" class="form-control @error('thumbnail') is-invalid @enderror" accept=".png,.jpg,.jpeg," data-default-file="{{old('thumbnail')}}" value="{{old('thumbnail')}}" name="thumbnail" nullable>
                   <label class="custom-file-label" for="validatedCustomFile">Choisir une photo...</label>
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Cours</label> 
+                <div class="custom-file">
+                  <input type="file" accept=".mp4, .ogg, .WebM" data-default-file="{{old('video')}}" class="form-control @error('video') is-invalid @enderror" value="{{old('video')}}" name="video">
+                  <label class="custom-file-label" for="validatedCustomFile">Choisir une vidéo...</label>
                   
                 </div>
               </div>

@@ -69,6 +69,9 @@
 										<h3 class="latest-title bold-font"><a href="#">No.1 The Best Online Course 2018.</a></h3>
 									</div>
 									<!-- /post -->
+									 <div class="col-md-4 text-right">
+						                <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" data-size="xs">
+						              </div>
 								</div>
 
 								<div class="view-all-btn bold-font">
@@ -101,9 +104,8 @@
 							</div>
 						</div>
 					</div>
-
-					
-
-
+<script type="text/javascript">
+    $("#input-id").rating();
+</script>
 
 @endsection

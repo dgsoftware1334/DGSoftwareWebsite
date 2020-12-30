@@ -75,11 +75,15 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/cours/create', 'CoursController@create');
 
-	Route::get('/cours/{id}', 'CoursController@show');
+	Route::get('/cours/{id}/show', 'CoursController@show');
 
 	Route::get('/cours/{id}/edit', 'CoursController@edit');
 
 	Route::get('/cours/{id}', 'CoursController@update');
+
+	Route::delete('/cours/{id}', 'CoursController@destroy');
+	
+	Route::get('getVideo/{cours}', 'CoursController@getVideo');
 	
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'UserController@edit']);
 	Route::put('profileUpdate/{id}', ['as' => 'profile.update', 'uses' => 'UserController@update']);

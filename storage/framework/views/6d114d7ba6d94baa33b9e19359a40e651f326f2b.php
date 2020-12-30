@@ -7,6 +7,21 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card ">
+          <?php if(session()->has('success')): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong><?php echo e(session()->get('success')); ?> </strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+           <?php elseif(session()->has('error')): ?>
+           <div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <strong><?php echo e(session()->get('error')); ?> </strong>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+            </div>
+           <?php endif; ?>
           <div class="card-header">
             <h4 class="card-title">Ajouter un cours</h4>
             <div class="col-12 mt-2">
@@ -99,8 +114,23 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('thumbnail')); ?>" name="thumbnail" nullable>
+unset($__errorArgs, $__bag); ?>" accept=".png,.jpg,.jpeg," data-default-file="<?php echo e(old('thumbnail')); ?>" value="<?php echo e(old('thumbnail')); ?>" name="thumbnail" nullable>
                   <label class="custom-file-label" for="validatedCustomFile">Choisir une photo...</label>
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Cours</label> 
+                <div class="custom-file">
+                  <input type="file" accept=".mp4, .ogg, .WebM" data-default-file="<?php echo e(old('video')); ?>" class="form-control <?php $__errorArgs = ['video'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('video')); ?>" name="video">
+                  <label class="custom-file-label" for="validatedCustomFile">Choisir une vidéo...</label>
                   
                 </div>
               </div>
