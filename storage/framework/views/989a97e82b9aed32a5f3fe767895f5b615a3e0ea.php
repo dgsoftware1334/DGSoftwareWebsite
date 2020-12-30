@@ -1,3 +1,4 @@
+ 
 <?php $__env->startSection('content'); ?>
     <div class="content">
         <div class="container">
@@ -70,17 +71,10 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startPush('js'); ?>
-    <script>
-        $(document).ready(function() {
-        demo.checkFullPageBackgroundImage();
-        });
-    </script>
-<?php $__env->stopPush(); ?>
 
 <?php echo $__env->make('layouts.app', [
-    'namePage' => 'Authentication',
+    'namePage' => 'Login page',
     'class' => 'login-page sidebar-mini ',
-    'activePage' => 'Authentication ',
-    'backgroundImage' => asset('assets') . "/img/banner/library.jpg",
+    'activePage' => 'login',
+    'backgroundImage' => asset('assets') . "/img/bg14.jpg",
 ], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\E-ECG\resources\views/auth/login.blade.php ENDPATH**/ ?>

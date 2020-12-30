@@ -62,9 +62,9 @@
                               <form  action="{{ url('cours/'.$g->id)}}" method="post" onsubmit="return confirm('Etes vous sure de vouloir supprimer ce cours?')">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                            <button type="submit" class="btn btn-danger btn-round pull-right" data-original-title="Suprrimer Profil" title="Supprimer"><i class="fas fa-trash"></i></button>
+                                  <button type="submit" class="btn btn-danger btn-round pull-right" data-original-title="Supprimer cours" title="Supprimer"><i class="fas fa-trash"></i></button>
+                                  <a href="{{ url('cours/'.$g->id.'/edit')}}" class="btn btn-info btn-round pull-right" data-original-title="Modifier cours" title="Modifier"><i class="fas fa-edit"></i></a>
                                </form>
-                          
                             </div>
 
                           </div>

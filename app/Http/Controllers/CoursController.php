@@ -66,9 +66,9 @@ class CoursController extends Controller
          try {
             $x = new Cours();
             $x->offre= $request->input('offre');
-            $x->cours= $request->input('cours');
-            $x->description = $request->input('description');
-            $x->durée = $request->input('durée');
+            $x->cours= $request->input('Cours');
+            $x->description = $request->input('Description');
+            $x->durée = $request->input('Durée');
             $x->catégories = $request->input('catégories');
             //save image
             if($request->hasFile('thumbnail')){
@@ -84,7 +84,7 @@ class CoursController extends Controller
         } catch(ModelNotFoundException $exception) {
             return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
         }
-        return redirect('cours')->with('success', "Le cours : ".$x->cours." ");
+        return redirect('cours')->with('success', "Le cours : ".$x->cours." a été ajouté avec succès");
     }
 
     /**
@@ -101,10 +101,11 @@ class CoursController extends Controller
         $x->rateOnce(4.5);
         
         $count=$x->timesRated();
-        $result=$x->ratings;
+       // $result=$x->ratings;
         $average=$x->averageRating;
+        $pourc=$x->ratingPercent();
 
-        return view('cours.show', ['cours'=> $x, 'count' => $count, 'result' =>$result, 'average' => $average]);
+        return view('cours.show', ['cours'=> $x, 'count' => $count, 'pourc' =>$pourc, 'average' => $average]);
     }
 
     /**
@@ -115,7 +116,11 @@ class CoursController extends Controller
      */
     public function edit($id)
     {
-        //
+       $cours = Cours::findOrFail($id);
+
+       $offres = Offre::get();
+    
+        return view('cours.edit', ['cours' => $cours, 'offres' => $offres]);
     }
 
     /**
@@ -127,7 +132,30 @@ class CoursController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         try {
+            $x = Cours::findOrFail($id);
+            $x->offre= $request->input('offre');
+            $x->cours= $request->input('Cours');
+            $x->description = $request->input('Description');
+            $x->durée = $request->input('Durée');
+            $x->catégories = $request->input('catégories');
+            //save image
+            if($request->hasFile('thumbnail')){
+              Storage::delete( $x->thumbnail );
+              $thumbnail= $request->input('cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
+               $x->thumbnail = $request->thumbnail->storeAs('thumbnails',$thumbnail);
+            }
+            //save video
+            if($request->hasFile('video')){
+              Storage::delete( $x->video );
+              $x->video = $request->video->store('cours');
+            }
+            $x->save();
+            
+        } catch(ModelNotFoundException $exception) {
+            return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        return redirect('cours')->with('success', "Le cours : ".$x->cours." a été modifié avec succès. ");
     }
 
     /**
@@ -147,7 +175,7 @@ class CoursController extends Controller
         }catch(Exception $e){
             return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
         }
-        return back()->with('success', "Le cours : ".$cours." a été suprrimée avec succès.");
+        return back()->with('success', "Le cours a été suprrimée avec succès.");
    
     }
 

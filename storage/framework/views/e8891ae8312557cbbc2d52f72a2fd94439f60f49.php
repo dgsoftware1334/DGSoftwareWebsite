@@ -10,7 +10,7 @@
       <div class="row">
          <div class="col-md-11">
           <div class="card-header">
-              <a class="btn btn-primary btn-round btn-lg text-white pull-right" href="<?php echo e(url('cours/create')); ?>" title="Ajouter Cours">Ajouter</a>
+              <a class="btn btn-primary btn-round btn-lg text-white pull-right" href="<?php echo e(url('cours/'.$cours->id.'/edit')); ?>" title="Ajouter Cours">Modifier</a>
             <h4 class="card-title"> <?php echo e($cours->id); ?>- <?php echo e($cours->Cours); ?></h4>
             <div class="col-11 mt-2">
                <?php if(session()->has('success')): ?>
@@ -40,13 +40,16 @@
             <div class="row"> 
               <!--element1-->
               <div class="col-md-8">
-  	          <div class="embed-responsive embed-responsive-16by9">
-                <video width="700" height="400" controls poster="<?php echo e(asset('storage/'.$cours->video)); ?>" preload="<?php echo e(asset('storage/'.$cours->thumbnail)); ?>">
-                   <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/mp4" >
-                   <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/ogg" >
-                   <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/webm" >
-                </video>Votre navigateur ne prend pas en charge cette vidéo.
-  			      </div>
+      	          <div class="embed-responsive embed-responsive-16by9">
+                    <video width="700" height="400" controls poster="<?php echo e(asset('storage/'.$cours->video)); ?>" preload="<?php echo e(asset('storage/'.$cours->thumbnail)); ?>"  oncontextmenu="return false;" controlsList="nodownload">
+                       <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/mp4" >
+                       <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/ogg" >
+                       <source src="<?php echo e(url('getVideo/'.$cours->id)); ?>" type="video/webm" >
+                    </video>
+      			      </div>
+                  <div class="col-md-4 text-right">
+
+                  </div>
               </div>
               <!--element2-->
               <div class="col-md-4">
@@ -56,6 +59,7 @@
                       <li class="list-group-item"><h6 class="text-primary">Catégorie :</h6> <?php echo e($cours->catégories); ?></li>
                       <li class="list-group-item"><h6 class="text-primary">Date de création :</h6> <?php echo e($cours->created_at); ?></li>
                       <li class="list-group-item"><h6 class="text-primary">Dérniere modification :</h6> <?php echo e($cours->updated_at); ?></li>
+                      <li class="list-group-item"><h6 class="text-primary">Évaluation :</h6><?php echo e($average); ?> <img src="<?php echo e(asset('assets/img/star.svg')); ?>" alt="stars" style="color: yellow; font-color:yellow;"> <br> (<?php echo e($count); ?>) votes <br> <?php echo e($pourc); ?>%</li>
                 </ul>
               </div>
               <!--element3-->
@@ -64,9 +68,7 @@
               </div>
             <!--row2-->
              <div class="row" style="text-align: right;"> 
-              <div class="col-md-4 text-right">
-                <span class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" data-size="xs"></span>
-              </div>
+              
             </div>
           </div>
           <!--end card body-->

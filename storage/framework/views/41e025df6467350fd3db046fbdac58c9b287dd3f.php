@@ -60,9 +60,9 @@
 
                                     <?php echo e(method_field('DELETE')); ?>
 
-                            <button type="submit" class="btn btn-danger btn-round pull-right" data-original-title="Suprrimer Profil" title="Supprimer"><i class="fas fa-trash"></i></button>
+                                  <button type="submit" class="btn btn-danger btn-round pull-right" data-original-title="Supprimer cours" title="Supprimer"><i class="fas fa-trash"></i></button>
+                                  <a href="<?php echo e(url('cours/'.$g->id.'/edit')); ?>" class="btn btn-info btn-round pull-right" data-original-title="Modifier cours" title="Modifier"><i class="fas fa-edit"></i></a>
                                </form>
-                          
                             </div>
 
                           </div>

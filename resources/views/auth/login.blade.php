@@ -1,10 +1,9 @@
 @extends('layouts.app', [
-    'namePage' => 'Authentication',
+    'namePage' => 'Login page',
     'class' => 'login-page sidebar-mini ',
-    'activePage' => 'Authentication ',
-    'backgroundImage' => asset('assets') . "/img/banner/library.jpg",
-])
-
+    'activePage' => 'login',
+    'backgroundImage' => asset('assets') . "/img/bg14.jpg",
+]) 
 @section('content')
     <div class="content">
         <div class="container">
@@ -77,10 +76,3 @@
     </div>
 @endsection
 
-@push('js')
-    <script>
-        $(document).ready(function() {
-        demo.checkFullPageBackgroundImage();
-        });
-    </script>
-@endpush

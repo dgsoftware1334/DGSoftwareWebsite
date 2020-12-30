@@ -3,6 +3,8 @@
 <?php $__env->startSection('content'); ?>
   <div class="panel-header panel-header-sm">
   </div>
+<div class="panel-header panel-header-sm">
+  </div>
   <div class="content">
     <div class="row">
       <div class="col-md-12">
@@ -28,7 +30,7 @@
             </div>
           </div>
           <div class="card-body ">
-           <form method="POST" action="<?php echo e(url('/cours')); ?>" autocomplete="off" enctype="multipart/form-data">
+           <form method="post" action="<?php echo e(url('cours/'.$cours->id)); ?>" autocomplete="off" enctype="multipart/form-data">
               <?php echo csrf_field(); ?>
               <?php echo method_field('put'); ?>
               <?php echo $__env->make('alerts.success', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -43,7 +45,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="Cours" id="exampleFormControlInput1" value="<?php echo e(old('Cours')); ?>" autofocus required>
+unset($__errorArgs, $__bag); ?>" name="Cours" value="<?php echo e($cours->Cours); ?>" autofocus required>
               </div>
 
               <div class="form-group">
@@ -55,11 +57,11 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" multiple="multiple" name="offre" value="<?php echo e(old('offre')); ?>" required>
+unset($__errorArgs, $__bag); ?>" multiple="multiple" name="offre" value="<?php echo e(old('offre', $cours->offre)); ?>" required>
                   <option align="center" class=" bg-warning" style="font-size:15px; font-weight:bold">--------------------------------------------------------Offres--------------------------------------------------------</option>
                  
                  <?php $__currentLoopData = $offres; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                 <option value="<?php echo e($o->id); ?>"  <?php echo e((old('offre') ==$o->id) ? 'selected' : ''); ?>> <?php echo e($o->titre); ?> </option>
+                 <option value="<?php echo e($o->id); ?>" <?php echo e(($cours->offre == $o->id) ? 'selected' : ''); ?>> <?php echo e($o->titre); ?> </option>
                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                </select>
               </div>
@@ -73,21 +75,21 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('Durée')); ?>" name="Durée" required>
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('Durée', $cours->Durée)); ?>" name="Durée" required>
               </div>
 
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Catégorie</label>
                 <div class="form-check form-check-radio">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="catégories" id="exampleRadios1" value="Cours" value="<?php echo e(old('catégories')); ?>" checked required>
+                        <input class="form-check-input" type="radio" name="catégories" id="exampleRadios1" value="Cours" value="<?php echo e(old('catégories', $cours->catégories)); ?>" <?php if($cours->catégories=='Cours'): ?> checked <?php endif; ?> required>
                         Cours
                         <span class="form-check-sign"></span>
                     </label>
                 </div>
                 <div class="form-check form-check-radio">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="catégories" id="exampleRadios2" value="Cas clinique" value="<?php echo e(old('catégories')); ?>" required>
+                        <input class="form-check-input" type="radio" name="catégories" id="exampleRadios2" value="Cas clinique" value="<?php echo e(old('catégories', $cours->catégories)); ?>"  <?php if($cours->catégories=='Cas clinique'): ?> checked <?php endif; ?> required>
                          Cas clinique
                         <span class="form-check-sign"></span>
                     </label>
@@ -102,7 +104,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="Description" id="exampleFormControlTextarea1" rows="5" required><?php echo e(old('Description')); ?></textarea>
+unset($__errorArgs, $__bag); ?>" name="Description" id="exampleFormControlTextarea1" rows="5" required><?php echo e(old('Description', $cours->Description)); ?></textarea>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Vignette</label> 
@@ -114,8 +116,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" accept=".png,.jpg,.jpeg," data-default-file="<?php echo e(old('thumbnail')); ?>" value="<?php echo e(old('thumbnail')); ?>" name="thumbnail" nullable>
-                  <label class="custom-file-label" for="validatedCustomFile"><?php echo e(old('thumbnail')); ?> </label>
+unset($__errorArgs, $__bag); ?>" accept=".png,.jpg,.jpeg," data-default-file="<?php echo e(old('thumbnail', $cours->thumbnail)); ?>" value="<?php echo e(old('thumbnail', $cours->thumbnail)); ?>" name="thumbnail" nullable>
+                  <label class="custom-file-label" for="validatedCustomFile"><?php echo e(old('thumbnail', $cours->thumbnail)); ?></label>
                   
                 </div>
               </div>
@@ -129,13 +131,13 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('video')); ?>" name="video">
-                  <label class="custom-file-label" for="validatedCustomFile"><?php echo e(old('video')); ?> </label>
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('video', $cours->video)); ?>" name="video">
+                  <label class="custom-file-label" for="validatedCustomFile"><?php echo e(old('video', $cours->video)); ?></label>
                   
                 </div>
               </div>
                <div class="card-footer " align="center">
-                <button type="submit" class="btn btn-primary btn-round"><?php echo e(__('Enregistrer')); ?></button>
+                <button type="submit" class="btn btn-primary btn-round"><?php echo e(__('Modifier')); ?></button>
                 <a href="<?php echo e(url('cours')); ?>" class="btn btn-default btn-round">Annuler</a>
               </div>
               <hr class="half-rule"/>
@@ -147,9 +149,12 @@ unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('video')); ?>" name="vi
       </div>
     </div>
   </div>
+
+
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', [
-    'namePage' => 'Modifier Cours',
+    'namePage' => 'Ajouter Cours',
     'class' => 'sidebar-mini',
     'activePage' => 'maps',
-], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\E-ECG\resources\views/cours/create.blade.php ENDPATH**/ ?>
+], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\E-ECG\resources\views/cours/edit.blade.php ENDPATH**/ ?>

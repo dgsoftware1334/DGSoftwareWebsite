@@ -79,7 +79,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/cours/{id}/edit', 'CoursController@edit');
 
-	Route::get('/cours/{id}', 'CoursController@update');
+	Route::put('/cours/{id}', 'CoursController@update');
 
 	Route::delete('/cours/{id}', 'CoursController@destroy');
 	
