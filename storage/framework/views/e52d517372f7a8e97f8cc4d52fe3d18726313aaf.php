@@ -69,7 +69,7 @@
 		    </ol>
 
 		    <!-- Wrapper for slides -->
-		    <div class="carousel-inner" style="height:auto; width:auto; ">
+		    <div class="carousel-inner" align="center" style="height:auto; width:auto; ">
 		      <div class="item active">
 		        <img src="img/CartesVisites/7.jpg" id="1">
 		      </div>
@@ -109,11 +109,11 @@
 
 		    <!-- Left and right controls -->
 		    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-		      <span class="fa fa-chevron-left" style="padding-top: 350px;"></span>
+		      <span class="fa fa-chevron-left" style="padding-top: 150px;"></span>
 		      <span class="sr-only">Previous</span>
 		    </a>
 		    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-		      <span class="fa fa-chevron-right" style="padding-top: 350px;"></span>
+		      <span class="fa fa-chevron-right" style="padding-top: 150px;"></span>
 		      <span class="sr-only">Next</span>
 		    </a>
 		  </div>

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="Dashboard">
-  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <meta name="description" content="DG Software est une société informatique qui fournit plusieurs services et technologies.">
+  <meta name="author" content="MECIFI Youssera Zoukha">
+  <meta name="keyword" content="Cartes visites, Dévloppement, Dévloppement web, logiciels, sites web, logo, Conceptions, Installation réseaux, Sponsorisation facebook, Sponsorisation instagram, Sponsorisation, Applications mobiles,DG software, DGSoftware plus, Cartes de visite, caméra de surveillance, fiche publicitaire, gestionnaire de stock, gestionnaire de gym, gestionnaire de pharmacie, gestionnaire de bibliothèque, développement web, application web, application mobile, service de conception, logo personnalisé, dépliants, Publicités, Montage video, Développement des  Logiciels, Vente logiciel de pièces détachées, Formation, Installation Réseaux Informatique, Installation des  Caméras de surveillance, startup, DEGDEG Hichem,  Hamlili Ennebati, Tlemcen, Algérie ">
   <title>DG Software</title>
 
   <!-- Favicons -->

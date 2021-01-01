@@ -11,13 +11,15 @@
     <meta name="keywords" content="DG software, DGSoftware, Cartes de visite, caméra de surveillance, fiche publicitaire, gestionnaire de stock, gestionnaire de gym, gestionnaire de pharmacie, gestionnaire de bibliothèque, développement web, application web, application mobile, service de conception, logo personnalisé, dépliants, Publicités, Montage video, Développement des  Logiciels, Vente logiciel de pièces détachées, Formation, Installation Réseaux Informatique, Installation des  Caméras de surveillance, startup, DEGDEG Hichem,  Hamlili Ennebati, Meguenni Rafik  Tlemcen, Algérie " />
     <meta name="author" content="MECIFI Youssera Zoukha" />
 
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicons/apple-touch-icon-57x57.png') }}">
 	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicons/apple-touch-icon-60x60.png') }}">
 	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-32x32.png') }}" sizes="32x32">
 	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-16x16.png') }}" sizes="16x16">
 	<link rel="manifest" href="{{ asset('img/favicons/manifest.json') }}">
-	<link rel="shortcut icon" href="{{ asset('img/favicons/dg-software.ico') }}">
+	<link rel="shortcut icon" href="{{ asset('img/favicons/favicon.ico') }}">
 	<meta name="msapplication-TileColor" content="#00a8ff">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
