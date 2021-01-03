@@ -57,7 +57,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70" ></a>
+				<a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('img/logoo.png') }}" data-active-url="{{ asset('img/logoo.png') }}"  hight="60" width="70"></a>
 			</div>
 <style type="text/css">
 		.boutton:hover{

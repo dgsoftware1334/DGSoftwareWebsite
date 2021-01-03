@@ -57,7 +57,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo e(url('/')); ?>"><img src="<?php echo e(asset('img/logoo.png')); ?>" data-active-url="<?php echo e(asset('img/logoo.png')); ?>"  hight="60" width="70" ></a>
+				<a class="navbar-brand" href="<?php echo e(url('/')); ?>"><img src="<?php echo e(asset('img/logoo.png')); ?>" data-active-url="<?php echo e(asset('img/logoo.png')); ?>"  hight="60" width="70"></a>
 			</div>
 <style type="text/css">
 		.boutton:hover{
