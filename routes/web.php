@@ -86,8 +86,11 @@ Route::delete('/delete/photo/{id}/{id1}',[GalerieController::class, 'DestroyLien
 //Home page DGSoftware
 Route::get('/',[HomeController::class, 'homepage']);
 Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
-Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
+//Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
 
+Route::get('/service/{id}',function($id){
+	return view('FrontEnd.show',['service'=>$id]);
+});
 
 
 

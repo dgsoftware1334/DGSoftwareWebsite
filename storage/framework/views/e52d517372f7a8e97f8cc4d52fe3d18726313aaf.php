@@ -52,6 +52,7 @@
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" align="center" style="height:auto; width:auto; ">
+
 		      <div class="item active">
 		        <img src="img/CartesVisites/7.jpg" id="1">
 		      </div>
@@ -87,6 +88,7 @@
 		      <div class="item">
 		        <img src="img/CartesVisites/305.jpg" id="9">
 		      </div>
+		      
 		    </div>
 
 		    <!-- Left and right controls -->

@@ -1,104 +1,41 @@
 
 
 
+<?php $__env->startSection('catchPhrase'); ?>
+            <h1 class="white typed">Nos services</h1>
+<?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('dynamique'); ?>
 
-<style type="text/css">
-  .caard{
-    margin-top: 200px;
-    margin-bottom: 200px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .column{
-    margin: 3px 3px 3px 3px;
-    width: 570px;
-    height: 500px;
 
-  }
-   .card{
-       text-align: justify-all;
-   }
-   .gal{
-    margin-top: 1px;
-   }
-</style>
-
-    <div class="container caard">
-
-      <h2 style="text-align: center;"><?php echo e($galerie->titre); ?></h2>
-  <div class="row mt">
-  
+<div class="container">
+    <?php 
+      $galerie = App\Models\Galerie::all()->where('id_service',$service);
+    ?>
+<div class="row">
+   <section id="services" class="section section-padded">
     <div class="container">
-      <div class="row">
-    <?php $__currentLoopData = $liens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc gal" >
-     <a class="btn btn-primary btn-ms" data-toggle="modal" data-target="#Mymodel-<?php echo $l->id;  ?>" ><img src="<?php echo e(asset('/storage/public/img/Galerie/'.$l->nom)); ?>" height="300px" width="300px" /></a> 
-     
-      
-    </div>
-
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                 
- </div>
-
-  </div>
-
-                      <div class="container">
-                         <div class="row">
-                            <div class="col-sm-4 ">
-                                      <div class="btn-group">
-                                        <?php echo e($liens->links()); ?>
-
-                                      </div>
-                                  </div>                    
-                            
-                          </div>
-                          </div>
-    </div>
- </div>
-
-   <!--   SHOW   IMAGE-->
- <?php $__currentLoopData = $liens; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-                  <!-- Modal -->
-  <div class="modal fade" id="Mymodel-<?php echo $l->id; ?>" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><b>&times;</b></button>
-          <h4 class="modal-title"></h4>
+      <div class="row title text-center">
+        <h2 class="margin-top">Détails</h2>
+      </div>
+    <?php $__currentLoopData = $galerie; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <div class="row services">
+       <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"> </h5>
+                 <img class="d-block img-fluid" src="<?php echo e(asset('img/'.$g->main_image)); ?>" alt="<?php echo e($g->catégorie); ?>">
+       
+          </div>
         </div>
-        <div class="modal-body">
-          
-          
-
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                   <center><img src="<?php echo e(asset('/storage/public/img/Galerie/'.$l->nom)); ?>" height="500px" width="500px" /></center> 
-                                  </div>
-                                </div>
-
-             
-        
-          
       </div>
-        
-      </div>
-      
-      
     </div>
-  </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-
+    </div>
+  </section>
+</div>
+</div> 
 
 
 <?php $__env->stopSection(); ?>

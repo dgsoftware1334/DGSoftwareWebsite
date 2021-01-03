@@ -24,7 +24,7 @@
 		  </div>  
 		  <div class="row">
 			<div class="col-md-12" align="right">
-				<a type="button" href="url('/service/'.$service->id)" class="btn btn-primary boutton">Voir Plus  <span class="fa fa-plus"></span>
+				<a type="button" href="{{ url('/service/'.$service->id) }}" class="btn btn-primary boutton">Voir Plus  <span class="fa fa-plus"></span>
 		      </a>
   			</div>
 		  </div>

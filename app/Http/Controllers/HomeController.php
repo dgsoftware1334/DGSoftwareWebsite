@@ -32,17 +32,6 @@ class HomeController extends Controller
     	return view('FrontEnd.indexCategorie',['galeries'=>$galeries,'service'=>$service]);
     }
 
-    /*  SHOW DETAIL CATEGORIE*/
-    public function Show($id){
 
-    	$galerie = Galerie::find($id);
-    	$arr['liens'] = DB::table('liens')->select('liens.*')->where('id_galerie', '=', $id)->paginate(6);
-    	$lien=Lien::find($id);
-
-
-    	return view('FrontEnd.show',['galerie'=>$galerie,'lien'=>$lien])->with($arr);
-    	
-
-    }
    
 }
