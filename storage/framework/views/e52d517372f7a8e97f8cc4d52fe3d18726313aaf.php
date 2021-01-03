@@ -2,25 +2,7 @@
 
 
 <?php $__env->startSection('catchPhrase'); ?>
-<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
-<header id="intro">
-		<div class="container" id="up">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<div>
-								<img src="<?php echo e(asset('img/logoo.png')); ?>" height="250px" width="250px">
-							</div><br>
-							<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
-							
-							<span class="typed-cursor">|</span>
-						</div><br><br>
-					</div>
-				</div>
-			</div>
-		</div>
-    </header>
+	<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>						
 <?php $__env->stopSection(); ?>
 
 
@@ -38,7 +20,7 @@
 
 						 </h5>
 						<div class="bottom">
-							<a href="#" class="btn btn-white-fill expand">Voir plus</a>
+							<a href="<?php echo e(url('/categories/'.$s->id)); ?>" class="btn btn-white-fill expand">Voir plus</a>
 						</div>
 					</div>
 				    

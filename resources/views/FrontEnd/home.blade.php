@@ -2,25 +2,7 @@
 @extends('FrontEnd.master')
 
 @section('catchPhrase')
-<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
-<header id="intro">
-		<div class="container" id="up">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<div>
-								<img src="{{ asset('img/logoo.png') }}" height="250px" width="250px">
-							</div><br>
-							<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>
-							
-							<span class="typed-cursor">|</span>
-						</div><br><br>
-					</div>
-				</div>
-			</div>
-		</div>
-    </header>
+	<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>						
 @endsection
 
 
@@ -37,7 +19,7 @@
 						 <h5 class="black heading hide-hover text-center" style="background-color: #9c1210 ; font-size: 22px; color: white;">{{$s->titre}}
 						 </h5>
 						<div class="bottom">
-							<a href="#" class="btn btn-white-fill expand">Voir plus</a>
+							<a href="{{url('/categories/'.$s->id)}}" class="btn btn-white-fill expand">Voir plus</a>
 						</div>
 					</div>
 				    
@@ -69,6 +51,7 @@
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" align="center" style="height:auto; width:auto; ">
+
 		      <div class="item active">
 		        <img src="img/CartesVisites/7.jpg" id="1">
 		      </div>
@@ -104,6 +87,7 @@
 		      <div class="item">
 		        <img src="img/CartesVisites/305.jpg" id="9">
 		      </div>
+		      
 		    </div>
 
 		    <!-- Left and right controls -->

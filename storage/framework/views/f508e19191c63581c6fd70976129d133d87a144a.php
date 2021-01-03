@@ -1,12 +1,9 @@
-@extends('FrontEnd.master')
-
-
-@section('catchPhrase')
+<?php $__env->startSection('catchPhrase'); ?>
   <h1 class="white typed" style="color:black;">A Propos De Nous.</h1>            
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('dynamique')
+<?php $__env->startSection('dynamique'); ?>
         <link rel="stylesheet" type="text/css" href="css/about-us.css">
     <div class="cut cut-top"></div>
 <div class="container">
@@ -131,4 +128,6 @@
 </main>
 
         </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/about.blade.php ENDPATH**/ ?>

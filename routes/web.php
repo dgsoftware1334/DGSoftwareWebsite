@@ -34,9 +34,10 @@ Route::get('/aboutUs', function () {
     return view('FrontEnd.about');
 });
 
-Route::get('/contact', function () {
-    return view('FrontEnd.contact');
-});
+
+Route::get('/contact' , 'ContactController@index');
+Route::post('/contact' , 'ContactController@store');
+
 
 Route::get('/service', function () {
     return view('FrontEnd.services');

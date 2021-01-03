@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/normalize.css')); ?>">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/bootstrap.css')); ?>">
+
 	<!-- Owl -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/owl.css')); ?>">
 	<!-- Animate.css -->
@@ -35,12 +36,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('fonts/font-awesome-4.1.0/css/font-awesome.min.css')); ?>">
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('fonts/eleganticons/et-icons.css')); ?>">
+	
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/flaticon.css')); ?>">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/cardio.css')); ?>">
 
 	
 </head>
-
 <body>
 	<div class="preloader">
 		<img src="<?php echo e(asset('img/loader.gif')); ?> " alt="Preloader image">
@@ -55,7 +57,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo e(url('/home')); ?>"><img src="<?php echo e(asset('img/logoo.png')); ?>" data-active-url="<?php echo e(asset('img/logoo.png')); ?>"  hight="60" width="70" ></a>
+				<a class="navbar-brand" href="<?php echo e(url('/')); ?>"><img src="<?php echo e(asset('img/logoo.png')); ?>" data-active-url="<?php echo e(asset('img/logoo.png')); ?>"  hight="60" width="70" ></a>
 			</div>
 <style type="text/css">
 		.boutton:hover{
@@ -71,7 +73,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav main-nav" style=" margin-right: 20%; margin-left: 20%;">
-					<li><a href="<?php echo e(url('/home')); ?>" class="boutton">Accueil</a></li>
+					<li><a href="<?php echo e(url('/')); ?>" class="boutton">Accueil</a></li>
 					<li><a href="<?php echo e(url('/service')); ?>" class="boutton" >Services</a></li>
 	                <li><a href="<?php echo e(url('/aboutUs')); ?>" class="boutton">About</a></li>
 	                <li><a href="<?php echo e(url('/contact')); ?>" class="boutton" >Contact</a></li>
@@ -87,7 +89,24 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-	<?php echo $__env->yieldContent('catchPhrase'); ?>
+
+	<header id="intro">
+		<div class="container" id="up">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div>
+								<img src="<?php echo e(asset('img/logoo.png')); ?>" height="250px" width="250px">
+							</div><br>
+							<?php echo $__env->yieldContent('catchPhrase'); ?>
+							<span class="typed-cursor">|</span>
+						</div><br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+    </header>
 
 	<?php echo $__env->yieldContent('dynamique'); ?>
 
@@ -161,6 +180,7 @@
 	<script src="<?php echo e(asset('js/typewriter.js')); ?>"></script>
 	<script src="<?php echo e(asset('js/jquery.onepagenav.js')); ?>"></script>
 	<script src="<?php echo e(asset('js/main.js')); ?>"></script>
+	
 </body>
 
 </html>

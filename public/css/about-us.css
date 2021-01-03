@@ -74,7 +74,7 @@
     padding: 100px 15px;
 }
 .culture-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../img/souris.jpg') top no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('../img/backgroundColor.jpg') top no-repeat;
     /* background-color: #095c87; */
     /* color: #fff; */
 }
@@ -249,14 +249,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-.columnB {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
@@ -298,6 +290,79 @@ html {
 .button:hover {
   background-color: #555;
 }
+
+.contact-form-area_3 {
+  background-color: #f7f7f7;
+  padding: 110px 0px; }
+
+.contact_third_form .contact-info input, .contact_third_form .contact-info .register-form-area select, .register-form-area .contact_third_form .contact-info select, .contact_third_form .contact-info .register-form-area textarea, .register-form-area .contact_third_form .contact-info textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+  .contact-page-version .contact_third_form {
+  background-color: #fff;
+  padding: 30px 30px 65px 30px;
+  border-radius: 4px; }
+
+  .mb45 {
+  margin-bottom: 45px; }
+
+.headline h1,
+.headline h2,
+.headline h3,
+.headline h4,
+.headline h5,
+.headline h6 {
+  margin: 0; }
+
+  .section-title .subtitle {
+  color: #a9a3a3;
+  letter-spacing: 7px;
+  position: relative; }
+  .section-title .subtitle:before, .section-title .subtitle:after {
+    content: ".";
+    font-size: 70px;
+    left: -45px;
+    pointer-events: none;
+    position: absolute;
+    text-shadow: rgba(0, 0, 0, 0) 0px 0px;
+    top: -10px;
+    line-height: 0;
+    color: #17d0cf;
+    text-shadow: 15px 0 #17d0cf; }
+  .section-title .subtitle:after {
+    right: -28px;
+    left: inherit; }
+
+  .contact-page-version .contact_third_form {
+  background-color: #fff;
+  padding: 30px 30px 65px 30px;
+  border-radius: 4px; }
+
+.contact_third_form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+  height: 150px;
+  margin-top: 40px; }
+
+.contact_third_form .nws-button {
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 70px; }
+
+ .contact_third_form .nws-button button {
+    border: none;
+    font-weight: 700;
+    color: #fff; }
+
 
 @media screen and (max-width: 650px) {
   .columnB {
