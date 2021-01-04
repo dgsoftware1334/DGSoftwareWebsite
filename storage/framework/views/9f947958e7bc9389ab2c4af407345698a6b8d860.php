@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +38,6 @@
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('fonts/eleganticons/et-icons.css')); ?>">
 	
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/flaticon.css')); ?>">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/cardio.css')); ?>">
 

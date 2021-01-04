@@ -46,14 +46,14 @@ class ServiceSeeder extends Seeder
             'updated_at' => now()
         ],[
         	'titre' => 'INSTALLATION DES CAMERAS ET RÉSEAUX',
-        	'description' => 'Les entreprises qui s’agrandissent ou qui déménagent sont confrontées au besoin d’installer un réseau informatique, Augmentez les performances de votre réseau avec un câblage réseau adapté.\r\n',
+        	'description' => 'Les entreprises qui s’agrandissent ou qui déménagent sont confrontées au besoin d’installer un réseau informatique, Augmentez les performances de votre réseau avec un câblage réseau adapté.',
             'prix' => '0',
             'photo' => 'thomas-jensen-qTEj-KMMq_Q-unsplash.jpg',
             'created_at' => now(),
             'updated_at' => now()
         ],[
         	'titre' => 'DÉVELOPPEMENT DES LOGICIELS',
-        	'description' => 'Un service de qualité pour  l\'installations des  videosurveillance , alarme anti intrusion , controle d\'acces..\r\n',
+        	'description' => 'Un service de qualité pour  l\'installations des  videosurveillance , alarme anti intrusion , controle d\'acces.',
             'prix' => '0',
             'photo' => 'scott-webb-yekGLpc3vro-unsplash.jpg',
             'created_at' => now(),

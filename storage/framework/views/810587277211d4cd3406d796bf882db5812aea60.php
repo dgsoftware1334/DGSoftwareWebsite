@@ -1,5 +1,5 @@
 <?php $__env->startSection('catchPhrase'); ?>
-            <h1 class="white typed">Nos services</h1>
+            <h1 class="white typed" style="color:black;">Nos services</h1>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('dynamique'); ?>
     <div class="cut cut-top"></div>
@@ -9,10 +9,11 @@
  ?>
 
 <div class="container">
-   <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+ <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   		<?php
      		$photos = App\Models\Galerie::all()->where('id_service','=',$service->id);
 	  	?>
+
 <div class="row">
    <section id="team" class="section gray-bg">
 		<div class="container">
@@ -39,7 +40,7 @@
 		    	
 			    <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $photo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			    	<div class="item <?php echo e($loop->first ? 'active' : ''); ?>">
-			    	   <img class="d-block img-fluid" src="img/<?php echo e($photo->main_image); ?>" alt="<?php echo e($photo->title); ?>">
+			    	   <img class="d-block img-fluid" src="img<?php echo e($photo->main_image); ?>" alt="<?php echo e($photo->catégorie); ?>">
 			       </div>
 			       
 			    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -60,8 +61,6 @@
 		
 	</section>
 	</div>
-	
-
 	
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </div>

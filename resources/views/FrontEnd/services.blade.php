@@ -1,7 +1,7 @@
 @extends('FrontEnd.master')
 
 @section('catchPhrase')
-            <h1 class="white typed">Nos services</h1>
+            <h1 class="white typed" style="color:black;">Nos services</h1>
 @endsection
 @section('dynamique')
     <div class="cut cut-top"></div>
@@ -11,10 +11,11 @@
  @endphp
 
 <div class="container">
-   @foreach($services as $service)
+ @foreach($services as $service)
   		@php
      		$photos = App\Models\Galerie::all()->where('id_service','=',$service->id);
 	  	@endphp
+
 <div class="row">
    <section id="team" class="section gray-bg">
 		<div class="container">
@@ -41,7 +42,7 @@
 		    	
 			    @foreach( $photos as $photo )
 			    	<div class="item {{ $loop->first ? 'active' : '' }}">
-			    	   <img class="d-block img-fluid" src="img/{{$photo->main_image}}" alt="{{ $photo->title }}">
+			    	   <img class="d-block img-fluid" src="img{{$photo->main_image}}" alt="{{ $photo->catégorie }}">
 			       </div>
 			       
 			    @endforeach
@@ -62,8 +63,6 @@
 		
 	</section>
 	</div>
-	
-
 	
 @endforeach
 </div>
