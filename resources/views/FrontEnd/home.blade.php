@@ -19,7 +19,7 @@
 						 <h5 class="black heading hide-hover text-center" style="background-color: #9c1210 ; font-size: 22px; color: white;">{{$s->titre}}
 						 </h5>
 						<div class="bottom">
-							<a href="{{url('/categories/'.$s->id)}}" class="btn btn-white-fill expand">Voir plus</a>
+							<a href="{{url('/service/'.$s->id)}}" class="btn btn-white-fill expand">Voir plus</a>
 						</div>
 					</div>
 				    

@@ -7,7 +7,7 @@
 <?php $__env->startSection('dynamique'); ?>
         <link rel="stylesheet" type="text/css" href="css/about-us.css">
  <div class="cut cut-top"> </div>
- 
+
 		<section id="contact-form" class="contact-form-area_3 contact-page-version">
 			<div class="container">
     <div class="row">
@@ -15,7 +15,7 @@
     	<?php if(session()->has('success')): ?>
 				  <div class="alert alert-success alert-dismissible fade show" role="alert">
 				    <strong><?php echo e(session()->get('success')); ?> </strong>
-				    <button type="button" class="close" data-dismiss="alert" aria-label="Close">lljkjhjlk
+				    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				      <span aria-hidden="true">&times;</span>
 				    </button>
 				  </div>

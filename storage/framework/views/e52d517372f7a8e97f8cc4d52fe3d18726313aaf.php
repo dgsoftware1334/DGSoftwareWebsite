@@ -20,7 +20,7 @@
 
 						 </h5>
 						<div class="bottom">
-							<a href="<?php echo e(url('/categories/'.$s->id)); ?>" class="btn btn-white-fill expand">Voir plus</a>
+							<a href="<?php echo e(url('/service/'.$s->id)); ?>" class="btn btn-white-fill expand">Voir plus</a>
 						</div>
 					</div>
 				    
