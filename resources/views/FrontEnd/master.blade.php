@@ -175,13 +175,13 @@
 		</a>
 	</div>
 	<!-- Scripts -->
-	<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
-	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('js/wow.min.js') }}"></script>
-	<script src="{{ asset('js/typewriter.js') }}"></script>
-	<script src="{{ asset('js/jquery.onepagenav.js') }}"></script>
-	<script src="{{ asset('js/main.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+	<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/js/wow.min.js') }}"></script>
+	<script src="{{ asset('assets/js/typewriter.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery.onepagenav.js') }}"></script>
+	<script src="{{ asset('assets/js/main.js') }}"></script>
 	
 </body>
 
