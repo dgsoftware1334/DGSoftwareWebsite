@@ -3,6 +3,7 @@
 
 <head>
 
+	<base href="http://www.dgsoftwareplus.com/" />
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +39,8 @@
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/eleganticons/et-icons.css') }}">
 	
-	<!-- Main style -->
+    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">	
+    <!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
 
 	
