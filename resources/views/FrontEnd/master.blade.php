@@ -3,7 +3,7 @@
 
 <head>
 
-	<base href="http://46.101.123.44/" />
+	<base href="http://www.dgsoftwareplus.com/" />
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
 	<!-- Normalize -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
 
 	<!-- Owl -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.css') }}">
@@ -41,7 +41,7 @@
 	
     <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cardio.css') }}">
 
 	
 </head>
