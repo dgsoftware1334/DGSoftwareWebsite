@@ -52,7 +52,7 @@
 
 						<div class="affiliate-market-guide mb65">
 							<div class="section-title-2 mb20 headline text-left">
-								<h2><span>Déscription</span></h2>
+								<h2><span>Description</span></h2>
 							</div>
 
 							<div class="affiliate-market-accordion">
