@@ -712,7 +712,7 @@
 @if($comments)
                     <div  class="testimonial-slide">
                         <div class="section-title-2 mb65 headline text-left "  >
-                            <h2><span>Témoignage</span>d'étudiants.</h2>
+                            <h2><span>Témoignage</span> d'étudiants.</h2>
                         </div>
                         <div id="testimonial-slide-item" class="testimonial-slide-area">
                         @foreach($comments as $item)
