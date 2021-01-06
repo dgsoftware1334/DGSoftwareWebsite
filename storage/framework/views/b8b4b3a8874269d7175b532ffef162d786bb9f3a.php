@@ -266,7 +266,7 @@
 		<section id="best-course" class="best-course-section">
 			<div class="container">
 				<div class="section-title mb45 headline text-center">
-					<span class="subtitle text-uppercase">SEARCH OUR COURSES</span>
+					<span class="subtitle text-uppercase">REJOIGNEZ-NOUS</span>
 					<h2>Nos<span> Offres.</span></h2>
 				</div>
 				<div class="best-course-area mb45">
@@ -293,7 +293,7 @@
 										<h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
 										  <ul class="list-group list-group-flush">
 										    <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-										    <li class="list-group-item">* Accès a 10 cas cliniques</li>
+										    <li class="list-group-item">* Accès a 5 cas cliniques</li>
 										    <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
 										  </ul>
 										
@@ -324,7 +324,7 @@
 										<h3><a href="#">Accés pour une année !</a></h3>
 										  <ul class="list-group list-group-flush">
 										    <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-										    <li class="list-group-item">* Accès a 10 cas cliniques</li>
+										    <li class="list-group-item">* Accès a 5 cas cliniques</li>
 										    <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
 										  </ul>
 										

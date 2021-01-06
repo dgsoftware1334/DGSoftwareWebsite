@@ -138,7 +138,7 @@
                                                         <h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
                                                           <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* Accès a 5 cas cliniques</li>
                                                             <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
                                                           </ul>
                                                         
@@ -169,7 +169,7 @@
                                                         <h3><a href="#">Accés pour une année !</a></h3>
                                                           <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* Accès a 5 cas cliniques</li>
                                                             <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
                                                           </ul>
                                                         
@@ -467,7 +467,29 @@
                                 <div class="course-rate ul-li">
                                     @if($c->averageRating)
                                     <ul> 
-                                        <li> <i class="fas fa-star"></i>{{round($c->averageRating(),1)}}</li>                                          
+                                        @if($c->averageRating == 1)
+                                                                    <i class="fas fa-star"></i>
+                                                                @elseif($c->averageRating == 2)
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                @elseif($c->averageRating == 3)
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                @elseif($c->averageRating == 4)
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                @elseif($c->averageRating() == 5)
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                
+                                                                @endif
+                                                                                  
                                     </ul>
                                     @endif
                                 </div>
@@ -519,7 +541,7 @@
                                 </div>
                                 <div class="register-fomr-title text-center">
                                     <h3 class="bold-font"><span>Inscrivez-vous</span> dès maintenant.</h3>
-                                    <p>Plus de {{$c->count()-4}} Cours disponibles en ligne</p>
+                                    <p>Plus de 50 Cours disponibles en ligne</p>
                                 </div>
                                 <div class="register-form-area">
                                     
@@ -684,16 +706,27 @@
                         </div>
                     </div>
                     <!-- /service-slide -->
+                        @php
+                                $comments = App\Models\Commentaire::all();
+                        @endphp
+@if($comments)
                     <div  class="testimonial-slide">
                         <div class="section-title-2 mb65 headline text-left "  >
                             <h2><span>Témoignage</span>d'étudiants.</h2>
                         </div>
-
                         <div id="testimonial-slide-item" class="testimonial-slide-area">
-                            
-
+                        @foreach($comments as $item)
+                            <div class="student-qoute "  >
+                                <p>“{{$item->message}}”</p>
+                                <div class="student-name-designation">
+                                    <span class="st-name bold-font">{{$item->nom}} </span>
+                                    <span class="st-designation">Graphic Designer</span>
+                                </div>
+                            </div> 
+                        @endforeach
                         </div>
                     </div>
+@endif
                 </div>
             </div>
         </section>

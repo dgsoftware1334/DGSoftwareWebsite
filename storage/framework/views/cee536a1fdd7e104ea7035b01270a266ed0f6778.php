@@ -105,7 +105,6 @@
 													            	<li><i class="fas fa-star"></i></li>
 													            	<li><i class="fas fa-star"></i></li>
 													            	<li><i class="fas fa-star"></i></li>
-													            
 													    <?php endif; ?>
 												</ul>
 												<b><?php echo e($cours->timesRated()); ?> Évaluations</b>

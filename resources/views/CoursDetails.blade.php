@@ -104,7 +104,6 @@
 													            	<li><i class="fas fa-star"></i></li>
 													            	<li><i class="fas fa-star"></i></li>
 													            	<li><i class="fas fa-star"></i></li>
-													            
 													    @endif
 												</ul>
 												<b>{{$cours->timesRated()}} Évaluations</b>
