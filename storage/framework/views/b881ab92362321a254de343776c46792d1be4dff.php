@@ -428,12 +428,12 @@
                                     <i class="text-gradiant flaticon-book"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <span class="counter-count bold-font"><?php echo e(count($c)); ?>.</span>
+                                    <span class="counter-count bold-font">50.</span>
                                     <p>Cours Disponibles En ligne</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- /counter -->
+                        <!-- /counter   <?php echo e(count($c)); ?> -->
 
                         <div class="col-md-4 col-sm-4">
                             <div class="counter-icon-number " >
@@ -961,62 +961,7 @@ unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('recuCCP')); ?>" name="
                                 </div>
                              </div>
                               
-                            
-                          <!--  <div class="col-md-3">
-                                <div class="footer-widget">
-                                    <h2 class="widget-title">Photo Gallery</h2>
-                                    <div class="photo-list ul-li">
-                                        <ul>
-                                            <li>
-                                                <img src="assets/img/gallery/g-1.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-1.jpg" data-lightbox="roadtrip">
-                                                        <i class="fas fa-search"></i>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/gallery/g-2.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-2.jpg" data-lightbox="roadtrip">
-                                                        <i class="fas fa-search"></i>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/gallery/g-3.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-3.jpg" data-lightbox="roadtrip">  <i class="fas fa-search"></i></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/gallery/g-4.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-4.jpg" data-lightbox="roadtrip">  <i class="fas fa-search"></i></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/gallery/g-5.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-5.jpg" data-lightbox="roadtrip">  <i class="fas fa-search"></i></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/gallery/g-6.jpg" alt="">
-                                                <div class="blakish-overlay"></div>
-                                                <div class="pop-up-icon">
-                                                    <a href="assets/img/gallery/g-6.jpg" data-lightbox="roadtrip">  <i class="fas fa-search"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>-->
-                            </div>
+                        </div>
                         </div>
                     <!-- /footer-widget-content -->
                    
