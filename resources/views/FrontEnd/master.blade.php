@@ -16,32 +16,32 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicons/apple-touch-icon-57x57.png') }}">
-	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicons/apple-touch-icon-60x60.png') }}">
-	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-32x32.png') }}" sizes="32x32">
-	<link rel="icon" type="image/png" href="{{ asset('img/favicons/favicon-16x16.png') }}" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('asset/img/favicons/apple-touch-icon-57x57.png') }}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('asset/img/favicons/apple-touch-icon-60x60.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset('asset/img/favicons/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ asset('asset/img/favicons/favicon-16x16.png') }}" sizes="16x16">
 	<link rel="manifest" href="{{ asset('img/favicons/manifest.json') }}">
 	<link rel="shortcut icon" href="{{ asset('img/favicons/favicon.ico') }}">
 	<meta name="msapplication-TileColor" content="#00a8ff">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('asset/css/normalize.css') }}">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('asset/css/bootstrap.css') }}">
 
 	<!-- Owl -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.css') }}">
 	<!-- Animate.css -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css') }}">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.1.0/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('asset/fonts/font-awesome-4.1.0/css/font-awesome.min.css') }}">
 	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/eleganticons/et-icons.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('asset/fonts/eleganticons/et-icons.css') }}">
 	
-    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('asset/css/flaticon.css')}}">
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cardio.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('asset/css/cardio.css') }}">
 
 	
 </head>
