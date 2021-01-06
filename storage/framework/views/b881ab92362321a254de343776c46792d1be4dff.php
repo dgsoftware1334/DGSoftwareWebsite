@@ -10,22 +10,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('assets/img/apple-touch-icon.png')); ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/img/favicon-32x32.png')); ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/img/favicon-32x32.png')); ?>">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/video.min.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-    <link rel="stylesheet" href="assets/css/progess.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/owl.carousel.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/fontawesome-all.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/flaticon.css')); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/meanmenu.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/bootstrap.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/video.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/lightbox.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/progess.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/animate.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/responsive.css')); ?>">
 
     <link rel="stylesheet"  href="assets/css/colors/switch.css">
     <link href="assets/css/colors/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
@@ -75,15 +74,8 @@
                                 <a class="navbar-brand text-uppercase" href="#"><img src="assets/img/logo/E-ECG-LOGO-[Converted].png"  alt="logo"></a>
                             </div><!-- /.navbar-header -->
 
-                        <!--    <div class="select-lang">
-                                <select>
-                                    <option value="9" selected="">ENG</option>
-                                    <option value="10">BAN</option>
-                                    <option value="11">ARB</option>
-                                    <option value="12">FRN</option>
-                                </select>
-                        -->
-                            </div>
+                <!-- Search Bar-->
+                        </div>
                             <div class="cart-search float-right ul-li">
                                 <ul>
                                     <li><button type="button" data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-shopping-bag"></i></button>
@@ -146,7 +138,7 @@
                                                         <h3><a href="#">Accés a tous les cours pendant 6mois ! seulement a 3500 DA</a></h3>
                                                           <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* Accès a 5 cas cliniques</li>
                                                             <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
                                                           </ul>
                                                         
@@ -177,7 +169,7 @@
                                                         <h3><a href="#">Accés pour une année !</a></h3>
                                                           <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">* Accès a l'ensemble des cours ECG</li>
-                                                            <li class="list-group-item">* Accès a 10 cas cliniques</li>
+                                                            <li class="list-group-item">* Accès a 5 cas cliniques</li>
                                                             <li class="list-group-item">* 1 nouveau cas clinique publiée chaque semaine .</li>
                                                           </ul>
                                                         
@@ -273,7 +265,7 @@
                                                         <button type="submit" value="Submit">Entrer</button>
                                                     </div>
                                                     <div class="log-in-footer" align="right">
-                                                  <?php if(Route::has('password.request')): ?>
+                                                    <?php if(Route::has('password.request')): ?>
                                                         <a style=" font-size: 0.875rem; text-decoration: underline; color: grey;" href="<?php echo e(route('password.request')); ?>"> 
                                                         Mot de passe oublié?
                                                        </a>
@@ -352,79 +344,35 @@
                                 <span class="subtitle text-uppercase">LEARN IT THE EASY WAY</span>
                             </div>
                             <div class="layer-1-2">
-                                <h2 class="secoud-title"> Browse The <span>Best Courses.</span></h2>
+                                <h2 class="secoud-title"> Trouvez les meilleures <span>Cours.</span></h2>
                             </div>
                         </div>
                         <div class="layer-1-3">
                             <div class="search-course mb30 relative-position">
                                 <form action="#" method="post">
-                                    <input class="course" name="course" type="text" placeholder="Type what do you want to learn today?">
+                                    <input class="course" name="course" type="text" placeholder="Tapez ce que vous voulez apprendre aujourd'hui?">
                                     <div class="nws-button text-center  gradient-bg text-capitalize">
-                                        <button type="submit" value="Submit">Search Course</button>
+                                        <button type="submit" value="Submit">Rechercher un cours</button>
                                     </div>
                                 </form>
                             </div>
                             <div class="layer-1-4">
                                 <div class="slider-course-category ul-li text-center">
-                                    <span class="float-left">BY CATEGORY:</span>
+                                    <span class="float-left">PAR CATÉGORIE:</span>
                                     <ul>
-                                        <li>Graphics Design</li>
-                                        <li>Web Design</li>
-                                        <li>Mobile Application</li>
-                                        <li>Enginering</li>
-                                        <li>Science</li>
+                                        <li>Cours</li>
+                                        <li>Cas clinique</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--<div class="slider-area slider-bg-3 relative-position">
-                    <div class="slider-text">
-                        <div class="layer-1-2">
-                            <div class="coming-countdown ul-li">
-                                <ul>
-                                    <li class="days">
-                                        <span class="number"></span>
-                                        <span class>Days</span>
-                                    </li>
-                                    <li class="hours">
-                                        <span class="number"></span>
-                                        <span class>Hours</span>
-                                    </li>
-                                    <li class="minutes">
-                                        <span class="number"></span>
-                                        <span class>Minutes</span>
-                                    </li>
-                                    <li class="seconds">
-                                        <span class="number"></span>
-                                        <span class>Seconds</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="section-title mb20 headline text-center ">
-                            <div class="layer-1-3">
-                                <h2 class="third-slide"> Mobile Application Experiences : <br> <span>Mobile App Design.</span></h2>
-                            </div>
-                        </div>
-                        <div class="layer-1-4">
-                            <div class="about-btn text-center">
-                                <div class="genius-btn text-center text-uppercase ul-li-block bold-font">
-                                    <a href="#">About Us <i class="fas fa-caret-right"></i></a>
-                                </div>
-                                <div class="genius-btn text-center text-uppercase ul-li-block bold-font">
-                                    <a href="#">contact us <i class="fas fa-caret-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="slider-area slider-bg-4 relative-position">
                     <div class="slider-text">
                         <div class="section-title mb20 headline text-center ">
                             <span class="subtitle text-uppercase">LEARN IT THE EASY WAY</span>
-                            <h2 class=""  ><span>Inventive</span> Solution <br> for <span>Education</span></h2>
+                            <h2>Solution <span>Inventive</span> <br> pour comprendre <span> L'ECG</span></h2>
                         </div>
                     </div>
                 </div>
@@ -440,69 +388,65 @@
         <section id="search-course" class="search-course-section">
             <div class="container">
                 <div class="section-title mb20 headline text-center "  >
-                    <span class="subtitle text-uppercase">LEARN NEW SKILLS</span>
-                    <h2><span>Search</span> Genius Courses.</h2>
+                    <span class="subtitle text-uppercase">APPRENEZ DE NOUVELLES ASTUCES</span>
+                    <h2><span>Rechercher</span> des cours ECG.</h2>
                 </div>
                 <div class="search-course mb30 relative-position "  >
                     <form action="#" method="post">
                         <input class="course" name="course" type="text" placeholder="Type what do you want to learn today?">
                         <div class="nws-button text-center  gradient-bg text-capitalize">
-                            <button type="submit" value="Submit">Search Course</button>
+                            <button type="submit" value="Submit">Rechercher un cours</button>
                         </div>
                     </form>
                 </div>
+            <?php
+             $abonnés=DB::table('users')
+                ->where('users.status','=','Offre 1')
+                ->Orwhere('users.status','=','Offre 2')
+                ->get();
+             $c=DB::table('cours')->get();
+             $ratings = DB::table('ratings')->avg('rating');
+            ?>
                 <div class="search-counter-up">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="counter-icon-number "  >
                                 <div class="counter-icon">
                                     <i class="text-gradiant flaticon-graduation-hat"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <span class="counter-count bold-font">5 </span><span>M+</span>
-                                    <p>Students Enrolled</p>
+                                    <span class="counter-count bold-font"><?php echo e(count($abonnés)); ?>.</span>
+                                    <p>Étudiants inscrits</p>
                                 </div>
                             </div>
                         </div>
                         <!-- /counter -->
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="counter-icon-number " >
                                 <div class="counter-icon">
                                     <i class="text-gradiant flaticon-book"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <span class="counter-count bold-font">122</span><span>.500+</span>
-                                    <p>Online Available Courses</p>
+                                    <span class="counter-count bold-font"><?php echo e(count($c)); ?>.</span>
+                                    <p>Cours Disponibles En ligne</p>
                                 </div>
                             </div>
                         </div>
                         <!-- /counter -->
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="counter-icon-number " >
                                 <div class="counter-icon">
                                     <i class="text-gradiant flaticon-favorites-button"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <span class="counter-count bold-font">15</span><span>.000+</span>
-                                    <p>Premium Quality Products</p>
+                                    <span class="counter-count bold-font"><?php echo e($ratings); ?></span><span></span>
+                                    <p>Cours de qualité</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- /counter -->
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="counter-icon-number " >
-                                <div class="counter-icon">
-                                    <i class="text-gradiant flaticon-group"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <span class="counter-count bold-font">7</span><span>.500+</span>
-                                    <p>Teachers Registered</p>
-                                </div>
-                            </div>
-                        </div>
+                       
                         <!-- /counter -->
                     </div>
                 </div>
@@ -514,240 +458,78 @@
 
     <!-- Start popular course
         ============================================= -->
+        <?php 
+        
+            $cours= App\Models\Cours::where('offre','=',3)->orderBy('created_at','desc')->get();
+            $count=0;
+        ?>
+
         <section id="popular-course" class="popular-course-section">
             <div class="container">
                 <div class="section-title mb20 headline text-left "  >
-                    <span class="subtitle text-uppercase">LEARN NEW SKILLS</span>
-                    <h2><span>Popular</span> Courses.</h2>
+                    <span class="subtitle text-uppercase">APPRENEZ DE NOUVELLES COMPÉTENCES</span>
+                    <h2><span>Derniers</span> Publications.</h2>
                 </div>
                 <div id="course-slide-item" class="course-slide">
-                    <div class="course-item-pic-text " >
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-1.jpg" alt="">
-                            <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
-                            </div>
-                            <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="course-item-text">
-                            <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Web Design</a></span>
-                                <span class="course-author bold-font"><a href="#">John Luis Fernandes</a></span>
-                                <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Fully Responsive Web Design & Development.</a> <span class="trend-badge text-uppercase bold-font"><i class="fas fa-bolt"></i> TRENDING</span></h3>
-                            </div>
-                            <div class="course-viewer ul-li">
-                                <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-
-                    <div class="course-item-pic-text " >
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-2.jpg" alt="">
-                            <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
-                            </div>
-                            <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="course-item-text">
-                            <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Mobile Apps</a></span>
-                                <span class="course-author bold-font"><a href="#">Fernando Torres</a></span>
-                                <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Introduction to Mobile Application Development.</a></h3>
-                            </div>
-                            <div class="course-viewer ul-li">
-                                <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-
-                    <div class="course-item-pic-text " >
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-3.jpg" alt="">
-                            <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
-                            </div>
-                            <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="course-item-text">
-                            <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Motion Graphic </a></span>
-                                <span class="course-author bold-font"><a href="#">enny Garcias</a></span>
-                                <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Learning IOS Apps Programming & Development.</a></h3>
-                            </div>
-                            <div class="course-viewer ul-li">
-                                <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-
+                    <?php $__currentLoopData = $cours; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if($count < 3): ?>
                     <div class="course-item-pic-text">
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-2.jpg" alt="">
+                        <div class="course-pic relative-position mb25" style=" height:270px;">
+                            <img src="<?php echo e(url('storage/'.$c->thumbnail)); ?>" alt="">
                             <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
+                                <span><?php echo e($c->Durée); ?></span>
                             </div>
                             <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+                                <a href="<?php echo e(url('/cours/'.$c->id.'/details')); ?>">Voir Cours <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="course-item-text">
                             <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Web Design</a></span>
-                                <span class="course-author bold-font"><a href="#">John Luis Fernandes</a></span>
+                                <span class="course-category bold-font"><a href="<?php echo e(url('/cours/'.$c->id.'/details')); ?>">Gratuit</a></span>
+                                <span class="course-author bold-font"><a href="<?php echo e(url('/cours/'.$c->id.'/details')); ?>"><?php echo e($c->catégories); ?></a></span>
                                 <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
+                                    <?php if($c->averageRating): ?>
+                                    <ul> 
+                                        <?php if($c->averageRating == 1): ?>
+                                                                    <i class="fas fa-star"></i>
+                                                                <?php elseif($c->averageRating == 2): ?>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                <?php elseif($c->averageRating == 3): ?>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                <?php elseif($c->averageRating == 4): ?>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                <?php elseif($c->averageRating() == 5): ?>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                
+                                                                <?php endif; ?>
+                                                                                  
                                     </ul>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Fully Responsive Web Design & Development.</a> <span class="trend-badge text-uppercase bold-font"><i class="fas fa-bolt"></i> TRENDING</span></h3>
+                                <h3><a href="<?php echo e(url('/cours/'.$c->id.'/details')); ?>"><?php echo e($c->Cours); ?></a> <span class="trend-badge text-uppercase bold-font"><i class="fas fa-bolt"></i> Nouveau</span></h3>
                             </div>
                             <div class="course-viewer ul-li">
                                 <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
+                                    <li><a href="">Ajouté <?php echo e($c->created_at->locale('fr')->diffForHumans()); ?></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- /item -->
-
-                    <div class="course-item-pic-text">
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-3.jpg" alt="">
-                            <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
-                            </div>
-                            <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="course-item-text">
-                            <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Web Design</a></span>
-                                <span class="course-author bold-font"><a href="#">John Luis Fernandes</a></span>
-                                <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Fully Responsive Web Design & Development.</a> <span class="trend-badge text-uppercase bold-font"><i class="fas fa-bolt"></i> TRENDING</span></h3>
-                            </div>
-                            <div class="course-viewer ul-li">
-                                <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-
-                    <div class="course-item-pic-text">
-                        <div class="course-pic relative-position mb25">
-                            <img src="assets/img/course/c-1.jpg" alt="">
-                            <div class="course-price text-center gradient-bg">
-                                <span>$99.00</span>
-                            </div>
-                            <div class="course-details-btn">
-                                <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="course-item-text">
-                            <div class="course-meta">
-                                <span class="course-category bold-font"><a href="#">Web Design</a></span>
-                                <span class="course-author bold-font"><a href="#">John Luis Fernandes</a></span>
-                                <div class="course-rate ul-li">
-                                    <ul>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="#">Fully Responsive Web Design & Development.</a> <span class="trend-badge text-uppercase bold-font"><i class="fas fa-bolt"></i> TRENDING</span></h3>
-                            </div>
-                            <div class="course-viewer ul-li">
-                                <ul>
-                                    <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                    <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                    <li><a href="">125k Unrolled</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
+                    <?php endif; ?>
+                    <?php $count= $count+1 ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </section>
@@ -763,40 +545,154 @@
                     <div class="col-md-5">
                         <div class="about-resigter-form backgroud-style relative-position">
                             <div class="register-content">
+                                <div class=" text-center">
+                                    <?php if(session()->has('success')): ?>
+                                      <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong><?php echo e(session()->get('success')); ?> </strong>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                    <?php elseif(session()->has('error')): ?>
+                                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                       <strong><?php echo e(session()->get('error')); ?> </strong>
+                                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
+                                       </button>
+                                      </div>
+                                    <?php endif; ?>
+                                </div>
                                 <div class="register-fomr-title text-center">
-                                    <h3 class="bold-font"><span>Get a</span> Free Registration.</h3>
-                                    <p>More Than 122K Online Available Courses</p>
+                                    <h3 class="bold-font"><span>Inscrivez-vous</span> dès maintenant.</h3>
+                                    <p>Plus de 50 Cours disponibles en ligne</p>
                                 </div>
                                 <div class="register-form-area">
-                                    <form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                                    
+                                    <form action="<?php echo e(url('demandes')); ?>" method="post" class="contact_form" enctype="multipart/form-data">
+                                            <?php echo e(csrf_field()); ?>
+
                                         <div class="contact-info">
-                                            <input class="name" name="name" type="text" placeholder="Your Name.">
+                                            <select class="form-control <?php $__errorArgs = ['IDoffre'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="IDoffre" value="<?php echo e(old('IDoffre')); ?>" required>
+                                                    <option value="">---------Sélectionnez une offre---------</option>
+                                                    <option value='1'> Offre 1 (6 mois) </option>
+                                                    <option value='2'> Offre 2 (12 mois)</option>
+                                                </select>
+                                                <?php if($errors->has('IDoffre')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('IDoffre')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
                                         </div>
                                         <div class="contact-info">
-                                            <input class="nbm" name="nbm" type="number" placeholder="Your Number">
+                                            <input type="text" class="form-control <?php $__errorArgs = ['nom'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> nbm" name="nom" placeholder="Votre nom" value="<?php echo e(old('nom')); ?>" required>
+                                            <?php if($errors->has('nom')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('nom')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
                                         </div>
                                         <div class="contact-info">
-                                            <input class="email" name="email" type="email" placeholder="Email Address.">
+                                           <input type="text" class="form-control <?php $__errorArgs = ['prenom'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>"  name="prenom" placeholder="Votre prénom" value="<?php echo e(old('prenom')); ?>" required>
+                                           <?php if($errors->has('prenom')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('prenom')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
                                         </div>
-                                        <select>
-                                            <option value="9" selected="">Select Course.</option>
-                                            <option value="10">Web Design</option>
-                                            <option value="11">Web Development</option>
-                                            <option value="12">Php Core</option>
-                                        </select>
                                         <div class="contact-info">
-                                            <input type="text" id="datepicker" placeholder="Date.">
+                                            <input type="email" class="form-control <?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> email"  name="email" placeholder="Votre adresse mail" value="<?php echo e(old('email')); ?>" required unique>
+                                            <?php if($errors->has('email')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('email')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
                                         </div>
-                                        <textarea  placeholder="Message."></textarea>
-                                        <div class="nws-button text-uppercase text-center white text-capitalize">
-                                            <button type="submit" value="Submit">SUBMIT REQUEST </button>
+                                        <div class="contact-info">
+                                             <input type="text" class="form-control <?php $__errorArgs = ['pays'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="pays" placeholder="Votre pays" value="<?php echo e(old('pays')); ?>">
+                                                <?php if($errors->has('pays')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('pays')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
+                                        </div>                                  
+                                        <div class="contact-info">
+                                             <input type="text" class="form-control <?php $__errorArgs = ['ville'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> "  name="ville" placeholder="Votre ville" value="<?php echo e(old('ville')); ?>" required>
+                                                <?php if($errors->has('ville')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('ville')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
                                         </div>
+                                        <div class="contact-info custom-file">
+                                              <input type="file" accept=".png,.jpg,.jpeg," class="form-group  <?php $__errorArgs = ['recuCCP'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('recuCCP')); ?>" name="recuCCP" required/>
+                                                <?php if($errors->has('recuCCP')): ?>
+                                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                                    <strong><?php echo e($errors->first('recuCCP')); ?></strong>
+                                                    </span>
+                                                <?php endif; ?>
+                                           
+                                        </div>
+                                        <div class="contact-info"> 
+                                            <div class="nws-button text-uppercase text-center white text-capitalize">
+                                                <button type="submit" value="Submit">VALIDER INSCRIPTION </button>
+                                            </div>
+                                        </div>
+
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <div class="bg-mockup">
-                            <img src="assets/img/about/phone.png" alt="">
+                            <img src="<?php echo e(asset('assets/img/about/phone.png')); ?>" alt="">
                         </div>
                     </div>
                     <!-- /form -->
@@ -804,29 +700,26 @@
                     <div class="col-md-7">
                         <div class="about-us-text">
                             <div class="section-title relative-position mb20 headline text-left "  >
-                                <span class="subtitle ml42 text-uppercase">SORT ABOUT US</span>
-                                <h2>We are <span>Genius Course</span>
-                                work since 1980.</h2>
-                                <p>We take our mission of increasing global access to quality education seriously. We connect learners to the best universities and institutions from around the world.</p>
+                                <span class="subtitle ml42 text-uppercase">Instructions</span>
+                                <h2>Comment devenir  <span>Membre de Eazy-ECG!</span></h2>
+                                <p>Les payments sont fait par CCP sur le compte suivant:</p>
+                                <h2 class="alert alert-info">0017768801 56 <br> Kourtel Mohamed </h2>
                             </div>
                             <div class="about-content-text">
-                                <p class=""  >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam. magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+                                <h5>Etapes d'inscription.</h5>
                                 <div class="about-list mb65 ul-li-block "  >
                                     <ul>
-                                        <li>Professional And Experienced Since 1980</li>
-                                        <li>We Connect Learners To The Best  Universities From Around The World</li>
-                                        <li>Our Mission Increasing Global Access To Quality Aducation</li>
-                                        <li>100K Online Available Courses</li>
+                                        <li>Vous pouvez envoyer l'argent de l'offre spécifiée au compte CCP mentioné</li>
+                                        <li>Après le paiement, vous prenez une photo du reçu CCP comme preuve.</li>
+                                        <li>Et enfin vous remplissez le formulaire avec les informations demandés.</li>
+                                        <li>Une fois votre demande soumise et vérifiée par l'administrateur, il vous suffit d'attendre un e-mail contenant les coordonnées nécessaires pour accéder à votre compte.</li>
                                     </ul>
+                                <div>
+                                    <div class="alert alert-danger">Important !</div>
+                                    <p> Vous devez vous assurer que la photo de votre reçu de paiement est valide et claire, sinon votre demande sera supprimée par l'administrateur.
+                                    </p>
                                 </div>
-                                <div class="about-btn "  >
-                                    <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
-                                        <a href="#">About Us <i class="fas fa-caret-right"></i></a>
-                                    </div>
-                                    <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
-                                        <a href="#">contact us <i class="fas fa-caret-right"></i></a>
-                                    </div>
-                                </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -843,8 +736,8 @@
             <div class="jarallax  backgroud-style">
                 <div class="container">
                     <div class="section-title mb20 headline text-center "  >
-                        <span class="subtitle text-uppercase">GENIUS ADVANTAGES</span>
-                        <h2>Reason <span>Why Choose Genius.</span></h2>
+                        <span class="subtitle text-uppercase">AVANTAGES D'EAZY-ECG</span>
+                        <h2>Raisons pour lesquelles<span> Choisir E-ECG.</span></h2>
                     </div>
                     <div id="service-slide-item" class="service-slide">
                         <div class="service-text-icon "  >
@@ -852,324 +745,67 @@
                                 <i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
                             </div>
                             <div class="service-text">
-                                <h3 class="bold-font">The Power Of Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
+                                <h3 class="bold-font">Cas clinique Hebdomadaire.</h3>
+                                <p>Nouveau cas clinique publié chaque semaine en détail.</p>
+                            </div>
+                        </div>
+                        <div class="service-text-icon">
+                            <div class="service-icon float-left">
+                                <i class="text-gradiant flaticon-business"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3 class="bold-font">Meilleurs prix dans le marcher.</h3>
+                                <p>Les prix ont été fixés pour faciliter et aider mes confrères.</p>
                             </div>
                         </div>
                         <div class="service-text-icon "  >
                             <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-clipboard-with-pencil"></i>
+                                <i class="text-gradiant flaticon-technology"></i>
                             </div>
                             <div class="service-text">
-                                <h3 class="bold-font">Best Online Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
+                                <h3 class="bold-font">Sites web réactif et accessible a tout moment</h3>
+                                <p>Consultation confortable sur des écrans de tailles différentes.</p>
                             </div>
                         </div>
-                        <div class="service-text-icon "  >
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-list"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">Education For All Student.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
-                        <div class="service-text-icon "  >
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">The Power Of Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
+                        
                         <div class="service-text-icon">
                             <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-clipboard-with-pencil"></i>
+                                <i class="text-gradiant flaticon-dna"></i>
                             </div>
                             <div class="service-text">
-                                <h3 class="bold-font">Best Online Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
-                        <div class="service-text-icon">
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-list"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">Education For All Student.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
-                        <div class="service-text-icon">
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">The Power Of Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
-                        <div class="service-text-icon">
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-clipboard-with-pencil"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">Best Online Education.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
-                            </div>
-                        </div>
-                        <div class="service-text-icon">
-                            <div class="service-icon float-left">
-                                <i class="text-gradiant flaticon-list"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3 class="bold-font">Education For All Student.</h3>
-                                <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh euismod tincidun laoreet.</p>
+                                <h3 class="bold-font">Cours mené par passion et dévouement.</h3>
+                                <p>Des connaissances construites par de longues études et de dur travails, et surtout par la pratique!</p>
                             </div>
                         </div>
                     </div>
                     <!-- /service-slide -->
+                        <?php
+                                $comments = App\Models\Commentaire::all();
+                        ?>
+<?php if($comments): ?>
                     <div  class="testimonial-slide">
                         <div class="section-title-2 mb65 headline text-left "  >
-                            <h2>Students <span>Testimonial.</span></h2>
+                            <h2><span>Témoignage</span>d'étudiants.</h2>
                         </div>
-
                         <div id="testimonial-slide-item" class="testimonial-slide-area">
+                        <?php $__currentLoopData = $comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="student-qoute "  >
-                                <p>“This was our first time lorem ipsum and we <b> were very pleased with the whole experience</b>. Your price was lower than other companies. Our experience was good from start to finish, so we’ll be back in the future lorem ipsum diamet.”</p>
+                                <p>“<?php echo e($item->message); ?>”</p>
                                 <div class="student-name-designation">
-                                    <span class="st-name bold-font">Robertho Garcia </span>
+                                    <span class="st-name bold-font"><?php echo e($item->nom); ?> </span>
                                     <span class="st-designation">Graphic Designer</span>
                                 </div>
-                            </div>
-
-                            <div class="student-qoute "  >
-                                <p>“This was our first time lorem ipsum and we <b> were very pleased with the whole experience</b>. Your price was lower than other companies. Our experience was good from start to finish, so we’ll be back in the future lorem ipsum diamet.”</p>
-                                <div class="student-name-designation">
-                                    <span class="st-name bold-font">Robertho Garcia </span>
-                                    <span class="st-designation">Graphic Designer</span>
-                                </div>
-                            </div>
-
-                            <div class="student-qoute "  >
-                                <p>“This was our first time lorem ipsum and we <b> were very pleased with the whole experience</b>. Your price was lower than other companies. Our experience was good from start to finish, so we’ll be back in the future lorem ipsum diamet.”</p>
-                                <div class="student-name-designation">
-                                    <span class="st-name bold-font">Robertho Garcia </span>
-                                    <span class="st-designation">Graphic Designer</span>
-                                </div>
-                            </div>
-
-                            <div class="student-qoute">
-                                <p>“This was our first time lorem ipsum and we <b> were very pleased with the whole experience</b>. Your price was lower than other companies. Our experience was good from start to finish, so we’ll be back in the future lorem ipsum diamet.”</p>
-                                <div class="student-name-designation">
-                                    <span class="st-name bold-font">Robertho Garcia </span>
-                                    <span class="st-designation">Graphic Designer</span>
-                                </div>
-                            </div>
+                            </div> 
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
+<?php endif; ?>
                 </div>
             </div>
         </section>
     <!-- End of why choose us section
         ============================================= -->
 
-
-    <!-- Start latest section
-        ============================================= -->
-        <section id="latest-area" class="latest-area-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="latest-area-content  " >
-                            <div class="section-title-2 mb65 headline text-left">
-                                <h2>Latest <span>News.</span></h2>
-                            </div>
-                            <div class="latest-news-posts">
-                                <div class="latest-news-area">
-                                    <div class="latest-news-thumbnile relative-position">
-                                        <img src="assets/img/blog/lb-1.jpg" alt="">
-                                        <div class="hover-search">
-                                            <i class="fas fa-search"></i>
-                                        </div>
-                                        <div class="blakish-overlay"></div>
-                                    </div>
-                                    <div class="date-meta">
-                                        <i class="fas fa-calendar-alt"></i> 26 April 2018
-                                    </div>
-                                    <h3 class="latest-title bold-font"><a href="#">Affiliate Marketing A Beginner’s Guide.</a></h3>
-                                    <div class="course-viewer ul-li">
-                                        <ul>
-                                            <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                            <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- /post -->
-
-                                <div class="latest-news-posts">
-                                    <div class="latest-news-area">
-                                        <div class="latest-news-thumbnile relative-position">
-                                            <img src="assets/img/blog/lb-2.jpg" alt="">
-                                            <div class="hover-search">
-                                                <i class="fas fa-search"></i>
-                                            </div>
-                                            <div class="blakish-overlay"></div>
-                                        </div>
-                                        <div class="date-meta">
-                                            <i class="fas fa-calendar-alt"></i> 26 April 2018
-                                        </div>
-                                        <h3 class="latest-title bold-font"><a href="#">No.1 The Best Online Course 2018.</a></h3>
-                                        <div class="course-viewer ul-li">
-                                            <ul>
-                                                <li><a href=""><i class="fas fa-user"></i> 1.220</a></li>
-                                                <li><a href=""><i class="fas fa-comment-dots"></i> 1.015</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- /post -->
-                                </div>
-
-                                <div class="view-all-btn bold-font">
-                                    <a href="#">View All News <i class="fas fa-chevron-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /latest-news -->
-                    <div class="col-md-4">
-                        <div class="latest-area-content " >
-                            <div class="section-title-2 mb65 headline text-left">
-                                <h2>Upcoming <span>Events.</span></h2>
-                            </div>
-                            <div class="latest-events">
-                                <div class="latest-event-item">
-                                    <div class="events-date  relative-position text-center">
-                                        <div class="gradient-bdr"></div>
-                                        <span class="event-date bold-font">22</span>
-                                        April 2018
-                                    </div>
-                                    <div class="event-text">
-                                        <h3 class="latest-title bold-font"><a href="#">Fully Responsive Web Design & Development.</a></h3>
-                                        <div class="course-meta">
-                                            <span class="course-category"><a href="#">Web Design</a></span>
-                                            <span class="course-author"><a href="#">Koke</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="latest-events">
-                                <div class="latest-event-item">
-                                    <div class="events-date  relative-position text-center">
-                                        <div class="gradient-bdr"></div>
-                                        <span class="event-date bold-font">07</span>
-                                        August 2018
-                                    </div>
-                                    <div class="event-text">
-                                        <h3 class="latest-title bold-font"><a href="#">Introduction to Mobile Application Development.</a></h3>
-                                        <div class="course-meta">
-                                            <span class="course-category"><a href="#">Web Design</a></span>
-                                            <span class="course-author"><a href="#">Koke</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="latest-events">
-                                <div class="latest-event-item">
-                                    <div class="events-date  relative-position text-center">
-                                        <div class="gradient-bdr"></div>
-                                        <span class="event-date bold-font">30</span>
-                                        Sept 2018
-                                    </div>
-                                    <div class="event-text">
-                                        <h3 class="latest-title bold-font"><a href="#">IOS Apps Programming & Development.</a></h3>
-                                        <div class="course-meta">
-                                            <span class="course-category"><a href="#">Web Design</a></span>
-                                            <span class="course-author"><a href="#">Koke</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="view-all-btn bold-font">
-                                <a  href="#">Check Calendar   <i class="fas fa-calendar-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /events -->
-
-                    <div class="col-md-4">
-                        <div class="latest-area-content " >
-                            <div class="section-title-2 mb65 headline text-left">
-                                <h2>Latest <span>Video.</span></h2>
-                            </div>
-                            <div class="latest-video-poster relative-position mb20">
-                                <img src="assets/img/banner/v-1.jpg" alt="">
-                                <div class="video-play-btn text-center gradient-bg">
-                                    <a class="popup-with-zoom-anim" href="https://www.youtube.com/watch?v=-g4TnixUdSc"><i class="fas fa-play"></i></a>
-                                </div>
-                            </div>
-                            <div class="vidoe-text">
-                                <h3 class="latest-title bold-font"><a href="#">Learning IOS Apps in Amsterdam.</a></h3>
-                                <p class="mb25">Lorem ipsum dolor sit amet, consectetuer delacosta adipiscing elit, sed diam nonummy.</p>
-                            </div>
-                            <div class="view-all-btn bold-font">
-                                <a href="#">View All Videos <i class="fas fa-chevron-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /. -->
-                </div>
-            </div>
-        </section>
-    <!-- End latest section
-        ============================================= -->
-
-
-    <!-- Start of sponsor section
-        ============================================= -->
-    <!--    <section id="sponsor" class="sponsor-section">
-            <div class="container">
-                <div class="section-title-2 mb65 headline text-left "  >
-                    <h2>Genius <span>Sponsors.</span></h2>
-                </div>
-                <div class="sponsor-item sponsor-1 " >
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-1.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-2.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-3.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-4.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-5.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-6.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-6.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-6.jpg" alt="">
-                    </div>
-                    <div class="sponsor-pic text-center">
-                        <img src="assets/img/sponsor/s-6.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of sponsor section
-        ============================================= -->
-    -->
 
     <!-- Start of best course
         ============================================= -->
@@ -1469,741 +1105,6 @@
     <!-- End of best course
         ============================================= -->
 
-    <!-- Start of course teacher
-        ============================================= -->
-        <!--<section id="course-teacher" class="course-teacher-section">
-            <div class="jarallax">
-                <div class="container">
-                    <div class="section-title mb20 headline text-center "  >
-                        <span class="subtitle text-uppercase">OUR PROFESSIONAL</span>
-                        <h2>Genius Courses <span>Teachers.</span></h2>
-                    </div>
-                    <div class="teacher-list">
-                        <div class="row justify-content-center">
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Daniel
-                                                Alvares</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-1.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Mobile Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Juliana Hernandes</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-2.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Mobile Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Berliana
-                                                Luis</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-3.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">IOS Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Johansen
-                                                Doe</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-4.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Graphic </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Lisha
-                                                Chambelt</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-6.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Mobile Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Checilia
-                                                Yeoung</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-5.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Mobile Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            /teacher
-                            <div class="col-md-3">
-                                <div class="teacher-img-content "  >
-                                    <div class="teacher-cntent">
-                                        <div class="teacher-social-name ul-li-block">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            </ul>
-                                            <div class="teacher-name">
-                                                <span>Sean
-                                                Fernandes</span>
-                                            </div>
-                                        </div>
-                                        <div class="teacher-img-category">
-                                            <div class="teacher-img">
-                                                <img src="assets/img/teacher/t-7.jpg" alt="">
-                                                <div class="course-price text-uppercase text-center gradient-bg">
-                                                    <span>Featured</span>
-                                                </div>
-                                            </div>
-                                            <div class="teacher-category float-right">
-                                                <span class="st-name">Mobile Apps </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                         /teacher
-                        </div>
-                        <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font "  >
-                            <a href="#">All teacher <i class="fas fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    -->
-    <!-- End of course teacher
-        ============================================= -->
-
-
-
-    <!-- Start of best product section
-        ============================================= -->
-        <!--<section id="best-product" class="best-product-section">
-            <div class="container">
-                <div class="section-title-2 mb65 headline text-left "  >
-                    <h2>Genius <span>Best Products.</span></h2>
-                </div>
-                <div id="best-product-slide-item" class="best-product-slide">
-                    <div class="product-img-text "  >
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-1.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text "  >
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-2.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text "  >
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-3.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text "  >
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-4.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text "  >
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-1.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text">
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-2.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-img-text">
-                        <div class="product-img text-center mb20">
-                            <img src="assets/img/product/bp-3.png" alt="">
-                        </div>
-                        <div class="product-text-content relative-position">
-                            <div class="best-title-price float-left">
-                                <div class="course-title headline">
-                                    <h3><a href="#">Mobile Apps Books.</a></h3>
-                                </div>
-                                <div class="price-start">
-                                    Start from
-                                    <span>$55.25</span>
-                                </div>
-                            </div>
-                            <div class="add-cart text-center">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End  of best product section
-        ============================================= -->-->
-
-
-    <!-- Start FAQ section
-        ============================================= -->
-        <section id="faq" class="faq-section">
-            <div class="container">
-                <div class="section-title mb45 headline text-center "  >
-                    <span class="subtitle text-uppercase">GENIUS COURSE FAQ</span>
-                    <h2>Frequently<span> Ask & Questions</span></h2>
-                </div>
-                <div class="faq-tab">
-                    <div class="faq-tab-ques ul-li">
-                        <div class="tab-button text-center mb65 "  >
-                            <ul class="product-tab">
-                                <li class="active" rel="tab1">GENERAL </li>
-                                <li rel="tab2"> COURSES </li>
-                                <li rel="tab3"> TEACHERS </li>
-                                <li rel="tab4">  EVENTS  </li>
-                                <li rel="tab5">  OTHERS  </li>
-                            </ul>
-                        </div>
-                        <!-- /tab-head -->
-
-                        <!-- tab content -->
-                        <div class="tab-container">
-
-                            <!-- 1st tab -->
-                            <div id="tab1" class="tab-content-1 pt35">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> What is Genius Courses?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> How to Register or Make An Account in Genius?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- #tab1 -->
-
-                            <div id="tab2" class="tab-content-1 pt35">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> What is Genius Courses?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> How to Register or Make An Account in Genius?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline "  >
-                                            <h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- #tab2 -->
-
-                            <div id="tab3" class="tab-content-1 pt35">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What is Genius Courses?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> How to Register or Make An Account in Genius?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- #tab3 -->
-
-                            <div id="tab4" class="tab-content-1 pt35">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What is Genius Courses?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> How to Register or Make An Account in Genius?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- #tab3 -->
-
-                            <div id="tab5" class="tab-content-1 pt35">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What is Genius Courses?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> How to Register or Make An Account in Genius?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-
-                                        <div class="ques-ans mb45 headline">
-                                            <h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- #tab3 -->
-                        </div>
-                        <div class="view-all-btn bold-font "  >
-                            <a href="#">Make a Question <i class="fas fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End FAQ section
-        ============================================= -->
-
-
-    <!-- Start Course category
-        ============================================= -->
-    <!--    <section id="course-category" class="course-category-section">
-            <div class="container">
-                <div class="section-title mb45 headline text-center "  >
-                    <span class="subtitle text-uppercase">COURSES CATEGORIES</span>
-                    <h2>Browse Courses<span> By Category.</span></h2>
-                </div>
-                <div class="category-item">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-technology"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Responsive Website</h4>
-                                </div>
-                            </div>
-                        </div>
-                        /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-app-store"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>IOS Applications</h4>
-                                </div>
-                            </div>
-                        </div>
-                         /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-artist-tools"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Graphic Design</h4>
-                                </div>
-                            </div>
-                        </div>
-                         /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-business"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Marketing</h4>
-                                </div>
-                            </div>
-                        </div>
-                         /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-dna"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Science</h4>
-                                </div>
-                            </div>
-                        </div>
-                        /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-cogwheel"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Enginering</h4>
-                                </div>
-                            </div>
-                        </div>
-                        /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-technology-1"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Photography</h4>
-                                </div>
-                            </div>
-                        </div>
-                         /category
-                        <div class="col-md-3">
-                            <div class="category-icon-title text-center "  >
-                                <div class="category-icon">
-                                    <i class="text-gradiant flaticon-technology-2"></i>
-                                </div>
-                                <div class="category-title">
-                                    <h4>Mobile Application</h4>
-                                </div>
-                            </div>
-                        </div>
-                         /category
-                    </div>
-                </div>
-            </div>
-        </section>-->
-    <!-- End Course category
-        ============================================= -->
-
-
-    <!-- Start of contact area
-        ============================================= -->
-        <section id="contact-area" class="contact-area-section backgroud-style">
-            <div class="container">
-                <div class="contact-area-content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-left-content " >
-                                <div class="section-title  mb45 headline text-left">
-                                    <span class="subtitle ml42  text-uppercase">CONTACT US</span>
-                                    <h2><span>Get in Touch</span></h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet  ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    </p>
-                                </div>
-
-                                <div class="contact-address">
-                                    <div class="contact-address-details">
-                                        <div class="address-icon relative-position text-center float-left">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div class="address-details ul-li-block">
-                                            <ul>
-                                                <li><span>Primary: </span>Last Vegas, 120 Graphic Street, US</li>
-                                                <li><span>Second: </span>Califorinia, 88 Design Street, US</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-address-details">
-                                        <div class="address-icon relative-position text-center float-left">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div class="address-details ul-li-block">
-                                            <ul>
-                                                <li><span>Primary: </span>(100) 3434 55666</li>
-                                                <li><span>Second: </span>(20) 3434 9999</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-address-details">
-                                        <div class="address-icon relative-position text-center float-left">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div class="address-details ul-li-block">
-                                            <ul>
-                                                <li><span>Primary: </span>info@geniuscourse.com</li>
-                                                <li><span>Second: </span>mail@genius.info</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="genius-btn mt60 gradient-bg text-center text-uppercase ul-li-block bold-font ">
-                                <a href="#">Contact Us <i class="fas fa-caret-right"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div id="contact-map" class="contact-map-section">
-                                <div id="google-map">
-                                    <div id="googleMaps" class="google-map-container"></div>
-                                </div><!-- /#google-map-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of contact area
-        ============================================= -->
-
 
 
     <!-- Start of footer section
@@ -2211,13 +1112,7 @@
         <footer>
             <section id="footer-area" class="footer-area-section" style="background-image: url(assets/img/banner/footerBackgroundClean.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
                 <div class="container">
-                    <div>
-                     <!--<video class="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                        <source src="assets/heartbeat.mp4" type="video/mp4">
-                        <img src="assets/img/banner/Asset2.png" width="100%" height="100%" >
-                        </video>-->
-                    </div>
-                     <div class="footer-social-subscribe mb65">
+                    <div class="footer-social-subscribe mb65">
                         <div class="row">
                             <?php if(\Session::has('success')): ?>
                               <div class="alert alert-success">
@@ -2251,7 +1146,7 @@
                         </div>
                     </div>
                     <div class="footer-content pb10">
-                        <div class="row" style="background-image: url(assets/heartbeat.mp4);">
+                        <div class="row">
                             <div class="col-md-5">
                                 <div class="footer-widget">
                                     <div class="footer-logo mb35">
@@ -2386,22 +1281,21 @@
 
 
         <!-- For Js Library -->
-        <script src="assets/js/jquery-2.1.4.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/jarallax.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/lightbox.js"></script>
-        <script src="assets/js/jquery.meanmenu.js"></script>
-        <script src="assets/js/scrollreveal.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/jquery-ui.js"></script>
-        <script src="assets/js/gmap3.min.js"></script>
-        <script src="assets/js/switch.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="<?php echo e(asset('assets/js/jquery-2.1.4.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/bootstrap.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/popper.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/owl.carousel.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/jarallax.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/jquery.magnific-popup.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/lightbox.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/jquery.meanmenu.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/scrollreveal.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/jquery.counterup.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/waypoints.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/jquery-ui.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/gmap3.min.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/switch.js')); ?>"></script>
+        <script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
 
     </body>
     </html><?php /**PATH C:\laragon\www\E-ECG\resources\views/welcome.blade.php ENDPATH**/ ?>

@@ -33,7 +33,7 @@ class CoursController extends Controller
     public function freeCourses()
     {
         try {
-            $x = Cours::all()->where('offre','=','Gratuit');
+            $x = Cours::all()->where('offre','=','3');
             
         } catch (Exception $e) {
           return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
@@ -72,7 +72,7 @@ class CoursController extends Controller
             $x->catégories = $request->input('catégories');
             //save image
             if($request->hasFile('thumbnail')){
-              $thumbnail= $request->input('cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
+              $thumbnail= $request->input('Cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
                $x->thumbnail = $request->thumbnail->storeAs('thumbnails',$thumbnail);
             }
             //save video
@@ -142,7 +142,7 @@ class CoursController extends Controller
             //save image
             if($request->hasFile('thumbnail')){
               Storage::delete( $x->thumbnail );
-              $thumbnail= $request->input('cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
+              $thumbnail= $request->input('Cours').'_'. $request->input('catégories').'.'.$request->thumbnail->getClientOriginalExtenSion();
                $x->thumbnail = $request->thumbnail->storeAs('thumbnails',$thumbnail);
             }
             //save video
@@ -260,5 +260,12 @@ class CoursController extends Controller
     else{
         return back()->withError("La video du cours : ".$cours->id."- ".$cours->cours."n'existe pas .")->withInput();
     }
+    }
+
+    public function coursDetails($id){
+      $x = Cours::findOrFail($id);
+      
+      //$x->rateOnce(4.5);
+      return view('CoursDetails', ['cours' => $x]);
     }
 }

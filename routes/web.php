@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\Demande;
 use App\Mail\accountCreated;
 use App\Mail\demandeNonValide;
-
+use App\Models\Commentaire;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,12 @@ use App\Mail\demandeNonValide;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//client interface
+Route::get('/clients', function () {
+
+    return view('clients.accueil');
+});
+
 
 //Tester les emails
 
@@ -38,7 +44,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->name('dashboard');
 
 Route::get('/about', function () {
@@ -47,6 +53,14 @@ Route::get('/about', function () {
 
 
 Route::get('/coursgratuits' ,'CoursController@freeCourses');
+
+Route::get('cours/{cours}/lire', 'CoursController@getVideo');
+
+Route::get('/cours/{id}/details','CoursController@coursDetails');
+
+
+
+
 Route::resource('/contacts' , ContactController::class);
 Route::resource('/offres' , OffreController::class);
 Route::resource('/demandes' , DemandeController::class);
@@ -55,7 +69,23 @@ Route::get('/inscription' , 'DemandeController@create');
 
 Route::get('newsletter','NewsletterController@index');
 Route::post('newsletter/store','NewsletterController@store');
-
+Route::post('/comment/{id}',function(Request $request,$id){
+	 try {
+            $x = new Commentaire();
+            $x->nom= $request->input('nom');
+            $x->email= $request->input('email');
+            $x->message = $request->input('comments');
+            $x->rating = $request->input('stars');
+            $x->cours_id = $id;
+            
+            $x->save();
+            
+        } catch(ModelNotFoundException $exception) {
+            return back()->withError('Une erreur est survenue, veuillez réessayer ultérieurement')->withInput();
+        }
+        return back()->with('success', "Votre commentaire a été envoyé");
+  
+});
 //BackEnd
 
 Route::get('/home', 'HomeController@index')->name('home');
