@@ -44,7 +44,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->name('dashboard');
 
 Route::get('/about', function () {
@@ -69,13 +69,14 @@ Route::get('/inscription' , 'DemandeController@create');
 
 Route::get('newsletter','NewsletterController@index');
 Route::post('newsletter/store','NewsletterController@store');
-Route::post('/comment',function(Request $request){
+Route::post('/comment/{id}',function(Request $request,$id){
 	 try {
             $x = new Commentaire();
             $x->nom= $request->input('nom');
             $x->email= $request->input('email');
             $x->message = $request->input('comments');
             $x->rating = $request->input('stars');
+            $x->cours_id = $id;
             
             $x->save();
             

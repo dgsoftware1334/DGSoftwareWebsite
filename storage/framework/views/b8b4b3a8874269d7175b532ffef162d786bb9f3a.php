@@ -37,8 +37,7 @@
 										</div>	
 										<div class="row">
 <?php 
-	$items = DB::table('cours')
-                ->where([['cours.catégories','Cours'],['cours.offre',3]])
+	$items = App\Models\Cours::where([['cours.catégories','Cours'],['cours.offre',3]])
                 ->orderBy('cours.created_at','desc')
                 ->get();
 ?>
@@ -56,11 +55,32 @@
 														</div>
 														<div class="course-rate ul-li">
 															<ul>
-																 <li><i class="fas fa-star"></i></li>
+																<?php if($item->averageRating == 1): ?>
+													            	<i class="fas fa-star"></i>
+													            <?php elseif($item->averageRating == 2): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 3): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 4): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 5): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            
+													    <?php endif; ?>
 															</ul>
 														</div>
 														<div class="course-details-btn">
-															<a href="<?php echo e(url('cours/'.$item->id.'/details')); ?>">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+															<a href="<?php echo e(url('cours/'.$item->id.'/details')); ?>">DETAILS DU COURS <i class="fas fa-arrow-right"></i></a>
 														</div>
 														<div class="blakish-overlay"></div>
 													</div>
@@ -87,8 +107,7 @@
 											</div>
 											<div class="row">
 <?php 
-	$collection = DB::table('cours')
-                ->where([['cours.catégories','Cas Clinique'],['cours.offre',3]])
+	$collection = App\Models\Cours::where([['cours.catégories','Cas Clinique'],['cours.offre',3]])
                 ->orderBy('cours.created_at','desc')
                 ->get()
 ?>
@@ -102,15 +121,32 @@
 														</div>
 														<div class="course-rate ul-li">
 															<ul>
-																<li><i class="fas fa-star"></i></li>
-																<li><i class="fas fa-star"></i></li>
-																<li><i class="fas fa-star"></i></li>
-																<li><i class="fas fa-star"></i></li>
-																<li><i class="fas fa-star"></i></li>
+																<?php if($item->averageRating == 1): ?>
+													            	<i class="fas fa-star"></i>
+													            <?php elseif($item->averageRating == 2): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 3): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 4): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($item->averageRating == 5): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            
+													    		<?php endif; ?>
 															</ul>
 														</div>
 														<div class="course-details-btn">
-															<a href="<?php echo e(url('cours/'.$item->id.'/details')); ?>">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+															<a href="<?php echo e(url('cours/'.$item->id.'/details')); ?>">DETAILS DU COURS <i class="fas fa-arrow-right"></i></a>
 														</div>
 														<div class="blakish-overlay"></div>
 													</div>
@@ -198,7 +234,7 @@
 								<div class="featured-course">
 									<div class="best-course-pic-text relative-position">
 										<div class="best-course-pic relative-position">
-											<img src="<?php echo e(asset('storage/'.$c->thumbnail)); ?>" alt="">
+											<img src="<?php echo e(asset('storage/'.$cc->thumbnail)); ?>" alt="">
 											<div class="trend-badge-2 text-center text-uppercase">
 												<i class="fas fa-bolt"></i>
 												<span>Gratuit</span>

@@ -35,7 +35,7 @@
 								</div>
 								<div class="course-details-content">
 									   <div class="embed-responsive embed-responsive-16by9">
-					                    <video controls poster="<?php echo e(asset('storage/'.$cours->video)); ?>" autoplay="true" preload="<?php echo e(asset('storage/'.$cours->thumbnail)); ?>"  oncontextmenu="return false;" controlsList="nodownload">
+					                    <video controls poster="<?php echo e(asset('storage/'.$cours->video)); ?>" preload="<?php echo e(asset('storage/'.$cours->thumbnail)); ?>"  oncontextmenu="return false;" controlsList="nodownload">
 					                       <source src="<?php echo e(url('cours/'.$cours->id.'/lire')); ?>" type="video/mp4" >
 					                       <source src="<?php echo e(url('cours/'.$cours->id.'/lire')); ?>" type="video/ogg" >
 					                       <source src="<?php echo e(url('cours/'.$cours->id.'/lire')); ?>" type="video/webm" >
@@ -52,7 +52,7 @@
 
 						<div class="affiliate-market-guide mb65">
 							<div class="section-title-2 mb20 headline text-left">
-								<h2><span>Déscription</span></h2>
+								<h2><span>DESCRIPTION</span></h2>
 							</div>
 
 							<div class="affiliate-market-accordion">
@@ -69,12 +69,12 @@
 							</div>
 						</div>
 						<!-- /market guide -->
-<?php if($cours->averageRating): ?>
                                     
 						<div class="course-review">
 							<div class="section-title-2 mb20 headline text-left">
-								<h2><span>Avis </span>sur le cours:</h2>
+								<h2>Vos<span> Avis</span></h2>
 							</div>
+<?php if($cours->averageRating): ?>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="ratting-preview">
@@ -82,22 +82,40 @@
 											<div class="col-md-4">
 												<div class="avrg-rating ul-li">
 													<b>Note moyenne</b>
-													<span class="avrg-rate"><?php echo e(round($cours->averageRating(),1)); ?></span>
-													<ul>
-														<li><i class="fas fa-star"></i></li>
-														<li><i class="fas fa-star"></i></li>
-														<li><i class="fas fa-star"></i></li>
-														<li><i class="fas fa-star"></i></li>
-														<li><i class="fas fa-star"></i></li>
-													</ul>
-													<b><?php echo e($cours->timesRated()); ?> Évaluations</b>
+												<span class="avrg-rate"><?php echo e(round($cours->averageRating(),1)); ?></span>
+												<ul>
+
+														<?php if($cours->averageRating == 1): ?>
+													            	<i class="fas fa-star"></i>
+													            <?php elseif($cours->averageRating == 2): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($cours->averageRating == 3): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($cours->averageRating == 4): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            <?php elseif($cours->averageRating == 5): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            
+													    <?php endif; ?>
+												</ul>
+												<b><?php echo e($cours->timesRated()); ?> Évaluations</b>
 												</div>
 											</div>
 											<div class="col-md-8">
 												<div class="avrg-rating ul-li">
 													<span>Details</span>
 													<div class="rating-overview">
-														<span class="start-item">5 Starts</span>
+														<span class="start-item">5 Stars</span>
 														<span class="start-bar"></span>
 														<span class="start-count">
 															<?php
@@ -106,7 +124,7 @@
 												        <?php echo e($courses); ?></span>
 													</div>
 													<div class="rating-overview">
-														<span class="start-item">4 Starts</span>
+														<span class="start-item">4 Stars</span>
 														<span class="start-bar"></span>
 														<span class="start-count">
 															<?php
@@ -115,7 +133,7 @@
 												        <?php echo e($courses); ?></span>
 													</div>
 													<div class="rating-overview">
-														<span class="start-item">3 Starts</span>
+														<span class="start-item">3 Stars</span>
 														<span class="start-bar"></span>
 														<span class="start-count">
 															<?php
@@ -124,7 +142,7 @@
 												        <?php echo e($courses); ?></span>
 													</div>
 													<div class="rating-overview">
-														<span class="start-item">2 Starts</span>
+														<span class="start-item">2 Stars</span>
 														<span class="start-bar"></span>
 														<span class="start-count">
 															<?php
@@ -133,7 +151,7 @@
 												        <?php echo e($courses); ?></span>
 													</div>
 													<div class="rating-overview">
-														<span class="start-item">1 Starts</span>
+														<span class="start-item">1 Stars</span>
 														<span class="start-bar"></span>
 														<span class="start-count">
 															<?php
@@ -147,16 +165,18 @@
 									</div>
 								</div>
 							</div>
-						</div>
  <?php endif; ?>
+						</div>
 						<!-- /review overview -->
-
+							<?php
+								$comments = App\Models\Commentaire::where('cours_ID',$cours->id)->get();
+							?>
+<?php if($comments): ?>
 						<div class="couse-comment">
 							<div class="blog-comment-area ul-li about-teacher-2">
 								<ul class="comment-list">
-									<?php
-										$comments = App\Models\Commentaire::where('cours_ID',$cours->id);
-									?>
+									
+
 									<?php $__currentLoopData = $comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 									<li>
 										<div class=" comment-avater">
@@ -169,11 +189,27 @@
 											</div>
 											<div class="comment-ratting float-right ul-li">
 												<ul>
-													<li><i class="fas fa-star"></i></li>
-													<li><i class="fas fa-star"></i></li>
-													<li><i class="fas fa-star"></i></li>
-													<li><i class="fas fa-star"></i></li>
-													<li><i class="fas fa-star"></i></li>
+													<?php if($comment->rating == 1): ?>
+													            	<i class="fas fa-star"></i>
+													<?php elseif($comment->rating == 2): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													<?php elseif($comment->rating == 3): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													<?php elseif($comment->rating == 4): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													<?php elseif($comment->rating == 5): ?>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													            	<li><i class="fas fa-star"></i></li>
+													<?php endif; ?>
 												</ul>
 											</div>
 											<div class="time-comment float-right"><?php echo e($comment->created_at->locale('fr')->diffForHumans()); ?></div>
@@ -195,38 +231,39 @@
 										</div>
 										<div class="review-stars-item float-right mt15">
 											<span>Your Rating: </span>
-											<form class="rating" action="<?php echo e(url('/comment')); ?>" method="POST">
+											<form class="rating" action="<?php echo e(url('/comment/'.$cours->id)); ?>" method="POST">
                                                      <?php echo csrf_field(); ?> 
 												<label>
-													<input type="radio" name="stars" value="1" />
+													<input type="radio" name="stars" value="1" required/>
 													<span class="icon"><i class="fas fa-star"></i></span>
 												</label>
 												<label>
-													<input type="radio" name="stars" value="2" />
+													<input type="radio" name="stars" value="2" required/>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 												</label>
 												<label>
-													<input type="radio" name="stars" value="3" />
+													<input type="radio" name="stars" value="3" required/>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>   
 												</label>
 												<label>
-													<input type="radio" name="stars" value="4" />
+													<input type="radio" name="stars" value="4" required/>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 												</label>
 												<label>
-													<input type="radio" name="stars" value="5" />
+													<input type="radio" name="stars" value="5" required/>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 													<span class="icon"><i class="fas fa-star"></i></span>
 												</label>
+
 											
 										</div>
 									</div>
@@ -255,7 +292,7 @@
 												</div>
 												<div class="col-md-6">
 													<label for="phone">Email</label>
-													<input type="tel" name="email" id="phone" required="required">
+													<input type="email" name="email" id="phone" required="required">
 												</div>
 											</div>
 											<label for="comments">Message</label>
@@ -269,7 +306,7 @@
 							</div>
 						</div>
 					</div>
-
+<?php endif; ?>
 					<div class="col-md-3">
 						<div class="side-bar">
 
@@ -332,7 +369,7 @@
 								<div class="featured-course">
 									<div class="best-course-pic-text relative-position">
 										<div class="best-course-pic relative-position">
-											<img src="<?php echo e(asset('storage/'.$c->thumbnail)); ?>" alt="">
+											<img src="<?php echo e(asset('storage/'.$cc->thumbnail)); ?>" alt="">
 											<div class="trend-badge-2 text-center text-uppercase">
 												<i class="fas fa-bolt"></i>
 												<span>Gratuit</span>

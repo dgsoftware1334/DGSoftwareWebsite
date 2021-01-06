@@ -264,7 +264,8 @@ class CoursController extends Controller
 
     public function coursDetails($id){
       $x = Cours::findOrFail($id);
-
+      
+      //$x->rateOnce(4.5);
       return view('CoursDetails', ['cours' => $x]);
     }
 }
