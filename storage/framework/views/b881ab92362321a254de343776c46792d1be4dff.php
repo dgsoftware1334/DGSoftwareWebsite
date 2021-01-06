@@ -812,21 +812,28 @@ unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('recuCCP')); ?>" name="
         <section id="best-course" class="best-course-section">
             <div class="container">
                 <div class="section-title mb45 headline text-center "  >
-                    <span class="subtitle text-uppercase">SEARCH OUR COURSES</span>
-                    <h2>Browse Our<span> Best Course.</span></h2>
+                    <span class="subtitle text-uppercase">REJOIGNEZ-NOUS</span>
+                    <h2>Consultez les titres des <span>COURS PUBLIÉS.</span></h2>
                 </div>
                 <div class="best-course-area mb45">
                     <div class="row">
+                       
+                       <?php
+                        $new =DB::table('cours')
+                            ->where('cours.offre','1')
+                            ->Orwhere('cours.offre','2')
+                            ->orderBy('cours.created_at','desc')
+                            ->get()
+                        ?>
+                        <!-- /course -->
+                       
+<?php $__currentLoopData = $new; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-md-3">
                             <div class="best-course-pic-text relative-position "  >
                                 <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-1.jpg" alt="">
-                                    <div class="trend-badge-2 text-center text-uppercase">
-                                        <i class="fas fa-bolt"></i>
-                                        <span>Trending</span>
-                                    </div>
+                                    <img src="<?php echo e(url('storage/'.$item->thumbnail)); ?>" alt="">
                                     <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
+                                        <span><?php echo e($item->catégories); ?></span>
                                     </div>
                                     <div class="course-rate ul-li">
                                         <ul>
@@ -838,268 +845,25 @@ unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('recuCCP')); ?>" name="
                                         </ul>
                                     </div>
                                     <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+                                       <?php echo e($item->catégories); ?><i class="fas fa-arrow-right"></i>
                                     </div>
                                     <div class="blakish-overlay"></div>
                                 </div>
                                 <div class="best-course-text">
                                     <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
+                                        <h3><?php echo e($item->Cours); ?>.</h3>
                                     </div>
                                     <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
+                                        <span class="course-category"><a href="#"><?php echo e($item->Durée); ?></a></span>
+                                        <span class="course-author"><a href="#"><?php echo e(\Carbon\Carbon::parse($c->created_at)->format('d/m/Y')); ?></a></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-2.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-3.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-4.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-5.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-6.jpg" alt="">
-                                    <div class="trend-badge-2 text-center text-uppercase">
-                                        <i class="fas fa-bolt"></i>
-                                        <span>Trending</span>
-                                    </div>
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-7.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
-
-                        <div class="col-md-3">
-                            <div class="best-course-pic-text relative-position "  >
-                                <div class="best-course-pic relative-position">
-                                    <img src="assets/img/course/bc-8.jpg" alt="">
-                                    <div class="course-price text-center gradient-bg">
-                                        <span>$99.00</span>
-                                    </div>
-                                    <div class="course-rate ul-li">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-details-btn">
-                                        <a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="blakish-overlay"></div>
-                                </div>
-                                <div class="best-course-text">
-                                    <div class="course-title mb20 headline relative-position">
-                                        <h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
-                                    </div>
-                                    <div class="course-meta">
-                                        <span class="course-category"><a href="#">Web Design</a></span>
-                                        <span class="course-author"><a href="#">250 Students</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /course -->
+                        <!-- /End course -->
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
-
-
             </div>
         </section>
     <!-- End of best course
