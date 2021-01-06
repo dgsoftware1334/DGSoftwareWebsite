@@ -27,7 +27,7 @@
 	<!-- Normalize -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
 
 	<!-- Owl -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.css') }}">
@@ -39,7 +39,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/eleganticons/et-icons.css') }}">
 	
 	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/cardio.css') }}">
 
 	
 </head>
