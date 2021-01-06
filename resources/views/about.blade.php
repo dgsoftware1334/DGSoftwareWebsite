@@ -54,7 +54,7 @@
 								<p>
 									E-ECG est un site e-learning destiné aux médecins généralistes et aux étudiants en médecine
 									Parce que les formations données par les professeurs sont bonnes, mais en même temps elles coûtent très cher! J'ai donc eu l'idée de créer une formation en ligne avec un prix symbolique par rapport à d'autres formations, pour aider mes confrères. Vous pouvez avoir accès à tout moment à des cours et des cas cliniques, vous pouvez également voir des cas réels fréquents et rares, avec des tracés de haute qualité, en sorte de vidéo, c'est la méthode la plus efficace pour la maîtriser. Un cas clinique sera publié chaque
-									semaine, ce sera donc une sorte de formation continue. nous veulent être une bonne source d’apprentissage de l’électrocardiogramme en français.
+									semaine, ce sera donc une sorte de formation continue. Nous voulons être une bonne source d’apprentissage de l’électrocardiogramme en français.
 								</p>
 							</div>
 							<!-- /about-text -->
