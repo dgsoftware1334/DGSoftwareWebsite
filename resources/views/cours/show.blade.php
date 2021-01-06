@@ -63,7 +63,7 @@
                       <li class="list-group-item"><h6 class="text-primary">Catégorie :</h6> {{$cours->catégories}}</li>
                       <li class="list-group-item"><h6 class="text-primary">Date de création :</h6> {{$cours->created_at}}</li>
                       <li class="list-group-item"><h6 class="text-primary">Dérniere modification :</h6> {{$cours->updated_at}}</li>
-                      <li class="list-group-item"><h6 class="text-primary">Évaluation :</h6>{{$average}} <img src="{{ asset('assets/img/star.svg')}}" alt="stars" style="color: yellow; font-color:yellow;"> <br> ({{$count}}) votes <br> {{$pourc}}%</li>
+                      <li class="list-group-item"><h6 class="text-primary">Évaluation :</h6>{{$average}} <i class="fas fa-star"></i> alt="stars" style="color: yellow; font-color:yellow;"> <br> ({{$count}}) votes <br> {{$pourc}}%</li>
                 </ul>
               </div>
               <!--element3-->

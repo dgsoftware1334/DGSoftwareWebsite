@@ -94,7 +94,7 @@
 											</div>
 											<div class="payment-info input-2">
 												<label class=" control-label">Emplacement :</label>
-												<input type="text" class="form-control @error('pays') is-invalid @enderror" name="pays" placeholder="votre pays" value="{{old('pays')}}">
+												<input type="text" class="form-control @error('pays') is-invalid @enderror" name="pays" placeholder="Votre pays" value="{{old('pays')}}">
 												<input type="text" class="form-control @error('ville') is-invalid @enderror "  name="ville" placeholder="Votre ville" value="{{old('ville')}}" required>
 											</div>
 											<div class="payment-info">

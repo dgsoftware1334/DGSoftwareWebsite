@@ -59,7 +59,7 @@
                       <li class="list-group-item"><h6 class="text-primary">Catégorie :</h6> <?php echo e($cours->catégories); ?></li>
                       <li class="list-group-item"><h6 class="text-primary">Date de création :</h6> <?php echo e($cours->created_at); ?></li>
                       <li class="list-group-item"><h6 class="text-primary">Dérniere modification :</h6> <?php echo e($cours->updated_at); ?></li>
-                      <li class="list-group-item"><h6 class="text-primary">Évaluation :</h6><?php echo e($average); ?> <img src="<?php echo e(asset('assets/img/star.svg')); ?>" alt="stars" style="color: yellow; font-color:yellow;"> <br> (<?php echo e($count); ?>) votes <br> <?php echo e($pourc); ?>%</li>
+                      <li class="list-group-item"><h6 class="text-primary">Évaluation :</h6><?php echo e($average); ?> <i class="fas fa-star"></i> alt="stars" style="color: yellow; font-color:yellow;"> <br> (<?php echo e($count); ?>) votes <br> <?php echo e($pourc); ?>%</li>
                 </ul>
               </div>
               <!--element3-->

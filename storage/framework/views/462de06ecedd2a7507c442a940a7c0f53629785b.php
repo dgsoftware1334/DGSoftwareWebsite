@@ -156,7 +156,7 @@
                                         <div class="col-md-5">
                                             <div class="best-course-pic-text relative-position">
                                                 <div class="best-course-pic relative-position">
-                                                    <img src="<?php echo e(asset('assets/img/banner/offer1.png')); ?>" alt="">
+                                                    <img src="<?php echo e(asset('assets/img/banner/offer2.png')); ?>" alt="">
                                                     <div class="trend-badge-2 text-center text-uppercase">
                                                         <i class="fas fa-bolt"></i>
                                                         <span>12 mois</span>
@@ -478,7 +478,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="copy-right-text">
-                                    <p>© 2020 - www.DGSoftware.com. Tous les droits sont réservés</p>
+                                    <p>© 2020 - www.dgsoftwareplus.com. Tous les droits sont réservés</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -512,7 +512,6 @@
         <script src="<?php echo e(asset('assets/js/jquery-ui.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/gmap3.min.js')); ?>"></script>
         <script src="<?php echo e(asset('assets/js/switch.js')); ?>"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
 
         <script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
     </body>

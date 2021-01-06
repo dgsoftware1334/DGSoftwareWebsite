@@ -71,7 +71,7 @@
 											</div>
 											<div class="service-text">
 												<h3 class="bold-font">Cas clinique Hebdomadaire.</h3>
-												<p>Nouveau cas clinique publié chaque semaine en détail .</p>
+												<p>Nouveau cas clinique publié chaque semaine en détail.</p>
 											</div>
 										</div>
 										<div class="service-text-icon">

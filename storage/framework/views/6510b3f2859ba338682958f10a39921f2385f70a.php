@@ -293,7 +293,7 @@ unset($__errorArgs, $__bag); ?>
 							<div id="contact-map" class="contact-map-section">
 								<div id="google-map">
 									<div id="googleMaps" class="google-map-container"></div>
-								</div /#google-map-->
+								</div /#google-map
 							</div>
 						</div>
 					</div>
