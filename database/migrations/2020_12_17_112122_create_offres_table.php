@@ -18,7 +18,6 @@ class CreateOffresTable extends Migration
             $table->string('titre')->required();
             $table->string('durée')->required();
             $table->double('prix');
-            $table->text('description');
             $table->DateTime('deleted_at')->nullable();
             $table->timestamps();
         });
