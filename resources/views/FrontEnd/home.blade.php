@@ -15,7 +15,7 @@
                 @foreach ($services as $s)
 
                 <div class="col-md-4">
-                	<div class="intro-table intro-table-hover" style=" background-image: url('../img/{{$s->photo}}');">
+                	<div class="intro-table intro-table-hover" style=" background-image: url({{asset('img/'.$s->photo)}});">
 						 <h5 class="black heading hide-hover text-center" style="background-color: #9c1210 ; font-size: 22px; color: white;">{{$s->titre}}
 						 </h5>
 						<div class="bottom">
@@ -53,39 +53,39 @@
 		    <div class="carousel-inner" align="center" style="height:auto; width:auto; ">
 
 		      <div class="item active">
-		        <img src="img/CartesVisites/7.jpg" id="1">
+		        <img src="{{asset('img/CartesVisites/C17.jpg')}}" id="1">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/4.jpg" id="2">
+		        <img src="{{asset('img/CartesVisites/C15.jpg')}}" id="2">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/4819227.jpg" id="3">
+		        <img src="{{asset('img/CartesVisites/C18.jpg')}}" id="3">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/433.jpg" id="4">
+		        <img src="{{asset('img/CartesVisites/C12.jpg')}}" id="4">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/4761354.jpg" id="5">
+		        <img src="{{asset('img/CartesVisites/C13.jpg')}}" id="5">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/18203355.jpg" id="6">
+		        <img src="{{asset('img/CartesVisites/C21.jpg')}}" id="6">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/7905.jpg" id="7">
+		        <img src="{{asset('img/CartesVisites/C11.jpg')}}" id="7">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/14.jpg" id="8">
+		        <img src="{{asset('img/CartesVisites/C9.jpg')}}" id="8">
 		      </div>
 
 		      <div class="item">
-		        <img src="img/CartesVisites/305.jpg" id="9">
+		        <img src="{{asset('img/CartesVisites/C10.jpg')}}" id="9">
 		      </div>
 		      
 		    </div>
@@ -115,7 +115,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/quality.png" alt="" class="icon">
+							<img src="{{asset('img/icons/quality.png')}}" alt="" class="icon">
 						</div>
 						<h4 class="heading">Qualité Garantie</h4>
 						<p class="description">Nous nous assurons que nos produits sont fabriqués avec dévouement et perfection et livrés à temps.</p>
@@ -124,7 +124,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/customer-service.png" alt="" class="icon">
+							<img src="{{asset('img/icons/customer-service.png')}}" alt="" class="icon">
 						</div>
 						<h4 class="heading">Service clientèle a votre service</h4>
 						<p class="description">Une équipe de service à la clientèle dédiée à répondre à vos besoins et à répondre à vos demandes tout le temps.</p>
@@ -133,7 +133,7 @@
 				<div class="col-md-4">
 					<div class="service">
 						<div class="icon-holder">
-							<img src="img/icons/best-price.png" alt="" class="icon">
+							<img src="{{asset('img/icons/best-price.png')}}" alt="" class="icon">
 						</div>
 						<h4 class="heading">Meilleurs prix</h4>
 						<p class="description">Nos prix sont abordables pour tout le monde car notre objectif le plus important est d'aider les petites entreprises à prospérer et à réussir.</p>
@@ -153,7 +153,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="team text-center">
-						<div class="cover" style="background:url('img/team/3426526.jpg'); background-size:cover;">
+						<div class="cover" style="background:url({{asset('img/team/3426526.jpg')}}); background-size:cover;">
 							<div class="overlay text-center">
 								<h3 class="white">Contact</h3>
 								<h5><i class="light-white light text-center-mobile fa fa-phone" aria-hidden="true"></i>&nbsp;0668 01 98 30</h5>
@@ -167,7 +167,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="team text-center">
-						<div class="cover" style="background:url('img/team/20943607.jpg'); background-size:cover;">
+						<div class="cover" style="background:url({{asset('img/team/20943607.jpg')}}); background-size:cover;">
 							<div class="overlay text-center">
 								<h3 class="white">Contact</h3>
 								<h5><i class="light-white light text-center-mobile fa fa-phone" aria-hidden="true"></i>&nbsp;0665 44 45 91</h5>
@@ -181,7 +181,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="team text-center">
-						<div class="cover" style="background:url('img/team/3369515.jpg'); background-size:cover;">
+						<div class="cover" style="background:url({{asset('img/team/3369515.jpg')}}); background-size:cover;">
 							<div class="overlay text-center">
 								<h3 class="white">Contact</h3>
 								<h5><i class="light-white light text-center-mobile fa fa-phone" aria-hidden="true"></i>&nbsp;0558 80 53 27</h5>
@@ -201,7 +201,7 @@
 			<div class="row no-margin">
 				<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
 					<div class="pricing">
-						<div class="box-main active" data-img="img/123.jpg">
+						<div class="box-main active" data-img="{{asset('img/123.jpg')}}">
 							<h4 class="white">À propos de nous</h4>
 							<a href="{{url('/about')}}" class="btn btn-white-fill">Voir plus</a>
 							<i class="info-icon icon_question"></i>
@@ -213,17 +213,17 @@
 						</div>
 					</div>
 					<div class="pricing">
-						<div class="box-main" data-img="img/123.jpg">
+						<div class="box-main" data-img="{{asset('img/123.jpg')}}">
 							<h4 class="white regular light">Veuillez nous laisser un message pour toute question </h4>
 							<a href="{{url('/contact')}}" class="btn btn-white-fill">Contactez-nous</a>
 							<i class="info-icon icon_question"></i>
 						</div>
 						<div class="box-second">
 							<ul class="white-list text-left">
-								<li><img src="img/icons/facebook-logo1.png" alt="Facebook Logo" class="icon"> : DGSoftware</li>
-								<li><img src="img/icons/instagram1.png" alt="Instagram Logo" /> : @dgsoftware1334</li>
-								<li><img src="img/icons/gmail.png" alt="Gmail Logo" class="icon"> : dgsoftware1334@gmail.com</li>
-								<li><img src="img/icons/phone-receiver-silhouette.png" alt="Phone Logo" class="icon"> : <ul> 0558 80 53 27 <br>0665 44 45 91</ul></li>
+								<li><img src="{{asset('img/icons/facebook-logo1.png')}}" alt="Facebook Logo" class="icon"> : DGSoftware</li>
+								<li><img src="{{asset('img/icons/instagram1.png')}}" alt="Instagram Logo" /> : @dgsoftware1334</li>
+								<li><img src="{{asset('img/icons/gmail.png')}}" alt="Gmail Logo" class="icon"> : dgsoftware1334@gmail.com</li>
+								<li><img src="{{asset('img/icons/phone-receiver-silhouette.png')}}" alt="Phone Logo" class="icon"> : <ul> 0558 80 53 27 <br>0665 44 45 91</ul></li>
 							</ul>
 						</div>
 					</div>

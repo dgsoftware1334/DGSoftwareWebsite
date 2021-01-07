@@ -4,7 +4,7 @@
 
 
 <?php $__env->startSection('dynamique'); ?>
-        <link rel="stylesheet" type="text/css" href="css/about-us.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/about-us.css')); ?>">
     <div class="cut cut-top"></div>
 <div class="container">
   <div class="ct-pageWrapper" id="ct-js-wrapper">
@@ -84,7 +84,7 @@
   <div class="row">
     <div class="col-md-5">
       <div class="card">
-        <img src="/img/team/hamlili.jpg" alt="Jane" style="width:100%">
+        <img src="<?php echo e(asset('/img/team/hamlili.jpg')); ?>" alt="Jane" style="width:100%">
         <div class="containerB">
           <h2>ENNEBATI Hamlili</h2>
           <p class="title">Co-fondateur</p>
@@ -97,7 +97,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-5">
       <div class="card">
-        <img src="/img/team/hicham.jpg" alt="Mike" style="width:100%">
+        <img src="<?php echo e(asset('/img/team/hicham.jpg')); ?>" alt="Mike" style="width:100%">
         <div class="containerB">
           <h2>DEGDEG Hichem</h2>
           <p class="title">PDG et fondateur</p>

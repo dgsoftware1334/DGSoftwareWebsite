@@ -39,7 +39,6 @@
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/eleganticons/et-icons.css') }}">
 	
-    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">	
     <!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/cardio.css') }}">
 

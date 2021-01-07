@@ -40,7 +40,7 @@
 		    	
 			    <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $photo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			    	<div class="item <?php echo e($loop->first ? 'active' : ''); ?>">
-			    	   <img class="d-block img-fluid" src="img<?php echo e($photo->main_image); ?>" alt="<?php echo e($photo->catégorie); ?>">
+			    	   <img class="d-block img-fluid" src="<?php echo e(asset('img/'.$photo->main_image)); ?>" alt="<?php echo e($photo->catégorie); ?>">
 			       </div>
 			       
 			    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

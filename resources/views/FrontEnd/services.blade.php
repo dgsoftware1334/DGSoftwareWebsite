@@ -42,7 +42,7 @@
 		    	
 			    @foreach( $photos as $photo )
 			    	<div class="item {{ $loop->first ? 'active' : '' }}">
-			    	   <img class="d-block img-fluid" src="img{{$photo->main_image}}" alt="{{ $photo->catégorie }}">
+			    	   <img class="d-block img-fluid" src="{{asset('img/'.$photo->main_image)}}" alt="{{ $photo->catégorie }}">
 			       </div>
 			       
 			    @endforeach

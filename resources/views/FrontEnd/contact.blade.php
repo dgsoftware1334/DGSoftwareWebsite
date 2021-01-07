@@ -5,7 +5,7 @@
 @endsection
 
 @section('dynamique')
-        <link rel="stylesheet" type="text/css" href="css/about-us.css">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/about-us.css')}}">
  <div class="cut cut-top"> </div>
 
 		<section id="contact-form" class="contact-form-area_3 contact-page-version">
