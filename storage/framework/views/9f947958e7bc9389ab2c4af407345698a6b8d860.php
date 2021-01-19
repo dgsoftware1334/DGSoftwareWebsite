@@ -39,7 +39,6 @@
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('fonts/eleganticons/et-icons.css')); ?>">
 	
-    <link rel="stylesheet" href="<?php echo e(asset('css/flaticon.css')); ?>">	
     <!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/cardio.css')); ?>">
 
