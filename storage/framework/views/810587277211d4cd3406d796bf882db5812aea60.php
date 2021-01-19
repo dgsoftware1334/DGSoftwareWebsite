@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('catchPhrase'); ?>
             <h1 class="white typed" style="color:black;">Nos services</h1>
 <?php $__env->stopSection(); ?>
@@ -28,12 +30,8 @@
   			</div>
 		  </div>
 		  <div id="myCarousel<?php echo e($service->id); ?>" class="carousel slide" data-ride="carousel" style="height:auto; width: auto; padding: 0% 30% 0% 30%;">
-		    <!-- Indicators -->
-		    <ol class="carousel-indicators">
-		    	<?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $photo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-			    	<li data-target="#myCarousel<?php echo e($service->id); ?>" data-slide-to="<?php echo e($photo->id); ?>"></li>
-			   	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		    </ol>
+		    
+		    
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" role="listbox" align="center">

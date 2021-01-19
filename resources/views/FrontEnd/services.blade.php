@@ -30,12 +30,8 @@
   			</div>
 		  </div>
 		  <div id="myCarousel{{$service->id}}" class="carousel slide" data-ride="carousel" style="height:auto; width: auto; padding: 0% 30% 0% 30%;">
-		    <!-- Indicators -->
-		    <ol class="carousel-indicators">
-		    	@foreach($photos as $photo)
-			    	<li data-target="#myCarousel{{$service->id}}" data-slide-to="{{$photo->id}}"></li>
-			   	@endforeach
-		    </ol>
+		    
+		    
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" role="listbox" align="center">
