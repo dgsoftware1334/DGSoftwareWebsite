@@ -49,7 +49,7 @@
 		<img src="{{ asset('img/loader.gif') }} " alt="Preloader image">
 	</div>
 	<nav class="navbar">
-		<div class="container">
+		<div class="container container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -122,7 +122,7 @@
 					<div class="row opening-hours">
 						<div class="col-sm-12 text-center-mobile">
 							<h5 class="light-white light">Dimanche - Jeudi</h5>
-							<h4 class="regular white">8h:30 - 16h:00</h4>
+							<h4 class="regular white">9h:00 - 17h:00</h4>
 						</div>
 
 					</div>

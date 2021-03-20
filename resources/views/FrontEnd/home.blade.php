@@ -103,7 +103,7 @@
 		</div>
 
 	</section>
-    </section>
+</section>
 
 	<section id="services" class="section section-padded">
 		<div class="container">
