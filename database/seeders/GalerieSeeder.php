@@ -169,13 +169,7 @@ class GalerieSeeder extends Seeder
             'titre' => 'LOGO','catégorie' => 'logo','main_image' => '\Logos\L34.jpg','id_service' => '2','created_at' => now(),
             'updated_at' => now()
         ],[
-            'titre' => 'LOGO','catégorie' => 'logo','main_image' => '\Logos\L35.jpg','id_service' => '2','created_at' => now(),
-            'updated_at' => now()
-        ],[
             'titre' => 'LOGO','catégorie' => 'logo','main_image' => '\Logos\L36.jpg','id_service' => '2','created_at' => now(),
-            'updated_at' => now()
-        ],[
-            'titre' => 'LOGO','catégorie' => 'logo','main_image' => '\Logos\L37.jpg','id_service' => '2','created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => 'LOGO','catégorie' => 'logo','main_image' => '\Logos\L38.jpg','id_service' => '2','created_at' => now(),
