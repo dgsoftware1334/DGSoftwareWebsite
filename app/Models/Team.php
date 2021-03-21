@@ -5,10 +5,15 @@ namespace App\Models;
 use Laravel\Jetstream\Events\TeamCreated;
 use Laravel\Jetstream\Events\TeamDeleted;
 use Laravel\Jetstream\Events\TeamUpdated;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Jetstream\Team as JetstreamTeam;
+
 
 class Team extends JetstreamTeam
 {
+    use SoftDeletes;
+
+    
     /**
      * The attributes that should be cast to native types.
      *

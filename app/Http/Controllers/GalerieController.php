@@ -22,7 +22,7 @@ class GalerieController extends Controller
     }
 
     
-     /*              INDEX GALERY    */
+     /*    INDEX GALERY    */
     public function indexGalery(){
 
         $galeries = DB::table('galeries')->get();

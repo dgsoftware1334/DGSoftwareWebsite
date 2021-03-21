@@ -89,7 +89,10 @@ Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
 //Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
 
 Route::get('/service/{id}',function($id){
-	return view('FrontEnd.show',['service'=>$id]);
+
+      $galerie = App\Models\Galerie::where('id_service',$id)->get();
+       
+	return view('FrontEnd.show',['galerie' =>$galerie, 'service' =>$id]);
 });
 
 
