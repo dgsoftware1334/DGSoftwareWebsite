@@ -265,63 +265,63 @@ class GalerieSeeder extends Seeder
         ],[
             'titre' => '1',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\1.png',
+            'main_image' => '\logiciels\DGSchool\1.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '2',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\2.png',
+            'main_image' => '\logiciels\DGSchool\2.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '3',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\3.png',
+            'main_image' => '\logiciels\DGSchool\3.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '4',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\4.png',
+            'main_image' => '\logiciels\DGSchool\4.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '5',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\5.png',
+            'main_image' => '\logiciels\DGSchool\5.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '6',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\6.png',
+            'main_image' => '\logiciels\DGSchool\6.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '7',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\7.png',
+            'main_image' => '\logiciels\DGSchool\7.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '8',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\8.png',
+            'main_image' => '\logiciels\DGSchool\8.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
         ],[
             'titre' => '9',
             'catégorie' => 'DGSchool',
-            'main_image' => '\logiciels\DGSchool\9.png',
+            'main_image' => '\logiciels\DGSchool\9.jpg',
             'id_service' => '6',
             'created_at' => now(),
             'updated_at' => now()
