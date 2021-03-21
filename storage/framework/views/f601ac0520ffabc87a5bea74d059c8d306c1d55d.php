@@ -17,23 +17,14 @@
   <section class="section gray-bg">
     <div class="container container-fluid"> 
       <div class="row">
-            <div class="p-2" style="width: 80%;">
-              <div class="card-columns">
-                <?php $__currentLoopData = $galerie; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $photo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="<?php echo e(asset('img/'.$photo->main_image)); ?>" alt="Card image cap">
-                    </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-              </div>
-            </div>
-
+         
         <?php $__currentLoopData = $galerie; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
      
         <div class="col-md-4">
             <div class="title"><h3>Modéle N°<?php echo e($g->id); ?></h3></div>
 
               <button data-toggle="modal" data-target="#image<?php echo e($g->id); ?>" class="btn btn-info">
-                  <img src="<?php echo e(asset('img/'.$g->main_image)); ?>" alt="<?php echo e($g->catégorie); ?>"  class="img-responsive" style="width:100%; height: 250px;">
+                  <img src="<?php echo e(asset('img'.$g->main_image)); ?>" alt="<?php echo e($g->catégorie); ?>"  class="img-responsive" style="width:100%; height: 250px;">
               </button>
               <!--Modal-->
               <div class="modal fade" id="image<?php echo e($g->id); ?>" data-backdrop="false" style="width:100%;" >

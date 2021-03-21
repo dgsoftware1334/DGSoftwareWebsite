@@ -24,7 +24,7 @@
             <div class="title"><h3>Modéle N°{{$g->id}}</h3></div>
 
               <button data-toggle="modal" data-target="#image{{$g->id}}" class="btn btn-info">
-                  <img src="{{asset('img/'.$g->main_image)}}" alt="{{ $g->catégorie }}"  class="img-responsive" style="width:100%; height: 250px;">
+                  <img src="{{asset('img'.$g->main_image)}}" alt="{{ $g->catégorie }}"  class="img-responsive" style="width:100%; height: 250px;">
               </button>
               <!--Modal-->
               <div class="modal fade" id="image{{$g->id}}" data-backdrop="false" style="width:100%;" >
