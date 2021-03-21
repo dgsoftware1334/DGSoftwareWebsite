@@ -24,4 +24,9 @@ class Service extends Model
 
     protected $dates = ['deleted_at','created_at','updated_at'];
 
+    public function galeries()
+    {
+        return $this->hasMany('App\Models\Galerie', 'service_id');
+    }
+
 }

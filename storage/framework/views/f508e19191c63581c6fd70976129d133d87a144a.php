@@ -1,3 +1,6 @@
+
+
+
 <?php $__env->startSection('catchPhrase'); ?>
   <h1 class="white typed" style="color:black;">A Propos De Nous.</h1>            
 <?php $__env->stopSection(); ?>

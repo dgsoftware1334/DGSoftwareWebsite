@@ -15,10 +15,13 @@ class CreateGaleriesTable extends Migration
     {
         Schema::create('galeries', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('service_id')->unsigned()->nullable();
             $table->string('titre')->required();
             $table->string('catégorie')->required();
             $table->string('main_image')->required();
-            $table->unsignedBigInteger('id_service')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('service_id')->references('id')->on('services')
+                                        ->onDelete('cascade')
+                                        ->onUpdate('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

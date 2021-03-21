@@ -203,7 +203,7 @@
 					<div class="pricing">
 						<div class="box-main active" data-img="{{asset('img/123.jpg')}}">
 							<h4 class="white">À propos de nous</h4>
-							<a href="{{url('/about')}}" class="btn btn-white-fill">Voir plus</a>
+							<a href="{{url('/aboutUs')}}" class="btn btn-white-fill">Voir plus</a>
 							<i class="info-icon icon_question"></i>
 						</div>
 						<div class="box-second active">

@@ -9,12 +9,29 @@
 <section>
   <div class="cut cut-top"></div> 
   <div class="row text-center title">
-        <h2>{{$galerie->first()->catégorie}}</h2>
+        <h2>Nos Logos</h2>
         <h4 class="light muted">
-          Allez-y et choisissez l'un de ces modèles magnifiques et diversifiés, tout ce que vous avez à faire pour aider votre entreprise est d'appuyer sur le bouton "Commander" et de remplir le formulaire affiché, une fois votre commande passée et approuvée, nous vous contacterons pour confirmation.
+          Allez-y et dites-nous ce que vous avez en tête comme idées et nous y arriverons avec un logo unique et qui représente l'essence de votre entreprise!.
         </h4>
   </div>
   <div class="row services">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-6">
+          <button  style="border-color:#5d76b6; font-weight: bold; color:#5d76b6;" class="btn btn-outline-primary">
+            Prix : 7000 DA
+          </button>
+        </div>
+        <div class="col-md-6 offset-md-1" align="right">
+          <a href="{{url('/about')}}"  style="background-color:#9c1210;" class="btn btn-secondary">
+            Passer une commande <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <hr>
   <section class="section gray-bg">
     <div class="container container-fluid"> 
       <div class="row">

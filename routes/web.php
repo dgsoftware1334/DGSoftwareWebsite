@@ -89,10 +89,18 @@ Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
 //Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
 
 Route::get('/service/{id}',function($id){
-
-      $galerie = App\Models\Galerie::where('id_service',$id)->get();
-       
-	return view('FrontEnd.show',['galerie' =>$galerie, 'service' =>$id]);
+    $galerie = App\Models\Galerie::where('service_id',$id)->get();
+	$service = App\Models\Service::find($id);
+	
+	if($service->titre == 'INFOGRAPHIE ET DESIGN'){
+		return view('FrontEnd.services.show1',['galerie' =>$galerie, 'service' =>$id]);
+	}elseif($service->titre == 'LOGO'){
+		return view('FrontEnd.services.show2',['galerie' =>$galerie, 'service' =>$id]);
+	}
+	elseif($service->titre == 'DEVELLOPEMENT SITES WEB'){
+		$galerie = App\Models\Galerie::where('service_id',$id)->groupBy('catégorie')->select('catégorie')->get();
+		return view('FrontEnd.services.show3',['galerie' =>$galerie, 'service' =>$id]);
+	}
 });
 
 

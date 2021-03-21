@@ -23,4 +23,9 @@ class Galerie extends Model
     protected $files = ['main_image'];
 
     protected $dates = ['deleted_at','created_at','updated_at'];
+
+    public function service()
+    {
+        return $this->belongsTo('App\Models\Service','service_id');
+    }
 }
