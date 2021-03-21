@@ -204,7 +204,7 @@
 					<div class="pricing">
 						<div class="box-main active" data-img="<?php echo e(asset('img/123.jpg')); ?>">
 							<h4 class="white">À propos de nous</h4>
-							<a href="<?php echo e(url('/about')); ?>" class="btn btn-white-fill">Voir plus</a>
+							<a href="<?php echo e(url('/aboutUs')); ?>" class="btn btn-white-fill">Voir plus</a>
 							<i class="info-icon icon_question"></i>
 						</div>
 						<div class="box-second active">
