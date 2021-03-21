@@ -42,7 +42,7 @@ class GalerieController extends Controller
 
         $galerie = new Galerie();
         $galerie->titre = $request->input('titre');
-        $galerie->id_service = $service->id;
+        $galerie->service_id = $service->id;
         $galerie->description= $request->input('description');
 
         if($request->hasFile('files')){

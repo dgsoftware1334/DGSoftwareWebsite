@@ -13,7 +13,7 @@
 <div class="container">
  @foreach($services as $service)
   		@php
-     		$photos = App\Models\Galerie::all()->where('id_service','=',$service->id);
+     		$photos = App\Models\Galerie::all()->where('service_id','=',$service->id);
 	  	@endphp
 
 <div class="row">

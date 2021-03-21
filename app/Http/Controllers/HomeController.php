@@ -26,7 +26,7 @@ class HomeController extends Controller
     /*  Inforgraphie categorie */
     public function indexCategorie($id){
 
-    	$galeries = Galerie::where('id_service', '=', $id)->get();
+    	$galeries = Galerie::where('service_id', '=', $id)->get();
     	$service = Service::find($id);
 
     	return view('FrontEnd.indexCategorie',['galeries'=>$galeries,'service'=>$service]);
