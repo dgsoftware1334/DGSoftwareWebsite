@@ -270,7 +270,7 @@ class GalerieSeeder extends Seeder
         ],[//sites web
             'titre' => 'Site web',
             'catégorie' => 'Gestinnaire de Pharmacie',
-            'main_image' => '\sites\Gestionnaire de pharmacie\medicaments.jpg',
+            'main_image' => '\sites\Gestionnaire de pharmacie\medicaments.png',
             'service_id' => '3',
             'description' =>'',
             'created_at' => now(),
