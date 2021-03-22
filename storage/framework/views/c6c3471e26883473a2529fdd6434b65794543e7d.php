@@ -31,7 +31,7 @@
               Chaque petit détail compte alors essayez d'être aussi descriptif que possible, notre équipe fixera le prix de votre site Web et vous répondra dans les plus brefs délais.</h5>
           </div>
           <div class="col-md-4" align="right">
-            <a href="<?php echo e(url('/about')); ?>"  style="background-color:#9c1210;" class="btn btn-secondary" title="Paiement par CCP"> 
+            <a href="<?php echo e(url('/commandes/create')); ?>"  style="background-color:#9c1210;" class="btn btn-secondary" title="Paiement par CCP"> 
               Passer une commande <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>

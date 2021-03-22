@@ -37,22 +37,16 @@ class GalerieController extends Controller
     /*      STORE NEW GALERIE     */
     public function galerieStore(Request $request){
 
-        $service = Service::where('titre', '=', $request->input('srvname'))->first();
-
-
         $galerie = new Galerie();
         $galerie->titre = $request->input('titre');
-        $galerie->service_id = $service->id;
+        $galerie->catégorie = $request->input('catégorie');
+        $galerie->service_id =  $request->input('srvname');
         $galerie->description= $request->input('description');
 
-        if($request->hasFile('files')){
-            $destionation_path = 'public/img/Galerie/';
-            $image = $request->file('files');
-            $image_name = $image->getClientOriginalName();
-            $path = $request->file('files')->storeAs($destionation_path,$image_name);
+        if($request->hasFile('files')){  
+            $image_name = $request->file('files')->getClientOriginalName();
+            $galerie->main_image = $request->file('files')->storeAs('galerie/',$image_name);
 
-            
-            $galerie->main_image = $image_name;
         }
         $galerie->save();
 

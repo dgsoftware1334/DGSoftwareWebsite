@@ -6,8 +6,6 @@
 
 @section('dynamique')
 
-
-
 <section>
   <div class="cut cut-top"></div> 
  
@@ -45,7 +43,7 @@
             </div>
           </div>
           <div class="col-md-6 offset-md-1" align="right">
-            <a href="{{url('/about')}}"  style="background-color:#9c1210;" class="btn btn-secondary" title="Paiement par CCP"> 
+            <a href="{{url('/commandes/create')}}"  style="background-color:#9c1210;" class="btn btn-secondary" title="Paiement par CCP"> 
               Passer une commande <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </a>
           </div>

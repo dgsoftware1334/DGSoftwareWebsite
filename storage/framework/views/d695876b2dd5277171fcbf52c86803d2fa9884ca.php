@@ -10,19 +10,19 @@
   <title>DG Software</title>
 
   <!-- Favicons -->
-  <link href="{{ asset('img/dg-software.jpg') }}" rel="icon" style="background-color: white">
-  <link href="{{ asset('img/dg-software.jpg') }}" rel="apple-touch-icon" style="background-color: white">
+  <link href="<?php echo e(asset('img/dg-software.jpg')); ?>" rel="icon" style="background-color: white">
+  <link href="<?php echo e(asset('img/dg-software.jpg')); ?>" rel="apple-touch-icon" style="background-color: white">
 
   <!-- Bootstrap core CSS -->
-  <link href="{{ asset('admin/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="<?php echo e(asset('admin/lib/bootstrap/css/bootstrap.min.css')); ?>" rel="stylesheet">
   <!--external css-->
-  <link href="{{ asset('admin/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="{{ asset('admin/css/zabuto_calendar.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('admin/lib/gritter/css/jquery.gritter.css') }}" />
+  <link href="<?php echo e(asset('admin/lib/font-awesome/css/font-awesome.css')); ?>" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/css/zabuto_calendar.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/lib/gritter/css/jquery.gritter.css')); ?>" />
   <!-- Custom styles for this template -->
-  <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('admin/css/style-responsive.css') }}" rel="stylesheet">
-  <script src="{{ asset('admin/lib/chart-master/Chart.js') }}"></script>
+  <link href="<?php echo e(asset('admin/css/style.css')); ?>" rel="stylesheet">
+  <link href="<?php echo e(asset('admin/css/style-responsive.css')); ?>" rel="stylesheet">
+  <script src="<?php echo e(asset('admin/lib/chart-master/Chart.js')); ?>"></script>
 
   <!-- =======================================================
     Template Name: Dashio
@@ -43,7 +43,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="{{url('/')}}" class="logo" style="background-color: white"><span style="text-align: center;"><img src="{{ asset('img/logoo.png') }}" height="60px" width="55px"></span></a>
+      <a href="<?php echo e(url('/')); ?>" class="logo" style="background-color: white"><span style="text-align: center;"><img src="<?php echo e(asset('img/logoo.png')); ?>" height="60px" width="55px"></span></a>
       <!--logo end-->
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -232,7 +232,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="{{ route('logout') }}">Déconnexion</a></li>
+          <li><a class="logout" href="<?php echo e(route('logout')); ?>">Déconnexion</a></li>
         </ul>
       </div>
     </header>
@@ -246,16 +246,16 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="{{ asset('../storage/'.Auth::user()->photo) }}" class="img-circle" width="80" title="Mon profil"></a></p>
-          <h5 class="centered">{{ Auth::user()->username }}</h5>
+          <p class="centered"><a href="profile.html"><img src="<?php echo e(asset('../storage/'.Auth::user()->photo)); ?>" class="img-circle" width="80" title="Mon profil"></a></p>
+          <h5 class="centered"><?php echo e(Auth::user()->username); ?></h5>
           <li class="mt">
-            <a  @if(Request::path() == 'dash') class="active" @endif href="index.html">
+            <a  <?php if(Request::path() == 'dash'): ?> class="active" <?php endif; ?> href="index.html">
               <i class="fa fa-dashboard"></i>
               <span>Tableau de bord</span>
               </a>
           </li>
           <li class="sub-menu">
-            <a @if(Request::path() == 'employes') class="active" @endif href="{{ url('employes')}}">
+            <a <?php if(Request::path() == 'employes'): ?> class="active" <?php endif; ?> href="<?php echo e(url('employes')); ?>">
               <i class="fa fa-desktop"></i>
               <span>Employés</span>
               </a>
@@ -263,14 +263,14 @@
           </li>
           
           <li class="sub-menu">
-            <a @if(Request::path() == 'services') class="active" @endif href="{{ url('services')}}">
+            <a <?php if(Request::path() == 'services'): ?> class="active" <?php endif; ?> href="<?php echo e(url('services')); ?>">
               <i class="fa fa-book"></i>
               <span>Services</span>
               </a>
             
           </li>
           <li >
-            <a @if(Request::path() == 'galerie') class="active" @endif href="{{ url('galerie')}}">
+            <a <?php if(Request::path() == 'galerie'): ?> class="active" <?php endif; ?> href="<?php echo e(url('galerie')); ?>">
               <i class=" fa fa-th"></i>
               <span>Galerie</span>
               </a>
@@ -329,7 +329,7 @@
     <!--main content start-->
    
 
-       @yield('content')
+       <?php echo $__env->yieldContent('content'); ?>
 
     
 
@@ -352,20 +352,20 @@
     <!--footer end-->
   </section>
   <!-- js placed at the end of the document so the pages load faster -->
-  <script src="{{ asset('admin/lib/jquery/jquery.min.js') }}"></script>
+  <script src="<?php echo e(asset('admin/lib/jquery/jquery.min.js')); ?>"></script>
 
-  <script src="{{ asset('admin/lib/bootstrap/js/bootstrap.min.js') }}"></script>
-  <script class="include" type="text/javascript" src="{{ asset('admin/lib/jquery.dcjqaccordion.2.7.js') }}"></script>
-  <script src="{{ asset('admin/lib/jquery.scrollTo.min.js') }}"></script>
-  <script src="{{ asset('admin/lib/jquery.nicescroll.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('admin/lib/jquery.sparkline.js') }}"></script>
+  <script src="<?php echo e(asset('admin/lib/bootstrap/js/bootstrap.min.js')); ?>"></script>
+  <script class="include" type="text/javascript" src="<?php echo e(asset('admin/lib/jquery.dcjqaccordion.2.7.js')); ?>"></script>
+  <script src="<?php echo e(asset('admin/lib/jquery.scrollTo.min.js')); ?>"></script>
+  <script src="<?php echo e(asset('admin/lib/jquery.nicescroll.js')); ?>" type="text/javascript"></script>
+  <script src="<?php echo e(asset('admin/lib/jquery.sparkline.js')); ?>"></script>
   <!--common script for all pages-->
-  <script src="{{ asset('admin/lib/common-scripts.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/lib/gritter/js/jquery.gritter.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/lib/gritter-conf.js') }}"></script>
+  <script src="<?php echo e(asset('admin/lib/common-scripts.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('admin/lib/gritter/js/jquery.gritter.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('admin/lib/gritter-conf.js')); ?>"></script>
   <!--script for this page-->
-  <script src="{{ asset('admin/lib/sparkline-chart.js') }}"></script>
-  <script src="{{ asset('admin/lib/zabuto_calendar.js') }}"></script>
+  <script src="<?php echo e(asset('admin/lib/sparkline-chart.js')); ?>"></script>
+  <script src="<?php echo e(asset('admin/lib/zabuto_calendar.js')); ?>"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       var unique_id = $.gritter.add({
@@ -431,3 +431,4 @@
 </body>
 
 </html>
+<?php /**PATH C:\laragon\www\DGSoftware\resources\views/layouts/admin.blade.php ENDPATH**/ ?>

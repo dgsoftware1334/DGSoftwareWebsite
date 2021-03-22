@@ -43,7 +43,7 @@
                       <div class="modal-body">
                         <div class="row"> 
                           <div class="col-md-auto" align="center">
-                            <img src="<?php echo e(asset('img/'.$g->main_image)); ?>" class="img-fluid image-control img-responsive">
+                            <img src="<?php echo e(asset('img'.$g->main_image)); ?>" class="img-fluid image-control img-responsive">
                             
                           </div>
                         </div>
