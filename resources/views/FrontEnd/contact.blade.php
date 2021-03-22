@@ -1,43 +1,47 @@
 @extends('FrontEnd.master')
 
 @section('catchPhrase')
- 		<h1 class="white typed" style="color:black;">Contactez-nous</h1>			
+ 		<h1 class="white typed" style="color:black;">Contactez-nous.</h1>			
 @endsection
 
 @section('dynamique')
         <link rel="stylesheet" type="text/css" href="{{asset('css/about-us.css')}}">
  <div class="cut cut-top"> </div>
-
-		<section id="contact-form" class="contact-form-area_3 contact-page-version">
-			<div class="container">
-    <div class="row">
-    	<div class="col-md-12">
-    	@if(session()->has('success'))
-				  <div class="alert alert-success alert-dismissible fade show" role="alert">
-				    <strong>{{session()->get('success')}} </strong>
-				    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				      <span aria-hidden="true">&times;</span>
-				    </button>
-				  </div>
-				@elseif(session()->has('error'))
-				  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-				   <strong>{{session()->get('error')}} </strong>
-				   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				     <span aria-hidden="true">&times;</span>
-				   </button>
-				  </div>
-				@endif
-		</div>
-    </div>
-
-				<div class="section-title mb45 headline text-center">
-					<span class="subtitle text-uppercase">Rester en contact</span>
-					<h2>Envoyez-nous Un<span> Message.</span></h2>
+	<nav aria-label="breadcrumb">
+	    <ol class="breadcrumb">
+	      <li class="breadcrumb-item"><a href="{{url('/')}}"> Home</a></li> 
+	      <li class="breadcrumb-item active" aria-current="page">Contactez-nous</li>
+	    </ol>
+	</nav>
+<section id="contact-form" class="contact-form-area_3 contact-page-version">
+		<div class="container">
+		    <div class="row">
+		    	<div class="col-md-12">
+		    	@if(session()->has('success'))
+						  <div class="alert alert-success alert-dismissible fade show" role="alert">
+						    <strong>{{session()->get('success')}} </strong>
+						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						      <span aria-hidden="true">&times;</span>
+						    </button>
+						  </div>
+						@elseif(session()->has('error'))
+						  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+						   <strong>{{session()->get('error')}} </strong>
+						   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						     <span aria-hidden="true">&times;</span>
+						   </button>
+						  </div>
+						@endif
 				</div>
+		    </div>
+			<div class="section-title mb45 headline text-center">
+				<span class="subtitle text-uppercase">Rester en contact</span>
+				<h2>Envoyez-nous Un<span> Message.</span></h2>
+			</div>
 				
-				<div class="contact_third_form">
-					<form class="contact_form" action="{{ url('contact')}}" method="POST" enctype="multipart/form-data">
-				      {{ csrf_field()}}
+			<div class="contact_third_form">
+				<form class="contact_form" action="{{ url('contact')}}" method="POST" enctype="multipart/form-data">
+			      {{ csrf_field()}}
 
 						<div class="row">
 							<div class="col-md-4">

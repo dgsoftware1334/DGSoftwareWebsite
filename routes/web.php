@@ -89,19 +89,25 @@ Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
 //Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
 
 Route::get('/service/{id}',function($id){
-    $galerie = App\Models\Galerie::where('service_id',$id)->get();
-	$service = App\Models\Service::find($id);
-	
-	if($service->titre == 'INFOGRAPHIE ET DESIGN'){
+    
+	if($id == 1)
+	{
+		$galerie = App\Models\Galerie::where('service_id',$id)->get();
 		return view('FrontEnd.services.show1',['galerie' =>$galerie, 'service' =>$id]);
-	}elseif($service->titre == 'LOGO'){
+	}
+	elseif($id == 2)
+	{
+		$galerie = App\Models\Galerie::where('service_id',$id)->get();
 		return view('FrontEnd.services.show2',['galerie' =>$galerie, 'service' =>$id]);
 	}
-	elseif($service->titre == 'DEVELLOPEMENT SITES WEB'){
-		$galerie = App\Models\Galerie::where('service_id',$id)->groupBy('catégorie')->select('catégorie')->get();
-		return view('FrontEnd.services.show3',['galerie' =>$galerie, 'service' =>$id]);
+	elseif($id == 3 || $id == 6)
+	{
+		$catégorie = App\Models\Galerie::select('titre','catégorie')->where('service_id',$id)->groupBy('catégorie','titre')->get();
+		return view('FrontEnd.services.show3',['catégorie' =>$catégorie, 'service' =>$id]);
 	}
 });
+
+Route::get('/services/{id}/details','ServicesController@serviceDetails');
 
 
 

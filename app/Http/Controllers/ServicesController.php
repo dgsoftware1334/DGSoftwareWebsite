@@ -113,11 +113,21 @@ class ServicesController extends Controller
 
 
         $service = Service::find($id);
-        return view('services.index',['services'=>$services]);
+        return view('services.index',['services'=>$service]);
 
 
     }
 
+    public function serviceDetails($id){
+
+        $site = Galerie::where('catégorie',$id)->get();
+
+        $s = Galerie::where('catégorie',$id)->select('service_id')->first();
+
+        $service = Service::find($s->service_id);
+
+        return view('FrontEnd.services.detailsService',['photos'=>$site,'service'=>$service ,'cat'=>$id]);
+    }
 
    
 }

@@ -13,10 +13,16 @@
 <div class="container">
  @foreach($services as $service)
   		@php
-     		$photos = App\Models\Galerie::all()->where('service_id','=',$service->id);
+     		$photos = App\Models\Galerie::where('service_id','=',$service->id)->get();
 	  	@endphp
 
 <div class="row">
+	<nav aria-label="breadcrumb">
+	    <ol class="breadcrumb">
+	      <li class="breadcrumb-item"><a href="{{url('/')}}"> Home</a></li> 
+	      <li class="breadcrumb-item active" aria-current="page">Nos services</li>
+	    </ol>
+	</nav>
    <section id="team" class="section gray-bg">
 		<div class="container">
 		  <div class="row title text-center">

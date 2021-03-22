@@ -18,6 +18,7 @@ class CreateGaleriesTable extends Migration
             $table->unsignedBigInteger('service_id')->unsigned()->nullable();
             $table->string('titre')->required();
             $table->string('catégorie')->required();
+            $table->text('description')->nullable();
             $table->string('main_image')->required();
             $table->foreign('service_id')->references('id')->on('services')
                                         ->onDelete('cascade')

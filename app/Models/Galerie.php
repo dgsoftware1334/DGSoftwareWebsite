@@ -18,7 +18,7 @@ class Galerie extends Model
      */
     protected $table = 'galeries';
 
-    protected $fillable = ['titre', 'catégorie', 'main_image', 'service_id', 'deleted_at', 'created_at', 'updated_at' ];
+    protected $fillable = ['titre', 'catégorie', 'description', 'main_image', 'service_id', 'deleted_at', 'created_at', 'updated_at' ];
 
     protected $files = ['main_image'];
 

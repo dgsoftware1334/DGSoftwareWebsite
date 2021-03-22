@@ -1,14 +1,19 @@
 @extends('FrontEnd.master')
-
-
+  
 @section('catchPhrase')
   <h1 class="white typed" style="color:black;">A Propos De Nous.</h1>            
 @endsection
 
 
 @section('dynamique')
-        <link rel="stylesheet" type="text/css" href="{{asset('css/about-us.css')}}">
-    <div class="cut cut-top"></div>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/about-us.css')}}">
+<div class="cut cut-top"></div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/')}}"> Home</a></li> 
+        <li class="breadcrumb-item active" aria-current="page">A Propos De Nous</li>
+      </ol>
+    </nav>
 <div class="container">
   <div class="ct-pageWrapper" id="ct-js-wrapper">
   <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">

@@ -9,6 +9,7 @@
 @section('dynamique')
 <section>
 		<div class="cut cut-top"></div>
+		
 		<div class="container">
 			<div class="row intro-tables">
                 <!--Services-->

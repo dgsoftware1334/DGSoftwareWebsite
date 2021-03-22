@@ -1,38 +1,40 @@
 @extends('FrontEnd.master')
   
 @section('catchPhrase')
-            <h1 class="white typed" style="color:black;">{{ App\Models\Service::find($service)->titre}}</h1>
+            <h1 class="white typed" style="color:black;">{{$service->titre}}</h1>
 @endsection
 
 @section('dynamique')
 
 <section>
   <div class="cut cut-top"></div> 
-  <div class="row text-center title">
-        <h2>{{$galerie->first()->catégorie}}</h2>
-        <h4 class="light muted">
-          Allez-y et choisissez l'un de ces modèles magnifiques et diversifiés, tout ce que vous avez à faire pour aider votre entreprise est d'appuyer sur le bouton "Commander" et de remplir le formulaire affiché, une fois votre commande passée et approuvée, nous vous contacterons pour confirmation.
-        </h4>
-  </div>
-  <div class="row services">
-  <section class="section gray-bg">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
+      <li class="breadcrumb-item"><a href="{{url('/service')}}"> Services</a></li>
+      <li class="breadcrumb-item"><a href="{{url('/service/'.$service->id)}}"> {{$service->titre}}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Demo {{$cat}}</li>
+    </ol>
+  </nav>
+
+ <section class="section gray-bg">
     <div class="container container-fluid"> 
       <div class="row">
-         
-        @foreach($galerie as $g) 
+           
+        @foreach($photos as $g) 
      
         <div class="col-md-4">
-            <div class="title"><h3>Modéle N°{{$g->id}}</h3></div>
-
               <button data-toggle="modal" data-target="#image{{$g->id}}" class="btn btn-info">
-                  <img src="{{asset('img'.$g->main_image)}}" alt="{{ $g->catégorie }}"  class="img-responsive" style="width:100%; height: 250px;">
+                  <img src="{{asset('img'.$g->main_image)}}" alt="{{ $g->catégorie }}"  class="img-responsive img-fluid">
               </button>
+        </div>
+
               <!--Modal-->
               <div class="modal fade" id="image{{$g->id}}" data-backdrop="false" style="width:100%;" >
                 <div class="modal-dialog modal-lg" style="padding-top: 130px; z-index: 1100;">
                     <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title">Modéle N°{{$g->id}}</h5>
+                          <h5 class="modal-title">{{$g->titre}}</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">X</span>
                           </button>
@@ -47,13 +49,11 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button"  data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-blue" data-dismiss="modal">Fermer</button>
                       </div>
                     </div>
                   </div>
                 </div>
-
-        </div>
         
         @endforeach
 
@@ -63,5 +63,4 @@
   </div>
 </section>
 
-          
 @endsection
