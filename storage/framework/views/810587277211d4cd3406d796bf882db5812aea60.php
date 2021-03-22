@@ -13,7 +13,7 @@
 <div class="container">
  <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   		<?php
-     		$photos = App\Models\Galerie::all()->where('id_service','=',$service->id);
+     		$photos = App\Models\Galerie::all()->where('service_id','=',$service->id);
 	  	?>
 
 <div class="row">

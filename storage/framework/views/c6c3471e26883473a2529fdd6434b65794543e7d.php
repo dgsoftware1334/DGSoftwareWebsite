@@ -8,6 +8,13 @@
 
 <section>
   <div class="cut cut-top"></div> 
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo e(url('/')); ?>"><i class="fa fa-home"></i> Home</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo e(url('/service')); ?>"> Services</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="<?php echo e(url('/service/'.App\Models\Service::find($service)->id)); ?>"><?php echo e(App\Models\Service::find($service)->titre); ?></a></li>
+  </ol>
+</nav>
   <div class="row text-center title">
         <h2>Nos Sites Web</h2>
         <h4 class="light muted">

@@ -6,8 +6,19 @@
 
 @section('dynamique')
 
+
+
 <section>
   <div class="cut cut-top"></div> 
+ 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
+    <li class="breadcrumb-item"><a href="{{url('/service')}}"> Services</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="{{url('/service/'.App\Models\Service::find($service)->id)}}">{{App\Models\Service::find($service)->titre}}</a></li>
+  </ol>
+</nav>
+
   <div class="row text-center title">
         <h2>Nos Cartes Visites</h2>
         <h4 class="light muted">
@@ -18,22 +29,21 @@
   <div class="container">
       <div class="row">
         <div class="col-md-6">
-        <h3 style="color:#5d76b6; ">Prix :</h3>
-          <button  style="border-color:#5d76b6; font-weight: bold; color:#5d76b6;" class="btn btn-outline-primary">
-
+          <div style="font-weight: bold; color:#5d76b6; border: 1px solid #5d76b6;;border-radius: 4px;
+  font-size: 14px; line-height: 1.42857143;">
+            <h3 style="color:#5d76b6; text-align: center;">Prix :</h3>
             <ul>
-             
               <span style="color: black; text-decoration:underline;">Recto-Verso :</span>
                 <li><span style="color: black;">Quantité <  1000 pièces :</span> 15 DA/18 DA  la pièce (selon la qualité)</li>
                 <li><span style="color: black;">Quantité >= 1000 pièces :</span> 13 DA/16 DA  la pièce (selon la qualité)</li>
               <span style="color: black; text-decoration:underline;">Recto :</span>
-                <li><span style="color: black;">Quantité < 1000 pièces :</span> 11 DA/13 DA  la pièce (selon la qualité)</li>
+                <li><span style="color: black;">Quantité  < 1000 pièces :</span> 11 DA/13 DA  la pièce (selon la qualité)</li>
                 <li><span style="color: black;">Quantité >= 1000 pièces :</span> 10 DA/12 DA  la pièce (selon la qualité)</li>
                 
             </ul>
 
 
-          </button>
+          </div>
         </div>
         <div class="col-md-6 offset-md-1" align="right">
           <a href="{{url('/about')}}"  style="background-color:#9c1210;" class="btn btn-secondary" title="Paiement par CCP"> 
