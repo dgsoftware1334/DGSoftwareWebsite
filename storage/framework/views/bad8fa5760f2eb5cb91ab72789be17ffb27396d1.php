@@ -12,7 +12,7 @@
 		    <ol class="breadcrumb">
 		      <li class="breadcrumb-item"><a href="<?php echo e(url('/')); ?>"> Home</a></li>
 		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service')); ?>">Services</a></li>
-		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service/1')); ?>">INFOGRAPHIE ET DESIGN</a></li>  
+		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service/'.$service->id)); ?>"><?php echo e($service->titre); ?></a></li>  
 		      <li class="breadcrumb-item active" aria-current="page">Commander</li>
 		    </ol>
 		</nav>
@@ -47,12 +47,12 @@
 					<h2>Passer <span>Une Commande.</span></h2>
 			  </div>
 	          <div class="col-lg-7 col-md-7 col-sm-7">
-	            <h4 class="title">Votre Commande</h4>
+	            <h4 class="title">Vos Coordonnées</h4>
 	            <div id="message"></div>
 	            <form  action="<?php echo e(url('commandes')); ?>" method="POST" class="contact-form php-mail-form" role="form" enctype="multipart/form-data">
-	              <?php echo e(csrf_field()); ?>
-
-			      <input type="hidden" name="produit" value="<?php echo e($modele->id); ?>">
+	              <?php echo e(csrf_field()); ?> 
+	              <input type="hidden" name="produit" value="0">
+	              <input type="hidden" name="quantité" value="1">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control <?php $__errorArgs = ['nom'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -141,50 +141,6 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
 	              </div>
-	              <div class="form-group">
-	                <input type="number" min="500" name="quantité" class="form-control <?php $__errorArgs = ['quantité'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>"  placeholder="Nombre de pieces*" required title="nous ne prenons que des commandes de 500 pièces ou plus" value="<?php echo e(old('quantité')); ?>">
-	                <?php $__errorArgs = ['quantité'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-				        <span class="alert alert-danger" role="alert">
-			              <strong><?php echo e($message); ?></strong>
-			            </span>
-			        <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-	              </div>
-	              <div class="form-group">
-	                <input type="text" name="adresse" class="form-control <?php $__errorArgs = ['adresse'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" id="contact-subject" placeholder="Adresse de livraison*" required title="Si vous souhaitez récupérer votre commande chez nous, écrivez simplement notre adresse" value="<?php echo e(old('adresse')); ?>">
-	                <?php $__errorArgs = ['adresse'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-				        <span class="alert alert-danger" role="alert">
-			              <strong><?php echo e($message); ?></strong>
-			            </span>
-			        <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-	              </div>
 
 	              <div class="form-group">
 	                <textarea class="form-control <?php $__errorArgs = ['details'];
@@ -194,7 +150,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="details" id="contact-message" placeholder="Faites-nous savoir les coordonnées que vous souhaitez que nous mettions sur les cartes" rows="3" title="veuillez remplir toutes les coordonnées et remarques que vous souhaitez inclure dans vos cartes"><?php echo e(old('details')); ?></textarea>
+unset($__errorArgs, $__bag); ?>" name="details" id="contact-message" placeholder="Faites-nous savoir se que vous voullez*" rows="3" title="Veuillez nous décrire en détail ce que vous avez en tête comme logo et la nature de votre entreprise "><?php echo e(old('details')); ?></textarea>
 	                <?php $__errorArgs = ['details'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -208,8 +164,12 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
 	              </div>
-	              <div class="form-group">
-	              	<h4 class="title">Logo de votre entreprise</h4>
+	          </div>
+
+	          <div class="col-lg-5 col-md-5 col-sm-5">
+	          	
+	            <div class="form-group">
+	             	<h4 class="title">Pièce joints </h4>
 					<input type="file" name="logo" accept=".png,.jpg,.jpeg,.svg,.bmp" class="form-control  <?php $__errorArgs = ['logo'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -217,7 +177,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" required title="veuillez nous donner le logo de votre entreprise que vous souhaitez que nous mettions sur les cartes si vous n'en avez pas, nous pouvons trouver quelque chose à la place" data-default-value="<?php echo e(old('logo')); ?>" value="<?php echo e(old('logo')); ?>"/>
+unset($__errorArgs, $__bag); ?>" title="ici, vous pouvez télécharger un fichier pour nous aider à comprendre vos besoins ou si vous avez un exemple que vous souhaitez que nous suivions" data-default-value="<?php echo e(old('logo')); ?>" value="<?php echo e(old('logo')); ?>"/>
 					<?php $__errorArgs = ['logo'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -230,36 +190,10 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-	              </div>
-	 
-	          </div>
-
-	          <div class="col-lg-5 col-md-5 col-sm-5">
-	            <h4 class="title">Modele Choisis</h4>
-	            
-	            <img src="<?php echo e(asset('storage/'.$modele->main_image)); ?>" alt="" class="img-responsive img-thumbnail" />
+	            </div>
 	            <div class="form-group">
-	              	<h4 class="title">Paiement Par CCP</h4>
-					<input type="file" name="recu" accept=".png,.jpg,.jpeg," class="form-control  <?php $__errorArgs = ['recu'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" required title="Veuillez télécharger clairement votre reçu de paiement CCP" data-default-value="<?php echo e(old('recu')); ?>" value="<?php echo e(old('recu')); ?>"/>
-					<?php $__errorArgs = ['recu'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-				        <span class="alert alert-danger" role="alert">
-			              <strong><?php echo e($message); ?></strong>
-			            </span>
-			        <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
+	              	<h4 class="title">Paiement Par CCP*</h4>
+					<input type="file" name="recu" accept=".png,.jpg,.jpeg," class="form-control"  required/>
 	          	</div>
 	           </div>
 	        </div>
@@ -281,4 +215,4 @@ unset($__errorArgs, $__bag); ?>
 </section>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/commandes/commandeCartes.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/commandes/commandeLogo.blade.php ENDPATH**/ ?>

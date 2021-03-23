@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Commande;
 use Illuminate\Http\Request;
 use App\Models\Galerie;
+use App\Models\Service;
 class CommandeController extends Controller
 {
     /**
@@ -22,22 +23,21 @@ class CommandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('FrontEnd.commandes.commandeCartes');
-    }
+    public function create($s,$modele)
+    {   
+        $service = Service::find($s);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function commanderCarte($modele)
-    {
-        $modele = Galerie::find($modele);
-        
-        return view('FrontEnd.commandes.commandeCartes',['modele' => $modele]);
+        if($service->id == '1'){
+            $modele = Galerie::find($modele);
+            return view('FrontEnd.commandes.commandeCartes',[ 'service' => $service,'modele' => $modele]);
+        }
+        elseif($service->id == '2'){
+
+            return view('FrontEnd.commandes.commandeLogo',['service' => $service]);
+        }
+
     }
+ 
 
     /**
      * Store a newly created resource in storage.
@@ -48,6 +48,32 @@ class CommandeController extends Controller
     public function store(Request $request)
     {
         try {   
+            $validator = $request->validate([ 
+                'nom' => 'required|string|max:255',
+                'prenom' =>'required|string|max:255',
+                'telephone' =>'required|numeric|min:10',
+                'email' =>'required|string|email|max:255',
+                'adresse' =>'string|nullable',
+                'quantité' =>'required|numeric|min:500',
+                'recu'=>'mimes:jpeg,bmp,png,jpg,svg|image|filled|max:2048',
+                'logo'=>'mimes:jpeg,bmp,png,jpg,svg|image|filled|max:2048|nullable',
+                'details' =>'string|nullable',
+            ],[
+                'nom.required' => 'Votre nom est requis',
+                'prenom.required' => 'Votre prenom est requis',
+                'nom.max' => 'votre nom ne doit pas dépasser 255 caractères', 
+                'prenom.max' => 'votre prenom ne doit pas dépasser 255 caractères',
+                'telephone.required' => 'Un numéro de téléphone valide est requis pour pouvoir vous contacter a propos de votre commande',
+                'telephone.numeric' => 'Votre numéro de téléphone ne doit contenir que des chiffres',
+                'telephone.min' => 'Numéro de téléphone invalide',
+                'email.required' => 'Une adresse email valide est exigée', 
+                'email.email' => "Votre adresse mail n'est pas valide", 
+                'recu.mimes' => "Format d'image non prise en charge",
+                'recu.max' => "Taille d'image volumieuse",
+                'logo.mimes' => "Format du logo non prise en charge",
+                'logo.max' => "Taille d'image volumieuse",
+            ]); 
+            
             $c = new Commande();
             $c->nom = $request->input('nom');
             $c->prenom = $request->input('prenom');
@@ -59,11 +85,16 @@ class CommandeController extends Controller
             $c->details = $request->input('details'); 
             if($request->hasFile('recu')){ 
                 $image_name = $request->file('recu')->getClientOriginalName();
-                $c->recu = $request->file('recu')->storeAs('recus/',$image_name);
+                $c->recu = $request->file('recu')->storeAs('recus',$image_name);
+            }
+            if($request->hasFile('logo')){ 
+                $image_name = $request->input('nom').' '.$request->input('prenom').$request->file('logo')->getClientOriginalExtension();
+                $c->logo = $request->file('logo')->storeAs('commandes/logos',$image_name);
             }
             $c->save();
         
-            return back()->with('success', 'Votre commande a été envoyé avec succès!');   
+            return back()->with('success', 'Votre commande a été envoyé avec succès!'); 
+
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }

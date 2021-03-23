@@ -24,6 +24,7 @@ class CreateCommandesTable extends Migration
             $table->string('produit'); 
             $table->string('details')->nullable();
             $table->string('recu')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

@@ -109,7 +109,7 @@ Route::get('/service/{id}',function($id){
 
 Route::get('/services/{id}/details','ServicesController@serviceDetails');
 Route::resource('commandes','CommandeController');
-Route::get('commandes/{modele}/create','CommandeController@commanderCarte'); 
+Route::get('commandes/{service}/create/{modele}','CommandeController@create'); 
 
 
 
