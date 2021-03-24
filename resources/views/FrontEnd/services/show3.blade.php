@@ -1,4 +1,4 @@
-@extends('FrontEnd.master')
+@extends('layouts.master')
   
 @section('catchPhrase')
             <h1 class="white typed" style="color:black;">{{ App\Models\Service::find($service)->titre}}</h1>

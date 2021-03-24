@@ -1,6 +1,5 @@
 
 
-
 <?php $__env->startSection('catchPhrase'); ?>
 	<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>						
 <?php $__env->stopSection(); ?>
@@ -268,4 +267,4 @@
 	</div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/home.blade.php ENDPATH**/ ?>

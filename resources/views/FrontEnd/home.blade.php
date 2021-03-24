@@ -1,5 +1,4 @@
-
-@extends('FrontEnd.master')
+@extends('layouts.master')
 
 @section('catchPhrase')
 	<h1 class="white typed" style="color:black;">Be Modern To Be Happy.</h1>						

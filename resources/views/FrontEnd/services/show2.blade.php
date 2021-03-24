@@ -1,4 +1,4 @@
-@extends('FrontEnd.master')
+@extends('layouts.master')
   
 @section('catchPhrase')
             <h1 class="white typed" style="color:black;">{{ App\Models\Service::find($service)->titre}}</h1>
@@ -18,7 +18,7 @@
   <div class="row text-center title">
         <h2>Nos Logos</h2>
         <h4 class="light muted">
-          Allez-y et dites-nous ce que vous avez en tête comme idées et nous y arriverons avec un logo unique et qui représente l'essence de votre entreprise!.
+          Allez-y et dites-nous ce que vous avez en tête comme idées et nous y arriverons avec un logo unique et qui représente l'essence de votre entreprise.
         </h4>
   </div>
   <div class="row services">

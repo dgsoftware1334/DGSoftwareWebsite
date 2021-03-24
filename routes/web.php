@@ -24,28 +24,27 @@ use App\Http\Controllers\LoginController;
 //Authentification
 Auth::routes();
 
+Route::get('/', function (){
+	$services = App\Models\Service::all();
+        return view('FrontEnd.home',['services' => $services]);
+   });
+
 Route::get('/aboutUs', function () {
     return view('FrontEnd.about');
 });
 
-
+Route::get('/service', function () {
+    return view('FrontEnd.services');
+});
 Route::get('/contact' , 'ContactController@index');
 Route::post('/contact' , 'ContactController@store');
 
 
-Route::get('/service', function () {
-    return view('FrontEnd.services');
-});
-
-Route::get('/dash', function () {
-    return view('layouts.admin');
-});
 
 
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('BackEnd.home');
+})->name('/home');
 
 
 //Employes
@@ -77,9 +76,8 @@ Route::post('/liens/{id}',[GalerieController::class, 'NewLiens']);
 Route::delete('/delete/photo/{id}/{id1}',[GalerieController::class, 'DestroyLien']);
 
 
-//Home page DGSoftware
-Route::get('/',[HomeController::class, 'homepage']);
-Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
+//Home page DGSoftware 
+//Route::get('/categories/{id}',[HomeController::class, 'indexCategorie']);
 //Route::get('/show/categorie/{id}',[HomeController::class, 'Show']);
 
 Route::get('/service/{id}',function($id){

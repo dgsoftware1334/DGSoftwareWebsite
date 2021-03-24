@@ -1,7 +1,4 @@
-@extends('FrontEnd.master')
-
-
-
+@extends('layouts.master')
 
 @section('dynamique')
 
