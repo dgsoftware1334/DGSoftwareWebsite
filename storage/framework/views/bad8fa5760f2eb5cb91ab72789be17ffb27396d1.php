@@ -49,10 +49,24 @@
 	          <div class="col-lg-7 col-md-7 col-sm-7">
 	            <h4 class="title">Vos Coordonnées</h4>
 	            <div id="message"></div>
-	            <form  action="<?php echo e(url('commandes')); ?>" method="POST" class="contact-form php-mail-form" role="form" enctype="multipart/form-data">
+	            <form  action="<?php echo e(url('commandes')); ?>" method="POST" class="contact-form" enctype="multipart/form-data">
 	              <?php echo e(csrf_field()); ?> 
-	              <input type="hidden" name="produit" value="0">
-	              <input type="hidden" name="quantité" value="1">
+	              <input type="hidden" name="produit" class="form-control <?php $__errorArgs = ['produit'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" value="0">
+	              <input type="hidden" name="quantité" class="form-control <?php $__errorArgs = ['quantité'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" value="1">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control <?php $__errorArgs = ['nom'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

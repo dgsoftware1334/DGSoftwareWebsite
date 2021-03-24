@@ -21,14 +21,8 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/login', function () {
-    return view('Login.login');
-})->name('login');
-
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
+//Authentification
+Auth::routes();
 
 Route::get('/aboutUs', function () {
     return view('FrontEnd.about');

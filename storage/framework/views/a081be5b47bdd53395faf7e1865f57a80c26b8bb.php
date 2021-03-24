@@ -12,7 +12,7 @@
 		    <ol class="breadcrumb">
 		      <li class="breadcrumb-item"><a href="<?php echo e(url('/')); ?>"> Home</a></li>
 		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service')); ?>">Services</a></li>
-		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service/1')); ?>">INFOGRAPHIE ET DESIGN</a></li>  
+		      <li class="breadcrumb-item"><a href="<?php echo e(url('/service/'.$service->id)); ?>"><?php echo e($service->titre); ?></a></li>   
 		      <li class="breadcrumb-item active" aria-current="page">Commander</li>
 		    </ol>
 		</nav>
@@ -21,19 +21,19 @@
 		<div class="row">
 		    	<div class="col-md-12" >
 		    	<?php if(session()->has('success')): ?>
-						  <div class="alert alert-success">
+						<div class="alert alert-success">
 						    <strong><?php echo e(session()->get('success')); ?> </strong>
 						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						      <span aria-hidden="true">&times;</span>
 						    </button>
-						  </div>
+						</div>
 				<?php elseif(session()->has('error')): ?>
-						  <div class="alert alert-danger">
+						<div class="alert alert-danger">
 						   <strong><?php echo e(session()->get('error')); ?> </strong>
 						   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						     <span aria-hidden="true">&times;</span>
 						   </button>
-						  </div>
+						</div>
 				<?php endif; ?>
 				</div>
 		    </div>	
@@ -194,7 +194,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="details" id="contact-message" placeholder="Faites-nous savoir les coordonnées que vous souhaitez que nous mettions sur les cartes" rows="3" title="veuillez remplir toutes les coordonnées et remarques que vous souhaitez inclure dans vos cartes"><?php echo e(old('details')); ?></textarea>
+unset($__errorArgs, $__bag); ?>" name="details" id="contact-message" placeholder="Faites-nous savoir les coordonnées que vous souhaitez que nous mettions sur les cartes" rows="3" title="veuillez mentionner toutes les coordonnées et remarques que vous souhaitez inclure dans vos cartes"><?php echo e(old('details')); ?></textarea>
 	                <?php $__errorArgs = ['details'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -217,7 +217,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" required title="veuillez nous donner le logo de votre entreprise que vous souhaitez que nous mettions sur les cartes si vous n'en avez pas, nous pouvons trouver quelque chose à la place" data-default-value="<?php echo e(old('logo')); ?>" value="<?php echo e(old('logo')); ?>"/>
+unset($__errorArgs, $__bag); ?>" title="veuillez nous donner le logo de votre entreprise que vous souhaitez que nous mettions sur les cartes si vous n'en avez pas, nous pouvons trouver quelque chose à la place" data-default-value="<?php echo e(old('logo')); ?>" value="<?php echo e(old('logo')); ?>"/>
 					<?php $__errorArgs = ['logo'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :

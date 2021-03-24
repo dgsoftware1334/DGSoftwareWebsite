@@ -49,10 +49,10 @@
 	          <div class="col-lg-7 col-md-7 col-sm-7">
 	            <h4 class="title">Vos Coordonnées</h4>
 	            <div id="message"></div>
-	            <form  action="{{url('commandes')}}" method="POST" class="contact-form php-mail-form" role="form" enctype="multipart/form-data">
+	            <form  action="{{url('commandes')}}" method="POST" class="contact-form" enctype="multipart/form-data">
 	              {{ csrf_field()}} 
-	              <input type="hidden" name="produit" value="0">
-	              <input type="hidden" name="quantité" value="1">
+	              <input type="hidden" name="produit" class="form-control @error('produit') is-invalid @enderror" value="0">
+	              <input type="hidden" name="quantité" class="form-control @error('quantité') is-invalid @enderror" value="1">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control @error('nom') is-invalid @enderror" id="contact-name" placeholder="Votre Nom*" required value="{{old('nom') }}">
 	                @error('nom')

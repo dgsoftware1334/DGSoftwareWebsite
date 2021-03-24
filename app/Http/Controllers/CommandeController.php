@@ -54,7 +54,7 @@ class CommandeController extends Controller
                 'telephone' =>'required|numeric|min:10',
                 'email' =>'required|string|email|max:255',
                 'adresse' =>'string|nullable',
-                'quantité' =>'required|numeric|min:500',
+                'quantité' =>'required|numeric',
                 'recu'=>'mimes:jpeg,bmp,png,jpg,svg|image|filled|max:2048',
                 'logo'=>'mimes:jpeg,bmp,png,jpg,svg|image|filled|max:2048|nullable',
                 'details' =>'string|nullable',

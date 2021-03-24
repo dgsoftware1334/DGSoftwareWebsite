@@ -4,34 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
-use App\Models\Service;
-use App\Models\Galerie;
-use App\Models\Lien;
-use Illuminate\Support\Facades\DB;
-use Image;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\File;
-
 class HomeController extends Controller
 {
-    public function homepage(){
-
-    	$services = DB::table('services')->get();
-
-    	return view('FrontEnd.home',['services' => $services]);
-
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    /*  Inforgraphie categorie */
-    public function indexCategorie($id){
-
-    	$galeries = Galerie::where('service_id', '=', $id)->get();
-    	$service = Service::find($id);
-
-    	return view('FrontEnd.indexCategorie',['galeries'=>$galeries,'service'=>$service]);
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
-
-
-   
 }

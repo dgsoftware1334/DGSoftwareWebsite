@@ -60,7 +60,7 @@
               <button data-toggle="modal" data-target="#image<?php echo e($g->id); ?>" class="btn btn-info">
                   <img src="<?php echo e(asset('img'.$g->main_image)); ?>" alt="<?php echo e($g->catégorie); ?>"  class="img-responsive" style="width:100%; height: 250px;">
               </button>
-                <a href="<?php echo e(url('commandes/'.$g->id.'/create')); ?>"  style="background-color:#9c1210; width:100%;" class="btn btn-secondary" title="Paiement par CCP"> 
+                <a href="<?php echo e(url('commandes/'.$service.'/create/'.$g->id)); ?>"  style="background-color:#9c1210; width:100%;" class="btn btn-secondary" title="Paiement par CCP"> 
                   Commander <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </a>
               </div>

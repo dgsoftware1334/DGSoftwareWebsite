@@ -21,19 +21,19 @@
 		<div class="row">
 		    	<div class="col-md-12" >
 		    	@if(session()->has('success'))
-						  <div class="alert alert-success">
+						<div class="alert alert-success">
 						    <strong>{{session()->get('success')}} </strong>
 						    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						      <span aria-hidden="true">&times;</span>
 						    </button>
-						  </div>
+						</div>
 				@elseif(session()->has('error'))
-						  <div class="alert alert-danger">
+						<div class="alert alert-danger">
 						   <strong>{{session()->get('error')}} </strong>
 						   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						     <span aria-hidden="true">&times;</span>
 						   </button>
-						  </div>
+						</div>
 				@endif
 				</div>
 		    </div>	

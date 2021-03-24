@@ -17,9 +17,9 @@ class CreateCommandesTable extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email');
+            $table->string('email')->required();
             $table->string('telephone')->required();
-            $table->string('adresse')->required();
+            $table->string('adresse')->nullable();
             $table->string('quantité')->required();
             $table->string('produit'); 
             $table->string('details')->nullable();
