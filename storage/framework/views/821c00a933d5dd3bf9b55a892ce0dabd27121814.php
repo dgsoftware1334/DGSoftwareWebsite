@@ -18,7 +18,7 @@
   <div class="row text-center title">
         <h2>Nos Logos</h2>
         <h4 class="light muted">
-          Allez-y et dites-nous ce que vous avez en tête comme idées et nous y arriverons avec un logo unique et qui représente l'essence de votre entreprise!.
+          Allez-y et dites-nous ce que vous avez en tête comme idées et nous y arriverons avec un logo unique et qui représente l'essence de votre entreprise.
         </h4>
   </div>
   <div class="row services">
@@ -90,4 +90,4 @@
           
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/services/show2.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/services/show2.blade.php ENDPATH**/ ?>

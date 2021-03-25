@@ -7,7 +7,7 @@ $services = App\Models\Service::all();
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="{{url('employe/'. Auth::user()->id)}}"><img src="{{asset('storage/'. Auth::user()->profile_photo_path)}}" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="{{url('employe/'. Auth::user()->id)}}"><img src="{{asset('storage/'. Auth::user()->photo)}}" class="img-circle" width="80"></a></p>
           <h5 class="centered">{{Auth::user()->name}} {{ Auth::user()->prenom }}</h5>
           <li class="mt">
             <a class="active" href="{{url('/home')}}">

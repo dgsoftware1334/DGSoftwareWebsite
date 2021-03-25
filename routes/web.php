@@ -57,12 +57,8 @@ Route::get('/profil/{id}',[EmployesController::class,'Show']);
 
 
 //services & Galeries
-Route::get('/services', [ServicesController::class, 'index']);
-Route::get('/services/{id}', [ServicesController::class, 'editService']);
-Route::put('/service/update/{id}', [ServicesController::class, 'updateService'])->name('upload.upload_uploadservice');
-Route::delete('/delete/service/{id}',[ServicesController::class, 'deleteService']);
-Route::get('/Show/service/{id}',[ServicesController::class, 'ShowService']);
-Route::post('/newService', [ServicesController::class, 'storeService'])->name('upload.upload_photo');
+Route::resource('services','ServiceController')->middleware(['auth']);
+Route::resource('galeries','GalerieController')->middleware(['auth']);
 
 
 Route::get('/galerie', [GalerieController::class, 'indexGalery']);

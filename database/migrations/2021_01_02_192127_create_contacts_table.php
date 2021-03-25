@@ -19,8 +19,8 @@ class CreateContactsTable extends Migration
             $table->string('email')->required();
             $table->Text('message')->required();
             $table->Text('temoin')->nullable();
-            $table->DateTime('read_at')->nullable();
-            $table->DateTime('deleted_at')->nullable();
+            $table->DateTime('read_at')->nullable(); 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

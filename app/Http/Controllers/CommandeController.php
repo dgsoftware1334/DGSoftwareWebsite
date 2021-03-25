@@ -75,6 +75,7 @@ class CommandeController extends Controller
             ]); 
             
             $c = new Commande();
+            $c->service = $request->input('service');
             $c->nom = $request->input('nom');
             $c->prenom = $request->input('prenom');
             $c->telephone = $request->input('telephone');

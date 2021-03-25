@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('titre')->unique();
             $table->text('description')->required();
-            $table->double('prix');
+            $table->double('prix')->nullable();
             $table->string('photo');
             $table->softDeletes();
             $table->timestamps();

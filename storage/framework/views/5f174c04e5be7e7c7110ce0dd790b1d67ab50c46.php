@@ -1,10 +1,13 @@
 <header class="header black-bg">
-      <div class="sidebar-toggle-box">
+      <!--logo start-->
+      <a href="<?php echo e(url('/')); ?>" class="logo">
+        <b><img src="<?php echo e(asset('img/favicons/favicon-32x32.png')); ?>" alt=""></b>
+        <b>DG<span>Software</span></b> 
+      </a>
+      <!--logo end-->
+      <div class="sidebar-toggle-box" style="padding-left : 10px; padding-right : 10px;">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
-      <!--logo start-->
-      <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
-      <!--logo end-->
       <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
         <ul class="nav top-menu">

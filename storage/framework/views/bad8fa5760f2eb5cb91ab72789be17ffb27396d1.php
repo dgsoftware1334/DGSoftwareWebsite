@@ -67,6 +67,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" value="1">
+	              <input type="hidden" name="service" value="<?php echo e($service->id); ?>">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control <?php $__errorArgs = ['nom'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -229,4 +230,4 @@ unset($__errorArgs, $__bag); ?>
 </section>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('FrontEnd.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/commandes/commandeLogo.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\DGSoftware\resources\views/FrontEnd/commandes/commandeLogo.blade.php ENDPATH**/ ?>

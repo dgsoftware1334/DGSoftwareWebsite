@@ -15,7 +15,7 @@
                 <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                 <div class="col-md-4">
-                	<div class="intro-table intro-table-hover" style=" background-image: url(<?php echo e(asset('img/'.$s->photo)); ?>);">
+                	<div class="intro-table intro-table-hover" style=" background-image: url(<?php echo e(asset('storage/'.$s->photo)); ?>);">
 						 <h5 class="black heading hide-hover text-center" style="background-color: #9c1210 ; font-size: 22px; color: white;"><?php echo e($s->titre); ?>
 
 						 </h5>

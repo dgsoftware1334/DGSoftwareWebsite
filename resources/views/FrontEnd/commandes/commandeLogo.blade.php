@@ -53,6 +53,7 @@
 	              {{ csrf_field()}} 
 	              <input type="hidden" name="produit" class="form-control @error('produit') is-invalid @enderror" value="0">
 	              <input type="hidden" name="quantité" class="form-control @error('quantité') is-invalid @enderror" value="1">
+	              <input type="hidden" name="service" value="{{$service->id}}">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control @error('nom') is-invalid @enderror" id="contact-name" placeholder="Votre Nom*" required value="{{old('nom') }}">
 	                @error('nom')

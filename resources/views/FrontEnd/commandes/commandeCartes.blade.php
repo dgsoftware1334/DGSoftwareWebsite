@@ -52,6 +52,7 @@
 	            <form  action="{{url('commandes')}}" method="POST" class="contact-form php-mail-form" role="form" enctype="multipart/form-data">
 	              {{ csrf_field()}}
 			      <input type="hidden" name="produit" value="{{$modele->id}}">
+			      <input type="hidden" name="service" value="{{$service->id}}">
 	              <div class="form-group">
 	                <input type="name" name="nom" class="form-control @error('nom') is-invalid @enderror" id="contact-name" placeholder="Votre Nom*" required value="{{old('nom') }}">
 	                @error('nom')

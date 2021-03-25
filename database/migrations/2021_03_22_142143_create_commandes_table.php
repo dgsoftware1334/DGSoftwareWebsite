@@ -15,6 +15,7 @@ class CreateCommandesTable extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('service')->unsigned()->nullable();
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->required();
@@ -25,6 +26,10 @@ class CreateCommandesTable extends Migration
             $table->string('details')->nullable();
             $table->string('recu')->nullable();
             $table->string('logo')->nullable();
+            $table->foreign('service')->references('id')->on('services')
+                                        ->onDelete('SET NULL')
+                                        ->onUpdate('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
