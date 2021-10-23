@@ -1,0 +1,101 @@
+/**=========================
+	Author: Denthemes
+	Author URI: https://themeforest.net/user/denthemes
+	Description: Pixoraz - Business & Digital Services Landing Page
+=========================**/
+
+/**=========================
+[Table of contents]
+
+01. DEFAULT
+=========================**/
+
+/**=========================
+	START DEFAULT
+=========================**/
+/* ** background */
+::selection,
+#loader .rotating-bg:before,
+#nav-menu .navbar-toggler,
+.theme-btn-default,
+.theme-badge-default,
+.theme-badge-default-two:hover,
+.head-after:before,
+.head-after:after,
+.card.card-active,
+.card:hover,
+.theme-bg-default,
+.theme-btn-default-two:hover,
+.smedia-icons li a:hover i.theme-btn-default-two,
+#counter.theme-bg-default:before,
+.pagination .page-item.active .page-link,
+.pagination .page-item:focus,
+.pagination .page-item:active,
+.pagination .page-item:hover,
+.pagination .page-link:focus,
+.pagination .page-link:active,
+.pagination .page-link:hover,
+.faq-accordion button[aria-expanded="true"],
+#people-says .slick-center .card,
+.slick-prev,
+.slick-next,
+.slick-dots li.slick-active button,
+.slick-dots li button:hover{
+	background-color: #17a2b8;
+}
+
+/* ** light background */
+.theme-bg-default-light{
+	background-color: rgba(23, 162, 184, 0.1);
+}
+
+/* ** colors */
+.theme-text-default,
+#nav-menu .nav-item.active a,
+#nav-menu .nav-item a:hover,
+#nav-menu .nav-item .nav-link.easing-click.active,
+#nav-menu .nav-link.dropdown-toggle.active,
+#nav-menu .dropdown-menu .dropdown-item:hover,
+#nav-menu .dropdown-active a.dropdown-toggle,
+#nav-menu .dropdown.active .dropdown-menu .dropdown-item.active,
+#nav-menu .dropdown-menu .dropdown-item:hover,
+#nav-menu .dropdown.active .dropdown-menu .dropdown-item:hover,
+#nav-menu .dropdown-item.active, #nav-menu .dropdown-item:active,
+.dropdown-toggle::after,
+#breadcrumb li a,
+.sidebar .sidebar-categories li a:hover,
+.sidebar .sidebar-categories li a.btn-icon-active,
+#blog .recent-post-list a:hover h6,
+#services .service-item a,
+#services .service-item i:before,
+#who-we-are .whoweare-left .whoweare-play-video button:hover,
+#portfolio .filter-btn-group label.active,
+.theme-btn-link-default:hover,
+#footer .footer-logo span.logo-icon,
+#footer .smedia-icons a:hover i,
+#sub-footer .sub-footer-right a,
+#sub-footer .sub-footer-left a:hover{
+	color: #17a2b8;
+}
+
+/* ** light color */
+#footer .footer-about-content p,
+#footer .footer-list ul li a,
+#footer .footer-contact p,
+#blog .blog-content .blog-list li a:hover,
+#blog .blog-title a:hover,
+#blog .blog-btn a:hover{
+	color: #c5f7ff;
+}
+
+/* ** borders */
+#nav-menu .dropdown-menu,
+.theme-btn-default-two:hover,
+.pagination .page-item.active .page-link,
+.slick-prev,
+.slick-next{
+	border-color: #17a2b8;
+}
+/**=========================
+	END DEFAULT
+=========================**/

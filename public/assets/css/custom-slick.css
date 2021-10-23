@@ -1,0 +1,50 @@
+.slick-prev,
+.slick-next{
+	padding: 10px 15px;
+	border-radius: 0px;
+	background: #dc3545;
+    border-color: #dc3545;
+    transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.8s linear;
+}
+.slick-prev:hover,
+.slick-next:hover{
+	background-color: #343a40;
+	border-color: #343a40;
+}
+.slick-prev i,
+.slick-next i{
+	color: #fff;
+}
+#people-says .people-says-carousel:hover .slick-prev,
+#people-says .people-says-carousel:hover .slick-next{
+	transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	visibility: visible;
+	opacity: 1;
+}
+.slick-dots button{
+	margin-right: 5px;
+	padding: 10px 20px;
+    color: #343a40;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+}
+.slick-dots li.slick-active button,
+.slick-dots li button:hover{
+	background-color: #dc3545;
+	color: #fff;
+	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+}
